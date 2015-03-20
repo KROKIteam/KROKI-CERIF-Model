@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity class-name="ejb_generated.CfFedId" label="Federated Identifier" name="CFFEDID">
+<attributes>
+<column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
+<column-attribute field-name="a_federated_identifier_identifier" hidden="false" key="false" label="Federated Identifier Identifier" length="0" name="a_federated_identifier_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_instance_identifier" hidden="false" key="false" label="Instance Identifier" length="0" name="a_instance_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_federate_identifier" hidden="false" key="false" label="Federate Identifier" length="0" name="a_federate_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
+<zoom-attribute class-name="ejb_generated.CfClass" field-name="cffedid_classification" label="Classification" name="cffedid_classification" zoomed-by="id">
+<column-ref label="Classification ID" name="id"/>
+</zoom-attribute>
+</attributes>
+</entity>

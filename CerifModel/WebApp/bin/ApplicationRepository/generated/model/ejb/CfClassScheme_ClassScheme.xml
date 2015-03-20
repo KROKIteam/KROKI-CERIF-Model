@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity class-name="ejb_generated.CfClassScheme_ClassScheme" label="Classification Scheme - Classification Scheme" name="CFCLASSSCHEME_CLASSSCHEME">
+<attributes>
+<column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
+<column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="a_fraction" hidden="false" key="false" label="Fraction" length="0" name="a_fraction" precision="0" type="java.math.BigDecimal"/>
+<zoom-attribute class-name="ejb_generated.CfClass" field-name="cfclassscheme_classscheme_classification" label="Classification" name="cfclassscheme_classscheme_classification" zoomed-by="id">
+<column-ref label="Classification ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfClassScheme" field-name="cfclassscheme_classscheme_classificationScheme1" label="Classification scheme1" name="cfclassscheme_classscheme_classificationScheme1" zoomed-by="id">
+<column-ref label="Classification scheme1 ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfClassScheme" field-name="cfclassscheme_classscheme_classificationScheme2" label="Classification scheme2" name="cfclassscheme_classscheme_classificationScheme2" zoomed-by="id">
+<column-ref label="Classification scheme2 ID" name="id"/>
+</zoom-attribute>
+</attributes>
+</entity>

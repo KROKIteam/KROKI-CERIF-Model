@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity class-name="ejb_generated.CfPersKeyw" label="Person Keywords" name="CFPERSKEYW">
+<attributes>
+<column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
+<column-attribute field-name="a_translation_kind" hidden="false" key="false" label="Translation Kind" length="0" name="a_translation_kind" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_keywords" hidden="false" key="false" label="Keywords" length="0" name="a_keywords" precision="0" type="java.lang.String"/>
+<zoom-attribute class-name="ejb_generated.CfLang" field-name="cfperskeyw_language" label="Language" name="cfperskeyw_language" zoomed-by="id">
+<column-ref label="Language ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfPers" field-name="cfperskeyw_person" label="Person" name="cfperskeyw_person" zoomed-by="id">
+<column-ref label="Person ID" name="id"/>
+</zoom-attribute>
+</attributes>
+</entity>

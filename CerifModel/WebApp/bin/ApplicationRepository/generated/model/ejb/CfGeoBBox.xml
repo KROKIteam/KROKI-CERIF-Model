@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity class-name="ejb_generated.CfGeoBBox" label="Geographic Bounding Box" name="CFGEOBBOX">
+<attributes>
+<column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
+<column-attribute field-name="a_geographic_bounding_box_identifier" hidden="false" key="false" label="Geographic Bounding Box Identifier" length="0" name="a_geographic_bounding_box_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_west_bound_longitude" hidden="false" key="false" label="West Bound Longitude" length="0" name="a_west_bound_longitude" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="a_east_bound_longitude" hidden="false" key="false" label="East Bound Longitude" length="0" name="a_east_bound_longitude" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="a_south_bound_latitude" hidden="false" key="false" label="South Bound Latitude" length="0" name="a_south_bound_latitude" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="a_north_bound_latitude" hidden="false" key="false" label="North Bound Latitude" length="0" name="a_north_bound_latitude" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="a_minimum_elevation" hidden="false" key="false" label="Minimum Elevation" length="0" name="a_minimum_elevation" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="a_maximum_elevation" hidden="false" key="false" label="Maximum Elevation" length="0" name="a_maximum_elevation" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="0" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
+</attributes>
+</entity>

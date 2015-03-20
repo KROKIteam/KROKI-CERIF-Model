@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity class-name="ejb_generated.CfEquip_Meas" label="Equipment Measurement" name="CFEQUIP_MEAS">
+<attributes>
+<column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
+<column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="a_fraction" hidden="false" key="false" label="Fraction" length="0" name="a_fraction" precision="0" type="java.math.BigDecimal"/>
+<zoom-attribute class-name="ejb_generated.CfClass" field-name="cfequip_meas_classification" label="Classification" name="cfequip_meas_classification" zoomed-by="id">
+<column-ref label="Classification ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfMeas" field-name="cfequip_meas_measurement" label="Measurement" name="cfequip_meas_measurement" zoomed-by="id">
+<column-ref label="Measurement ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfEquip" field-name="cfequip_meas_equipment" label="Equipment" name="cfequip_meas_equipment" zoomed-by="id">
+<column-ref label="Equipment ID" name="id"/>
+</zoom-attribute>
+</attributes>
+</entity>

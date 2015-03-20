@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity class-name="ejb_generated.CfFacil_Fund" label="Facility Funding" name="CFFACIL_FUND">
+<attributes>
+<column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
+<column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="a_fraction" hidden="false" key="false" label="Fraction" length="0" name="a_fraction" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="a_amount" hidden="false" key="false" label="Amount" length="0" name="a_amount" precision="0" type="java.math.BigDecimal"/>
+<zoom-attribute class-name="ejb_generated.CfClass" field-name="cffacil_fund_classification" label="Classification" name="cffacil_fund_classification" zoomed-by="id">
+<column-ref label="Classification ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfCurrency" field-name="cffacil_fund_currency" label="Currency" name="cffacil_fund_currency" zoomed-by="id">
+<column-ref label="Currency ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfFund" field-name="cffacil_fund_funding" label="Funding" name="cffacil_fund_funding" zoomed-by="id">
+<column-ref label="Funding ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfFacil" field-name="cffacil_fund_facility" label="Facility" name="cffacil_fund_facility" zoomed-by="id">
+<column-ref label="Facility ID" name="id"/>
+</zoom-attribute>
+</attributes>
+</entity>

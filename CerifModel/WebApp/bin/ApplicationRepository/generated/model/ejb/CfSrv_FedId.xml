@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity class-name="ejb_generated.CfSrv_FedId" label="Service Federated Identifier" name="CFSRV_FEDID">
+<attributes>
+<column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
+<column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="a_c_end_date" hidden="false" key="false" label="C end date" length="0" name="a_c_end_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="a_fraction" hidden="false" key="false" label="Fraction" length="0" name="a_fraction" precision="0" type="java.math.BigDecimal"/>
+<zoom-attribute class-name="ejb_generated.CfClass" field-name="cfsrv_fedid_classification" label="Classification" name="cfsrv_fedid_classification" zoomed-by="id">
+<column-ref label="Classification ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfFedId" field-name="cfsrv_fedid_federatedIdentifier" label="Federated identifier" name="cfsrv_fedid_federatedIdentifier" zoomed-by="id">
+<column-ref label="Federated identifier ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfSrv" field-name="cfsrv_fedid_service" label="Service" name="cfsrv_fedid_service" zoomed-by="id">
+<column-ref label="Service ID" name="id"/>
+</zoom-attribute>
+</attributes>
+</entity>

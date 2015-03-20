@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity class-name="ejb_generated.CfPers" label="Person" name="CFPERS">
+<attributes>
+<column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
+<column-attribute field-name="a_person_identifier" hidden="false" key="false" label="Person Identifier" length="0" name="a_person_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_birthdate" hidden="false" key="false" label="Birthdate" length="0" name="a_birthdate" precision="0" type="java.util.Date"/>
+<column-attribute field-name="a_gender" hidden="false" key="false" label="Gender" length="0" name="a_gender" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="0" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
+</attributes>
+</entity>

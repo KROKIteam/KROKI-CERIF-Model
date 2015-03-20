@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity class-name="ejb_generated.CfLang" label="Language" name="CFLANG">
+<attributes>
+<column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
+<column-attribute field-name="a_language_code" hidden="false" key="false" label="Language Code" length="0" name="a_language_code" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="0" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
+</attributes>
+</entity>

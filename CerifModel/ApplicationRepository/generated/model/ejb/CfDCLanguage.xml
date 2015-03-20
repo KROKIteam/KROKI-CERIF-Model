@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity class-name="ejb_generated.CfDCLanguage" label="Dublin Core Language" name="CFDCLANGUAGE">
+<attributes>
+<column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
+<column-attribute field-name="a_dc_language_tag" hidden="false" key="false" label="DC Language Tag" length="0" name="a_dc_language_tag" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_dc_translation" hidden="false" key="false" label="DC Translation" length="0" name="a_dc_translation" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_dc_type" hidden="false" key="false" label="DC Type" length="0" name="a_dc_type" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_dc_value" hidden="false" key="false" label="DC Value" length="0" name="a_dc_value" precision="0" type="java.lang.String"/>
+<zoom-attribute class-name="ejb_generated.CfDC" field-name="cfdclanguage_dublinCore" label="Dublin core" name="cfdclanguage_dublinCore" zoomed-by="id">
+<column-ref label="Dublin core ID" name="id"/>
+</zoom-attribute>
+</attributes>
+</entity>

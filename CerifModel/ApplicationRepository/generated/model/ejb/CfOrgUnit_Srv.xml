@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity class-name="ejb_generated.CfOrgUnit_Srv" label="Organisation Unit Service" name="CFORGUNIT_SRV">
+<attributes>
+<column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
+<column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="a_fraction" hidden="false" key="false" label="Fraction" length="0" name="a_fraction" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="a_availability" hidden="false" key="false" label="Availability" length="0" name="a_availability" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_conditions" hidden="false" key="false" label="Conditions" length="0" name="a_conditions" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_price" hidden="false" key="false" label="Price" length="0" name="a_price" precision="0" type="java.math.BigDecimal"/>
+<zoom-attribute class-name="ejb_generated.CfClass" field-name="cforgunit_srv_classification" label="Classification" name="cforgunit_srv_classification" zoomed-by="id">
+<column-ref label="Classification ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfSrv" field-name="cforgunit_srv_service" label="Service" name="cforgunit_srv_service" zoomed-by="id">
+<column-ref label="Service ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfCurrency" field-name="cforgunit_srv_currency" label="Currency" name="cforgunit_srv_currency" zoomed-by="id">
+<column-ref label="Currency ID" name="id"/>
+</zoom-attribute>
+<zoom-attribute class-name="ejb_generated.CfOrgUnit" field-name="cforgunit_srv_organisationUnit" label="Organisation unit" name="cforgunit_srv_organisationUnit" zoomed-by="id">
+<column-ref label="Organisation unit ID" name="id"/>
+</zoom-attribute>
+</attributes>
+</entity>
