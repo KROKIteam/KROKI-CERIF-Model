@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_CURRICULUM_VITAE")
+@Table(name = "C1_CURRICULUM_VITAE")
 public class CfCV implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,14 +38,14 @@ public class CfCV implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfCVId", unique = false, nullable = false )
+	@Column(name = "cfCVId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_curriculum_vitae_identifier;
-	@Column(name = "cfCVDoc", unique = false, nullable = false )
+	@Column(name = "cfCVDoc", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_curriculum_vitae_doc;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcv_class_curriculumVitae")
-	private Set<CfCV_Class> cfcv_class_curriculumVitaeSet;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "fcv_class_curriculumVitae")
+	private Set<FCV_Class> fcv_class_curriculumVitaeSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_cv_curriculumVitae")
 	private Set<CfPers_CV> cfpers_cv_curriculumVitaeSet;
 	
@@ -84,12 +84,12 @@ public class CfCV implements java.io.Serializable {
 		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
 	}
 	
-	public Set<CfCV_Class> getCfcv_class_curriculumVitaeSet() {
-		return this.cfcv_class_curriculumVitaeSet;
+	public Set<FCV_Class> getFcv_class_curriculumVitaeSet() {
+		return this.fcv_class_curriculumVitaeSet;
 	}
 	
-	public void setCfcv_class_curriculumVitaeSet(Set<CfCV_Class> cfcv_class_curriculumVitaeSet) {
-		this.cfcv_class_curriculumVitaeSet = cfcv_class_curriculumVitaeSet;
+	public void setFcv_class_curriculumVitaeSet(Set<FCV_Class> fcv_class_curriculumVitaeSet) {
+		this.fcv_class_curriculumVitaeSet = fcv_class_curriculumVitaeSet;
 	}
 	
 	public Set<CfPers_CV> getCfpers_cv_curriculumVitaeSet() {

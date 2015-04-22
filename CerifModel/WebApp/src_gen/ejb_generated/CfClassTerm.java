@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_CLASSIFICATION_TERM")
+@Table(name = "C1_CLASSIFICATION_TERM")
 public class CfClassTerm implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,15 +38,13 @@ public class CfClassTerm implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfTrans", unique = false, nullable = false )
-	private java.lang.String a_translation_kind;
-	@Column(name = "cfTerm", unique = false, nullable = false )
+	@Column(name = "cfTerm", unique = false, nullable = false , length = 64, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_term;
-	@Column(name = "cfRoleExpr", unique = false, nullable = false )
+	@Column(name = "cfRoleExpr", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "VARCHAR")
 	private java.lang.String a_role_expression;
-	@Column(name = "cfRoleExprOpp", unique = false, nullable = false )
+	@Column(name = "cfRoleExprOpp", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "VARCHAR")
 	private java.lang.String a_role_expression_opposite;
-	@Column(name = "cfTermSrc", unique = false, nullable = false )
+	@Column(name = "cfTermSrc", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_term_source;
 	@ManyToOne
 	@JoinColumn(name="cfclassterm_language", referencedColumnName="ID",  nullable = true)
@@ -54,6 +52,8 @@ public class CfClassTerm implements java.io.Serializable {
 	@ManyToOne
 	@JoinColumn(name="cfclassterm_classification", referencedColumnName="ID",  nullable = true)
 	private CfClass cfclassterm_classification;
+	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
+	private java.lang.String a_translation_kind;
 	
 	public CfClassTerm(){
 	}
@@ -64,14 +64,6 @@ public class CfClassTerm implements java.io.Serializable {
 	
 	public void setId(Long id) {
 		this.id = id;
-	}
-	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
-	}
-	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
 	}
 	
 	public java.lang.String getA_term() {
@@ -120,6 +112,14 @@ public class CfClassTerm implements java.io.Serializable {
 	
 	public void setCfclassterm_classification(CfClass cfclassterm_classification) {
 		this.cfclassterm_classification = cfclassterm_classification;
+	}
+	
+	public java.lang.String getA_translation_kind() {
+		return this.a_translation_kind;
+	}
+	
+	public void setA_translation_kind(java.lang.String a_translation_kind) {
+		this.a_translation_kind = a_translation_kind;
 	}
 	
 }

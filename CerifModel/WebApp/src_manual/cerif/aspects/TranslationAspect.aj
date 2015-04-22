@@ -2,6 +2,7 @@ package cerif.aspects;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.persistence.EntityManager;
@@ -11,13 +12,13 @@ import adapt.model.ejb.AbstractAttribute;
 import adapt.model.ejb.ColumnAttribute;
 import adapt.model.ejb.EntityBean;
 import adapt.model.ejb.JoinColumnAttribute;
-import adapt.resources.BaseResource;
 import adapt.resources.ModifyResource;
 import adapt.util.ejb.PersisenceHelper;
+import adapt.util.html.TableModel;
 
 public aspect TranslationAspect {
 
-//--------------------------------------------------------------------------------------------------------------------------- || POINTCUTS ||
+//----------------------------------------------------------------------------------------------------------------------------------------------------------- || POINTCUTS ||
 	
 	public pointcut joinColumnPointcut() : 
 		execution (private static JoinColumnAttribute getJoinColumnAttributeInfo(..));
@@ -25,14 +26,39 @@ public aspect TranslationAspect {
 	// LinkedHashMap<String, String> adapt.resources.ModifyResource.prepareEditMap(EntityBean, Object)
 	public pointcut editMapPointCut(ModifyResource resource, EntityBean bean, Object obj) :
 		call (private LinkedHashMap<String, String> adapt.resources.ModifyResource.prepareEditMap(EntityBean, Object)) && 
-		this(resource) && 
+		this(resource) &&
 		args(bean, obj);
 
 	public pointcut injectColumnToJSON(JoinColumnAttribute jcAttribute, String id) :
-		call (protected ArrayList<String> BaseResource.getLookupValuesJSON(JoinColumnAttribute, String)) &&
+		call (protected ArrayList<String> adapt.resources.BaseResource.getLookupValuesJSON(JoinColumnAttribute, String)) &&
 		args(jcAttribute, id);
 	
-//--------------------------------------------------------------------------------------------------------------------------- || ADVICES ||
+	public pointcut injectColumnToTable(List<Object> resultSet, TableModel tableModel) :
+		execution(public ArrayList<LinkedHashMap<String, String>> getModel(List<Object>)) &&
+		args(resultSet) &&
+		this(tableModel);
+	
+//----------------------------------------------------------------------------------------------------------------------------------------------------------- || ADVICES ||
+
+	after(List<Object> resultSet, TableModel tableModel) returning(ArrayList<LinkedHashMap<String, String>> tableMap) : injectColumnToTable(resultSet, tableModel) {
+		EntityBean bean = tableModel.getBean();
+		for (AbstractAttribute attribute : bean.getAttributes()) {
+			if(attribute instanceof JoinColumnAttribute) {
+				JoinColumnAttribute joinColumn = (JoinColumnAttribute) attribute;
+				for (LinkedHashMap<String, String> row : tableMap) {
+					String zoomValues = row.get(joinColumn.getFieldName());
+					if(zoomValues != "") {
+						// For now assume that the id is always displayed in zoom column
+						String id = zoomValues.split(",")[0];
+						ColumnAttribute additionalColumn = findNameOrTitleColumn(joinColumn);
+						String additionalValue = getNameOrTitleColumnValue(joinColumn, id, additionalColumn);
+						zoomValues = zoomValues + ", " + additionalValue;
+						row.put(joinColumn.getFieldName(), zoomValues);
+					}
+				}
+			}
+		}
+	}
 	
 	// Intercept join column reading method and inject column references
 	after() returning(JoinColumnAttribute jcAttribute) : joinColumnPointcut() {
@@ -79,7 +105,7 @@ public aspect TranslationAspect {
 		}
 	}
 
-	//------------------------------------------------------------------------------------------------------------------------- || UTILS ||
+	//--------------------------------------------------------------------------------------------------------------------------------------------------------- || UTILS ||
 	
 	private ColumnAttribute findNameOrTitleColumn(JoinColumnAttribute jcAttribute) {
 		try {

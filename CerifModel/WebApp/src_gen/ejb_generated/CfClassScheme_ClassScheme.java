@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_CLASSIFICATION_SCHEME__CLASSIFICATION_SCHEME")
+@Table(name = "C1_CLASSIFICATION_SCHEME__CLASSIFICATION_SCHEME")
 public class CfClassScheme_ClassScheme implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,21 +38,21 @@ public class CfClassScheme_ClassScheme implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfStartDate", unique = false, nullable = false )
+	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_start_date;
-	@Column(name = "cfEndDate", unique = false, nullable = false )
+	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_end_date;
-	@Column(name = "cfFraction", unique = false, nullable = false )
+	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_fraction;
-	@ManyToOne
-	@JoinColumn(name="cfclassscheme_classscheme_classification", referencedColumnName="ID",  nullable = true)
-	private CfClass cfclassscheme_classscheme_classification;
 	@ManyToOne
 	@JoinColumn(name="cfclassscheme_classscheme_classificationScheme1", referencedColumnName="ID",  nullable = true)
 	private CfClassScheme cfclassscheme_classscheme_classificationScheme1;
 	@ManyToOne
 	@JoinColumn(name="cfclassscheme_classscheme_classificationScheme2", referencedColumnName="ID",  nullable = true)
 	private CfClassScheme cfclassscheme_classscheme_classificationScheme2;
+	@ManyToOne
+	@JoinColumn(name="cfclassscheme_classscheme_classification", referencedColumnName="ID",  nullable = true)
+	private CfClass cfclassscheme_classscheme_classification;
 	
 	public CfClassScheme_ClassScheme(){
 	}
@@ -89,14 +89,6 @@ public class CfClassScheme_ClassScheme implements java.io.Serializable {
 		this.a_fraction = a_fraction;
 	}
 	
-	public CfClass getCfclassscheme_classscheme_classification() {
-		return this.cfclassscheme_classscheme_classification;
-	}
-	
-	public void setCfclassscheme_classscheme_classification(CfClass cfclassscheme_classscheme_classification) {
-		this.cfclassscheme_classscheme_classification = cfclassscheme_classscheme_classification;
-	}
-	
 	public CfClassScheme getCfclassscheme_classscheme_classificationScheme1() {
 		return this.cfclassscheme_classscheme_classificationScheme1;
 	}
@@ -111,6 +103,14 @@ public class CfClassScheme_ClassScheme implements java.io.Serializable {
 	
 	public void setCfclassscheme_classscheme_classificationScheme2(CfClassScheme cfclassscheme_classscheme_classificationScheme2) {
 		this.cfclassscheme_classscheme_classificationScheme2 = cfclassscheme_classscheme_classificationScheme2;
+	}
+	
+	public CfClass getCfclassscheme_classscheme_classification() {
+		return this.cfclassscheme_classscheme_classification;
+	}
+	
+	public void setCfclassscheme_classscheme_classification(CfClass cfclassscheme_classscheme_classification) {
+		this.cfclassscheme_classscheme_classification = cfclassscheme_classscheme_classification;
 	}
 	
 }

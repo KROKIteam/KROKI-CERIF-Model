@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_RESULT_PUBLICATION")
+@Table(name = "C1_RESULT_PUBLICATION")
 public class CfResPubl implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,31 +38,31 @@ public class CfResPubl implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfResPublId", unique = false, nullable = false )
+	@Column(name = "cfResPublId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_result_publication_identifier;
-	@Column(name = "cfResPublDate", unique = false, nullable = false )
+	@Column(name = "cfResPublDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_result_publication_date;
-	@Column(name = "cfNum", unique = false, nullable = false )
+	@Column(name = "cfNum", unique = false, nullable = false , length = 32, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_number;
-	@Column(name = "cfVol", unique = false, nullable = false )
+	@Column(name = "cfVol", unique = false, nullable = false , length = 3, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_volume;
-	@Column(name = "cfEdition", unique = false, nullable = false )
+	@Column(name = "cfEdition", unique = false, nullable = false , length = 8, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_edition;
-	@Column(name = "cfSeries", unique = false, nullable = false )
+	@Column(name = "cfSeries", unique = false, nullable = false , length = 8, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_series;
-	@Column(name = "cfIssue", unique = false, nullable = false )
+	@Column(name = "cfIssue", unique = false, nullable = false , length = 8, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_issue;
-	@Column(name = "cfStartPage", unique = false, nullable = false )
+	@Column(name = "cfStartPage", unique = false, nullable = false , length = 8, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_start_page;
-	@Column(name = "cfEndPage", unique = false, nullable = false )
+	@Column(name = "cfEndPage", unique = false, nullable = false , length = 8, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_end_page;
-	@Column(name = "cfTotalPages", unique = false, nullable = false )
+	@Column(name = "cfTotalPages", unique = false, nullable = false , length = 8, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_total_pages;
-	@Column(name = "cfISBN", unique = false, nullable = false )
+	@Column(name = "cfISBN", unique = false, nullable = false , length = 20, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_isbn;
-	@Column(name = "cfISSN", unique = false, nullable = false )
+	@Column(name = "cfISSN", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_issn;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_respubl_resultPublication")
 	private Set<CfOrgUnit_ResPubl> cforgunit_respubl_resultPublicationSet;

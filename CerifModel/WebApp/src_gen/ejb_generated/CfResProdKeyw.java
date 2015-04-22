@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_RESULT_PRODUCT_KEYWORDS")
+@Table(name = "C1_RESULT_PRODUCT_KEYWORDS")
 public class CfResProdKeyw implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,9 +38,7 @@ public class CfResProdKeyw implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfTrans", unique = false, nullable = false )
-	private java.lang.String a_translation_kind;
-	@Column(name = "cfKeyw", unique = false, nullable = false )
+	@Column(name = "cfKeyw", unique = false, nullable = false , length = 255, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_keywords;
 	@ManyToOne
 	@JoinColumn(name="cfresprodkeyw_language", referencedColumnName="ID",  nullable = true)
@@ -48,6 +46,8 @@ public class CfResProdKeyw implements java.io.Serializable {
 	@ManyToOne
 	@JoinColumn(name="cfresprodkeyw_resultProduct", referencedColumnName="ID",  nullable = true)
 	private CfResProd cfresprodkeyw_resultProduct;
+	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
+	private java.lang.String a_translation_kind;
 	
 	public CfResProdKeyw(){
 	}
@@ -58,14 +58,6 @@ public class CfResProdKeyw implements java.io.Serializable {
 	
 	public void setId(Long id) {
 		this.id = id;
-	}
-	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
-	}
-	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
 	}
 	
 	public java.lang.String getA_keywords() {
@@ -90,6 +82,14 @@ public class CfResProdKeyw implements java.io.Serializable {
 	
 	public void setCfresprodkeyw_resultProduct(CfResProd cfresprodkeyw_resultProduct) {
 		this.cfresprodkeyw_resultProduct = cfresprodkeyw_resultProduct;
+	}
+	
+	public java.lang.String getA_translation_kind() {
+		return this.a_translation_kind;
+	}
+	
+	public void setA_translation_kind(java.lang.String a_translation_kind) {
+		this.a_translation_kind = a_translation_kind;
 	}
 	
 }

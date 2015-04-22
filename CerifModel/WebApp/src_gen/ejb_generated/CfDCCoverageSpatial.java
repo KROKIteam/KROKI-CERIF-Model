@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_DUBLIN_CORE_COVERAGE_SPATIAL")
+@Table(name = "C1_DUBLIN_CORE_COVERAGE_SPATIAL")
 public class CfDCCoverageSpatial implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,19 +38,19 @@ public class CfDCCoverageSpatial implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfDCLangTag", unique = false, nullable = false )
+	@Column(name = "cfDCLangTag", unique = false, nullable = false , length = 5, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_dc_language_tag;
-	@Column(name = "cfDCTrans", unique = false, nullable = false )
+	@Column(name = "cfDCTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_dc_translation;
-	@Column(name = "cfDCValue", unique = false, nullable = false )
+	@Column(name = "cfDCValue", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_dc_value;
-	@Column(name = "cfFDCXCoordinate", unique = false, nullable = false )
+	@Column(name = "cfFDCXCoordinate", unique = false, nullable = false , length = 12, precision = 6,columnDefinition = "DECIMAL")
 	private java.math.BigDecimal a_formalised_dc_x_coordinate;
-	@Column(name = "cfFDCYCoordinate", unique = false, nullable = false )
+	@Column(name = "cfFDCYCoordinate", unique = false, nullable = false , length = 12, precision = 6,columnDefinition = "DECIMAL")
 	private java.math.BigDecimal a_formalised_dc_y_coordinate;
-	@Column(name = "cfFDCZCoordinate", unique = false, nullable = false )
+	@Column(name = "cfFDCZCoordinate", unique = false, nullable = false , length = 12, precision = 6,columnDefinition = "DECIMAL")
 	private java.math.BigDecimal a_formalised_dc_z_coordinate;
-	@Column(name = "cfFDCPrecision", unique = false, nullable = false )
+	@Column(name = "cfFDCPrecision", unique = false, nullable = false , length = 12, precision = 6,columnDefinition = "DECIMAL")
 	private java.math.BigDecimal a_formalised_dc_precision;
 	@ManyToOne
 	@JoinColumn(name="cfdccoveragespatial_dublinCore", referencedColumnName="ID",  nullable = true)

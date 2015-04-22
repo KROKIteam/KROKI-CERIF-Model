@@ -2,13 +2,13 @@
 <entity class-name="ejb_generated.CfCurrencyEntName" label="Currency Entity Name" name="CFCURRENCYENTNAME">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_translation_kind" hidden="false" key="false" label="Translation Kind" length="0" name="a_translation_kind" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_entity_name" hidden="false" key="false" label="Entity Name" length="0" name="a_entity_name" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_entity_name" hidden="false" key="false" label="Entity Name" length="64" name="a_entity_name" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfLang" field-name="cfcurrencyentname_language" label="Language" name="cfcurrencyentname_language" zoomed-by="id">
 <column-ref label="Language ID" name="id"/>
 </zoom-attribute>
 <zoom-attribute class-name="ejb_generated.CfCurrency" field-name="cfcurrencyentname_currency" label="Currency" name="cfcurrencyentname_currency" zoomed-by="id">
 <column-ref label="Currency ID" name="id"/>
 </zoom-attribute>
+<column-attribute enum="TranslationKindCurrency_entity_nameEnum" field-name="a_translation_kind" hidden="false" key="false" label="Translation Kind" length="1" name="a_translation_kind" precision="0" type="java.lang.String"/>
 </attributes>
 </entity>

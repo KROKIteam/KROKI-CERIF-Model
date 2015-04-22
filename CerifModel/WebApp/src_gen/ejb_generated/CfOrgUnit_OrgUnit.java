@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_ORGANISATION_UNIT__ORGANISATION_UNIT")
+@Table(name = "C1_ORGANISATION_UNIT__ORGANISATION_UNIT")
 public class CfOrgUnit_OrgUnit implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,21 +38,21 @@ public class CfOrgUnit_OrgUnit implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfStartDate", unique = false, nullable = false )
+	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_start_date;
-	@Column(name = "cfEndDate", unique = false, nullable = false )
+	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_end_date;
-	@Column(name = "cfFraction", unique = false, nullable = false )
+	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_fraction;
 	@ManyToOne
 	@JoinColumn(name="cforgunit_orgunit_classification", referencedColumnName="ID",  nullable = true)
 	private CfClass cforgunit_orgunit_classification;
 	@ManyToOne
-	@JoinColumn(name="cforgunit_orgunit_organisationUnit", referencedColumnName="ID",  nullable = true)
-	private CfOrgUnit cforgunit_orgunit_organisationUnit;
+	@JoinColumn(name="cforgunit_orgunit_organisationUnit1", referencedColumnName="ID",  nullable = true)
+	private CfOrgUnit cforgunit_orgunit_organisationUnit1;
 	@ManyToOne
-	@JoinColumn(name="cforgunit_orgunit_organisationUnita", referencedColumnName="ID",  nullable = true)
-	private CfOrgUnit cforgunit_orgunit_organisationUnita;
+	@JoinColumn(name="cforgunit_orgunit_organisationUnit2", referencedColumnName="ID",  nullable = true)
+	private CfOrgUnit cforgunit_orgunit_organisationUnit2;
 	
 	public CfOrgUnit_OrgUnit(){
 	}
@@ -97,20 +97,20 @@ public class CfOrgUnit_OrgUnit implements java.io.Serializable {
 		this.cforgunit_orgunit_classification = cforgunit_orgunit_classification;
 	}
 	
-	public CfOrgUnit getCforgunit_orgunit_organisationUnit() {
-		return this.cforgunit_orgunit_organisationUnit;
+	public CfOrgUnit getCforgunit_orgunit_organisationUnit1() {
+		return this.cforgunit_orgunit_organisationUnit1;
 	}
 	
-	public void setCforgunit_orgunit_organisationUnit(CfOrgUnit cforgunit_orgunit_organisationUnit) {
-		this.cforgunit_orgunit_organisationUnit = cforgunit_orgunit_organisationUnit;
+	public void setCforgunit_orgunit_organisationUnit1(CfOrgUnit cforgunit_orgunit_organisationUnit1) {
+		this.cforgunit_orgunit_organisationUnit1 = cforgunit_orgunit_organisationUnit1;
 	}
 	
-	public CfOrgUnit getCforgunit_orgunit_organisationUnita() {
-		return this.cforgunit_orgunit_organisationUnita;
+	public CfOrgUnit getCforgunit_orgunit_organisationUnit2() {
+		return this.cforgunit_orgunit_organisationUnit2;
 	}
 	
-	public void setCforgunit_orgunit_organisationUnita(CfOrgUnit cforgunit_orgunit_organisationUnita) {
-		this.cforgunit_orgunit_organisationUnita = cforgunit_orgunit_organisationUnita;
+	public void setCforgunit_orgunit_organisationUnit2(CfOrgUnit cforgunit_orgunit_organisationUnit2) {
+		this.cforgunit_orgunit_organisationUnit2 = cforgunit_orgunit_organisationUnit2;
 	}
 	
 }

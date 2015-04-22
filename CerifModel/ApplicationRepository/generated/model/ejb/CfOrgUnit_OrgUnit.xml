@@ -8,11 +8,11 @@
 <zoom-attribute class-name="ejb_generated.CfClass" field-name="cforgunit_orgunit_classification" label="Classification" name="cforgunit_orgunit_classification" zoomed-by="id">
 <column-ref label="Classification ID" name="id"/>
 </zoom-attribute>
-<zoom-attribute class-name="ejb_generated.CfOrgUnit" field-name="cforgunit_orgunit_organisationUnit" label="Organisation unit" name="cforgunit_orgunit_organisationUnit" zoomed-by="id">
-<column-ref label="Organisation unit ID" name="id"/>
+<zoom-attribute class-name="ejb_generated.CfOrgUnit" field-name="cforgunit_orgunit_organisationUnit1" label="Organisation unit1" name="cforgunit_orgunit_organisationUnit1" zoomed-by="id">
+<column-ref label="Organisation unit1 ID" name="id"/>
 </zoom-attribute>
-<zoom-attribute class-name="ejb_generated.CfOrgUnit" field-name="cforgunit_orgunit_organisationUnita" label="Organisation unita" name="cforgunit_orgunit_organisationUnita" zoomed-by="id">
-<column-ref label="Organisation unita ID" name="id"/>
+<zoom-attribute class-name="ejb_generated.CfOrgUnit" field-name="cforgunit_orgunit_organisationUnit2" label="Organisation unit2" name="cforgunit_orgunit_organisationUnit2" zoomed-by="id">
+<column-ref label="Organisation unit2 ID" name="id"/>
 </zoom-attribute>
 </attributes>
 </entity>

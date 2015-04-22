@@ -2,9 +2,9 @@
 <entity class-name="ejb_generated.CfPersName" label="Person Name" name="CFPERSNAME">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_person_name_identifier" hidden="false" key="false" label="Person Name Identifier" length="0" name="a_person_name_identifier" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_family_names" hidden="false" key="false" label="Family Names" length="0" name="a_family_names" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_first_names" hidden="false" key="false" label="First Names" length="0" name="a_first_names" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_other_names" hidden="false" key="false" label="Other Names" length="0" name="a_other_names" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_person_name_identifier" hidden="false" key="false" label="Person Name Identifier" length="128" name="a_person_name_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_family_names" hidden="false" key="false" label="Family Names" length="64" name="a_family_names" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_first_names" hidden="false" key="false" label="First Names" length="64" name="a_first_names" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_other_names" hidden="false" key="false" label="Other Names" length="64" name="a_other_names" precision="0" type="java.lang.String"/>
 </attributes>
 </entity>

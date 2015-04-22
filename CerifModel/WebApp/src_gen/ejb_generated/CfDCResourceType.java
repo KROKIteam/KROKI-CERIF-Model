@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_DUBLIN_CORE_RESOURCE_TYPE")
+@Table(name = "C1_DUBLIN_CORE_RESOURCE_TYPE")
 public class CfDCResourceType implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,13 +38,13 @@ public class CfDCResourceType implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfDCLangTag", unique = false, nullable = false )
+	@Column(name = "cfDCLangTag", unique = false, nullable = false , length = 5, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_dc_language_tag;
-	@Column(name = "cfDCTrans", unique = false, nullable = false )
+	@Column(name = "cfDCTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_dc_translation;
-	@Column(name = "cfDCType", unique = false, nullable = false )
+	@Column(name = "cfDCType", unique = false, nullable = false , length = 30, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_dc_type;
-	@Column(name = "cfDCValue", unique = false, nullable = false )
+	@Column(name = "cfDCValue", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_dc_value;
 	@ManyToOne
 	@JoinColumn(name="cfdcresourcetype_dublinCore", referencedColumnName="ID",  nullable = true)

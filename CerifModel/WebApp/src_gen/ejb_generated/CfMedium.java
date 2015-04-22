@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_MEDIUM")
+@Table(name = "C1_MEDIUM")
 public class CfMedium implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,15 +38,15 @@ public class CfMedium implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfMediumId", unique = false, nullable = false )
+	@Column(name = "cfMediumId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_medium_identifier;
-	@Column(name = "cfMediumCreationDate", unique = false, nullable = false )
+	@Column(name = "cfMediumCreationDate", unique = false, nullable = false , length = 30, precision = 0,columnDefinition = "VARCHAR")
 	private java.lang.String a_medium_creation_date;
-	@Column(name = "cfSize", unique = false, nullable = false )
+	@Column(name = "cfSize", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_size;
-	@Column(name = "cfMimeType", unique = false, nullable = false )
+	@Column(name = "cfMimeType", unique = false, nullable = false , length = 30, precision = 0,columnDefinition = "VARCHAR")
 	private java.lang.String a_mime_type;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcite_medium_medium")
 	private Set<CfCite_Medium> cfcite_medium_mediumSet;

@@ -5,9 +5,9 @@
 <column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
 <column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
 <column-attribute field-name="a_fraction" hidden="false" key="false" label="Fraction" length="0" name="a_fraction" precision="0" type="java.math.BigDecimal"/>
-<column-attribute field-name="a_skill_reading" hidden="false" key="false" label="Skill Reading" length="0" name="a_skill_reading" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_skill_speaking" hidden="false" key="false" label="Skill Speaking" length="0" name="a_skill_speaking" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_skill_writing" hidden="false" key="false" label="Skill Writing" length="0" name="a_skill_writing" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_skill_reading" hidden="false" key="false" label="Skill Reading" length="1" name="a_skill_reading" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_skill_speaking" hidden="false" key="false" label="Skill Speaking" length="1" name="a_skill_speaking" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_skill_writing" hidden="false" key="false" label="Skill Writing" length="1" name="a_skill_writing" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfLang" field-name="cfpers_lang_language" label="Language" name="cfpers_lang_language" zoomed-by="id">
 <column-ref label="Language ID" name="id"/>
 </zoom-attribute>

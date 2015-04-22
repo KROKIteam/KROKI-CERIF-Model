@@ -5,7 +5,7 @@
 <column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
 <column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
 <column-attribute field-name="a_fraction" hidden="false" key="false" label="Fraction" length="0" name="a_fraction" precision="0" type="java.math.BigDecimal"/>
-<column-attribute field-name="a_copyright" hidden="false" key="false" label="Copyright" length="0" name="a_copyright" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_copyright" hidden="false" key="false" label="Copyright" length="64" name="a_copyright" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfClass" field-name="cfproj_respubl_classification" label="Classification" name="cfproj_respubl_classification" zoomed-by="id">
 <column-ref label="Classification ID" name="id"/>
 </zoom-attribute>

@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_EXPERTISE_AND_SKILLS")
+@Table(name = "C1_EXPERTISE_AND_SKILLS")
 public class CfExpSkills implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,10 +38,13 @@ public class CfExpSkills implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfExpSkillsId", unique = false, nullable = false )
+	@Column(name = "cfExpSkillsId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_expertise_and_skills;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
+	@ManyToOne
+	@JoinColumn(name="cfexpskills_expertiseAndSkillsIntegrated", referencedColumnName="ID",  nullable = true)
+	private Expertiseandskillsintegrated cfexpskills_expertiseAndSkillsIntegrated;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskills_class_expertiseAndSkills")
 	private Set<CfExpSkills_Class> cfexpskills_class_expertiseAndSkillsSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskillsdescr_expertiseAndSkills")
@@ -80,6 +83,14 @@ public class CfExpSkills implements java.io.Serializable {
 	
 	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
 		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	}
+	
+	public Expertiseandskillsintegrated getCfexpskills_expertiseAndSkillsIntegrated() {
+		return this.cfexpskills_expertiseAndSkillsIntegrated;
+	}
+	
+	public void setCfexpskills_expertiseAndSkillsIntegrated(Expertiseandskillsintegrated cfexpskills_expertiseAndSkillsIntegrated) {
+		this.cfexpskills_expertiseAndSkillsIntegrated = cfexpskills_expertiseAndSkillsIntegrated;
 	}
 	
 	public Set<CfExpSkills_Class> getCfexpskills_class_expertiseAndSkillsSet() {

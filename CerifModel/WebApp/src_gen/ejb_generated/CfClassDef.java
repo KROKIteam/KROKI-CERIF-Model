@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_CLASSIFICATION_DEFINITION")
+@Table(name = "C1_CLASSIFICATION_DEFINITION")
 public class CfClassDef implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,11 +38,9 @@ public class CfClassDef implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfTrans", unique = false, nullable = false )
-	private java.lang.String a_translation_kind;
-	@Column(name = "cfDef", unique = false, nullable = false )
+	@Column(name = "cfDef", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_definition;
-	@Column(name = "cfDefSrc", unique = false, nullable = false )
+	@Column(name = "cfDefSrc", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_definition_source;
 	@ManyToOne
 	@JoinColumn(name="cfclassdef_language", referencedColumnName="ID",  nullable = true)
@@ -50,6 +48,8 @@ public class CfClassDef implements java.io.Serializable {
 	@ManyToOne
 	@JoinColumn(name="cfclassdef_classification", referencedColumnName="ID",  nullable = true)
 	private CfClass cfclassdef_classification;
+	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
+	private java.lang.String a_translation_kind;
 	
 	public CfClassDef(){
 	}
@@ -60,14 +60,6 @@ public class CfClassDef implements java.io.Serializable {
 	
 	public void setId(Long id) {
 		this.id = id;
-	}
-	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
-	}
-	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
 	}
 	
 	public java.lang.String getA_definition() {
@@ -100,6 +92,14 @@ public class CfClassDef implements java.io.Serializable {
 	
 	public void setCfclassdef_classification(CfClass cfclassdef_classification) {
 		this.cfclassdef_classification = cfclassdef_classification;
+	}
+	
+	public java.lang.String getA_translation_kind() {
+		return this.a_translation_kind;
+	}
+	
+	public void setA_translation_kind(java.lang.String a_translation_kind) {
+		this.a_translation_kind = a_translation_kind;
 	}
 	
 }

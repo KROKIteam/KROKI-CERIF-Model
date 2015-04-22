@@ -1,2 +1,343 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<enums/>
+<enums>
+<enum label="Translation Kind" name="TranslationKindCitation_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindCitation_titleEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindClassification_definitionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindClassification_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindClassification_termEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindClassification_scheme_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindClassification_scheme_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindCountry_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindCurrency_entity_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindCurrency_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindEquipment_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindEquipment_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindEquipment_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindEvent_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindEvent_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindEvent_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindExpertise_and_skills_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindExpertise_and_skills_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindExpertise_and_skills_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindFacility_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindFacility_kewordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindFacility_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindFunding_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindFunding_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindFunding_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindGeographic_bounding_box_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindGeographic_bounding_box_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindGeographic_bounding_box_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindIndicator_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindIndicator_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindIndicator_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindLanguage_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindMeasurement_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindMeasurement_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindMeasurement_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindMedium_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindMedium_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindMedium_titleEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindMetrics_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindMetrics_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindMetrics_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindOrganisation_unit_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindOrganisation_unit_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Gender" name="GenderPersonEnum">
+<value>m</value>
+<value>f</value>
+<value>u</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindPerson_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindPerson_research_interestEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindPrize_award_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindPrize_award_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindPrize_award_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindProject_abstractEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindProject_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindProject_titleEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindQualification_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindQualification_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindQualification_titleEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindResult_patent_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindResult_patent_titleEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindResult_product_descriptionEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindResult_product_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindResult_product_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindResult_publication_abstractEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindResult_publication_bibliographic_noteEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindResult_publication_keywordsEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindResult_publication_name_abbreviationEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindResult_publication_subtitleEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindResult_publication_titleEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindResult_publication_version_infoEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+<enum label="Translation Kind" name="TranslationKindService_nameEnum">
+<value>o</value>
+<value>m</value>
+<value>t</value>
+</enum>
+</enums>

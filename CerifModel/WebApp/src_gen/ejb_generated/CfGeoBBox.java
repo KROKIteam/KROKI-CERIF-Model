@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_GEOGRAPHIC_BOUNDING_BOX")
+@Table(name = "C1_GEOGRAPHIC_BOUNDING_BOX")
 public class CfGeoBBox implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,21 +38,21 @@ public class CfGeoBBox implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfGeoBBoxId", unique = false, nullable = false )
+	@Column(name = "cfGeoBBoxId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_geographic_bounding_box_identifier;
-	@Column(name = "cfWBLong", unique = false, nullable = false )
+	@Column(name = "cfWBLong", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_west_bound_longitude;
-	@Column(name = "cfEBLong", unique = false, nullable = false )
+	@Column(name = "cfEBLong", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_east_bound_longitude;
-	@Column(name = "cfSBLat", unique = false, nullable = false )
+	@Column(name = "cfSBLat", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_south_bound_latitude;
-	@Column(name = "cfNBLat", unique = false, nullable = false )
+	@Column(name = "cfNBLat", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_north_bound_latitude;
-	@Column(name = "cfMinElev", unique = false, nullable = false )
+	@Column(name = "cfMinElev", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_minimum_elevation;
-	@Column(name = "cfMaxElev", unique = false, nullable = false )
+	@Column(name = "cfMaxElev", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_maximum_elevation;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfgeobbox_geobbox_geographicBoundingBox1")
 	private Set<CfGeoBBox_GeoBBox> cfgeobbox_geobbox_geographicBoundingBox1Set;

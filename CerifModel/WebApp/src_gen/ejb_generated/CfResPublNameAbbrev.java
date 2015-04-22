@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_RESULT_PUBLICATION_NAME_ABBREVIATION")
+@Table(name = "C1_RESULT_PUBLICATION_NAME_ABBREVIATION")
 public class CfResPublNameAbbrev implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,15 +38,15 @@ public class CfResPublNameAbbrev implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfLangCode", unique = false, nullable = false )
+	@Column(name = "cfLangCode", unique = false, nullable = false , length = 5, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_language_code;
-	@Column(name = "cfTrans", unique = false, nullable = false )
-	private java.lang.String a_translation_kind;
-	@Column(name = "cfNameAbbrev", unique = false, nullable = false )
+	@Column(name = "cfNameAbbrev", unique = false, nullable = false , length = 255, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_name_abbreviation;
 	@ManyToOne
 	@JoinColumn(name="cfrespublnameabbrev_resultPublication", referencedColumnName="ID",  nullable = true)
 	private CfResPubl cfrespublnameabbrev_resultPublication;
+	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
+	private java.lang.String a_translation_kind;
 	
 	public CfResPublNameAbbrev(){
 	}
@@ -67,14 +67,6 @@ public class CfResPublNameAbbrev implements java.io.Serializable {
 		this.a_language_code = a_language_code;
 	}
 	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
-	}
-	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
-	}
-	
 	public java.lang.String getA_name_abbreviation() {
 		return this.a_name_abbreviation;
 	}
@@ -89,6 +81,14 @@ public class CfResPublNameAbbrev implements java.io.Serializable {
 	
 	public void setCfrespublnameabbrev_resultPublication(CfResPubl cfrespublnameabbrev_resultPublication) {
 		this.cfrespublnameabbrev_resultPublication = cfrespublnameabbrev_resultPublication;
+	}
+	
+	public java.lang.String getA_translation_kind() {
+		return this.a_translation_kind;
+	}
+	
+	public void setA_translation_kind(java.lang.String a_translation_kind) {
+		this.a_translation_kind = a_translation_kind;
 	}
 	
 }

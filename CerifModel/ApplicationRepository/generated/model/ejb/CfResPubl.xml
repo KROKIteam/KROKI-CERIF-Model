@@ -2,18 +2,18 @@
 <entity class-name="ejb_generated.CfResPubl" label="Result Publication" name="CFRESPUBL">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_result_publication_identifier" hidden="false" key="false" label="Result Publication Identifier" length="0" name="a_result_publication_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_result_publication_identifier" hidden="false" key="false" label="Result Publication Identifier" length="128" name="a_result_publication_identifier" precision="0" type="java.lang.String"/>
 <column-attribute field-name="a_result_publication_date" hidden="false" key="false" label="Result Publication Date" length="0" name="a_result_publication_date" precision="0" type="java.util.Date"/>
-<column-attribute field-name="a_number" hidden="false" key="false" label="Number" length="0" name="a_number" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_volume" hidden="false" key="false" label="Volume" length="0" name="a_volume" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_edition" hidden="false" key="false" label="Edition" length="0" name="a_edition" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_series" hidden="false" key="false" label="Series" length="0" name="a_series" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_issue" hidden="false" key="false" label="Issue" length="0" name="a_issue" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_start_page" hidden="false" key="false" label="Start Page" length="0" name="a_start_page" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_end_page" hidden="false" key="false" label="End Page" length="0" name="a_end_page" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_total_pages" hidden="false" key="false" label="Total Pages" length="0" name="a_total_pages" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_isbn" hidden="false" key="false" label="ISBN" length="0" name="a_isbn" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_issn" hidden="false" key="false" label="ISSN" length="0" name="a_issn" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="0" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_number" hidden="false" key="false" label="Number" length="32" name="a_number" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_volume" hidden="false" key="false" label="Volume" length="3" name="a_volume" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_edition" hidden="false" key="false" label="Edition" length="8" name="a_edition" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_series" hidden="false" key="false" label="Series" length="8" name="a_series" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_issue" hidden="false" key="false" label="Issue" length="8" name="a_issue" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_start_page" hidden="false" key="false" label="Start Page" length="8" name="a_start_page" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_end_page" hidden="false" key="false" label="End Page" length="8" name="a_end_page" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_total_pages" hidden="false" key="false" label="Total Pages" length="8" name="a_total_pages" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_isbn" hidden="false" key="false" label="ISBN" length="20" name="a_isbn" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_issn" hidden="false" key="false" label="ISSN" length="16" name="a_issn" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="128" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
 </attributes>
 </entity>

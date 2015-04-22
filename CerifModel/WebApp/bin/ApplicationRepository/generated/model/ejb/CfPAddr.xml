@@ -2,16 +2,16 @@
 <entity class-name="ejb_generated.CfPAddr" label="Post Address" name="CFPADDR">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_post_address_identifier" hidden="false" key="false" label="Post Address Identifier" length="0" name="a_post_address_identifier" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_address_line1" hidden="false" key="false" label="Address line1" length="0" name="a_address_line1" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_address_line2" hidden="false" key="false" label="Address line2" length="0" name="a_address_line2" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_address_line3" hidden="false" key="false" label="Address line3" length="0" name="a_address_line3" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_address_line4" hidden="false" key="false" label="Address line4" length="0" name="a_address_line4" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_address_line5" hidden="false" key="false" label="Address line5" length="0" name="a_address_line5" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_post_code" hidden="false" key="false" label="Post Code" length="0" name="a_post_code" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_city_town" hidden="false" key="false" label="City Town" length="0" name="a_city_town" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_state_of_country" hidden="false" key="false" label="State Of Country" length="0" name="a_state_of_country" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="0" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_post_address_identifier" hidden="false" key="false" label="Post Address Identifier" length="128" name="a_post_address_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_address_line1" hidden="false" key="false" label="Address line1" length="80" name="a_address_line1" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_address_line2" hidden="false" key="false" label="Address line2" length="80" name="a_address_line2" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_address_line3" hidden="false" key="false" label="Address line3" length="80" name="a_address_line3" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_address_line4" hidden="false" key="false" label="Address line4" length="80" name="a_address_line4" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_address_line5" hidden="false" key="false" label="Address line5" length="80" name="a_address_line5" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_post_code" hidden="false" key="false" label="Post Code" length="16" name="a_post_code" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_city_town" hidden="false" key="false" label="City Town" length="64" name="a_city_town" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_state_of_country" hidden="false" key="false" label="State Of Country" length="64" name="a_state_of_country" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="128" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfCountry" field-name="cfpaddr_country" label="Country" name="cfpaddr_country" zoomed-by="id">
 <column-ref label="Country ID" name="id"/>
 </zoom-attribute>

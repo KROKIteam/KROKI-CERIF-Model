@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_EQUIPMENT")
+@Table(name = "C1_EQUIPMENT")
 public class CfEquip implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,20 +38,20 @@ public class CfEquip implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfEquipId", unique = false, nullable = false )
+	@Column(name = "cfEquipId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_equipment_identifier;
-	@Column(name = "cfAcro", unique = false, nullable = false )
+	@Column(name = "cfAcro", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_acronym;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_class_equipment")
 	private Set<CfEquip_Class> cfequip_class_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequipdescr_equipment")
 	private Set<CfEquipDescr> cfequipdescr_equipmentSet;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_equip_equipment1")
-	private Set<CfEquip_Equip> cfequip_equip_equipment1Set;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_equip_equipment2")
-	private Set<CfEquip_Equip> cfequip_equip_equipment2Set;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_equip_equipment")
+	private Set<CfEquip_Equip> cfequip_equip_equipmentSet;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_equip_equipmenta")
+	private Set<CfEquip_Equip> cfequip_equip_equipmentaSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_event_equipment")
 	private Set<CfEquip_Event> cfequip_event_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_fund_equipment")
@@ -136,20 +136,20 @@ public class CfEquip implements java.io.Serializable {
 		this.cfequipdescr_equipmentSet = cfequipdescr_equipmentSet;
 	}
 	
-	public Set<CfEquip_Equip> getCfequip_equip_equipment1Set() {
-		return this.cfequip_equip_equipment1Set;
+	public Set<CfEquip_Equip> getCfequip_equip_equipmentSet() {
+		return this.cfequip_equip_equipmentSet;
 	}
 	
-	public void setCfequip_equip_equipment1Set(Set<CfEquip_Equip> cfequip_equip_equipment1Set) {
-		this.cfequip_equip_equipment1Set = cfequip_equip_equipment1Set;
+	public void setCfequip_equip_equipmentSet(Set<CfEquip_Equip> cfequip_equip_equipmentSet) {
+		this.cfequip_equip_equipmentSet = cfequip_equip_equipmentSet;
 	}
 	
-	public Set<CfEquip_Equip> getCfequip_equip_equipment2Set() {
-		return this.cfequip_equip_equipment2Set;
+	public Set<CfEquip_Equip> getCfequip_equip_equipmentaSet() {
+		return this.cfequip_equip_equipmentaSet;
 	}
 	
-	public void setCfequip_equip_equipment2Set(Set<CfEquip_Equip> cfequip_equip_equipment2Set) {
-		this.cfequip_equip_equipment2Set = cfequip_equip_equipment2Set;
+	public void setCfequip_equip_equipmentaSet(Set<CfEquip_Equip> cfequip_equip_equipmentaSet) {
+		this.cfequip_equip_equipmentaSet = cfequip_equip_equipmentaSet;
 	}
 	
 	public Set<CfEquip_Event> getCfequip_event_equipmentSet() {

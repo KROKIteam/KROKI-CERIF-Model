@@ -24,12 +24,12 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_CURRICULUM_VITAE__CLASSIFICATION")
-public class CfCV_Class implements java.io.Serializable {
+@Table(name = "C1_CURRICULUM_VITAE__CLASSIFICATION")
+public class FCV_Class implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -38,20 +38,20 @@ public class CfCV_Class implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfStartDate", unique = false, nullable = false )
+	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_start_date;
-	@Column(name = "cfEndDate", unique = false, nullable = false )
+	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_end_date;
-	@Column(name = "cfFraction", unique = false, nullable = false )
+	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_fraction;
 	@ManyToOne
-	@JoinColumn(name="cfcv_class_classification", referencedColumnName="ID",  nullable = true)
-	private CfClass cfcv_class_classification;
+	@JoinColumn(name="fcv_class_classification", referencedColumnName="ID",  nullable = true)
+	private CfClass fcv_class_classification;
 	@ManyToOne
-	@JoinColumn(name="cfcv_class_curriculumVitae", referencedColumnName="ID",  nullable = true)
-	private CfCV cfcv_class_curriculumVitae;
+	@JoinColumn(name="fcv_class_curriculumVitae", referencedColumnName="ID",  nullable = true)
+	private CfCV fcv_class_curriculumVitae;
 	
-	public CfCV_Class(){
+	public FCV_Class(){
 	}
 	
 	public Long getId() {
@@ -86,20 +86,20 @@ public class CfCV_Class implements java.io.Serializable {
 		this.a_fraction = a_fraction;
 	}
 	
-	public CfClass getCfcv_class_classification() {
-		return this.cfcv_class_classification;
+	public CfClass getFcv_class_classification() {
+		return this.fcv_class_classification;
 	}
 	
-	public void setCfcv_class_classification(CfClass cfcv_class_classification) {
-		this.cfcv_class_classification = cfcv_class_classification;
+	public void setFcv_class_classification(CfClass fcv_class_classification) {
+		this.fcv_class_classification = fcv_class_classification;
 	}
 	
-	public CfCV getCfcv_class_curriculumVitae() {
-		return this.cfcv_class_curriculumVitae;
+	public CfCV getFcv_class_curriculumVitae() {
+		return this.fcv_class_curriculumVitae;
 	}
 	
-	public void setCfcv_class_curriculumVitae(CfCV cfcv_class_curriculumVitae) {
-		this.cfcv_class_curriculumVitae = cfcv_class_curriculumVitae;
+	public void setFcv_class_curriculumVitae(CfCV fcv_class_curriculumVitae) {
+		this.fcv_class_curriculumVitae = fcv_class_curriculumVitae;
 	}
 	
 }

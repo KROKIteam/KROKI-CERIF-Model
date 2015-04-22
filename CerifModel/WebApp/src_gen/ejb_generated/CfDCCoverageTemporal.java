@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_DUBLIN_CORE_COVERAGE_TEMPORAL")
+@Table(name = "C1_DUBLIN_CORE_COVERAGE_TEMPORAL")
 public class CfDCCoverageTemporal implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,17 +38,17 @@ public class CfDCCoverageTemporal implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfDCLangTag", unique = false, nullable = false )
+	@Column(name = "cfDCLangTag", unique = false, nullable = false , length = 5, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_dc_language_tag;
-	@Column(name = "cfDCTrans", unique = false, nullable = false )
+	@Column(name = "cfDCTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_dc_translation;
-	@Column(name = "cfDCValue", unique = false, nullable = false )
+	@Column(name = "cfDCValue", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_dc_value;
-	@Column(name = "cfFDCStartDateTime", unique = false, nullable = false )
+	@Column(name = "cfFDCStartDateTime", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_formalised_dc_start_date_time;
-	@Column(name = "cfFDCEndDateTime", unique = false, nullable = false )
+	@Column(name = "cfFDCEndDateTime", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_formalised_dc_end_date_time;
-	@Column(name = "cfFDCPrecision", unique = false, nullable = false )
+	@Column(name = "cfFDCPrecision", unique = false, nullable = false , length = 12, precision = 6,columnDefinition = "DECIMAL")
 	private java.math.BigDecimal a_formalised_dc_precision;
 	@ManyToOne
 	@JoinColumn(name="cfdccoveragetemporal_dublinCore", referencedColumnName="ID",  nullable = true)

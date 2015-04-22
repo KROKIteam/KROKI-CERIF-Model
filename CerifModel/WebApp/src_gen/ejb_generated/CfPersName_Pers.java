@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_PERSON_NAME__PERSON")
+@Table(name = "C1_PERSON_NAME__PERSON")
 public class CfPersName_Pers implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,9 +38,9 @@ public class CfPersName_Pers implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfStartDate", unique = false, nullable = false )
+	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_start_date;
-	@Column(name = "cfEndDate", unique = false, nullable = false )
+	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_end_date;
 	@ManyToOne
 	@JoinColumn(name="cfpersname_pers_classification", referencedColumnName="ID",  nullable = true)

@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_MEASUREMENT")
+@Table(name = "C1_MEASUREMENT")
 public class CfMeas implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,25 +38,25 @@ public class CfMeas implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfMeasId", unique = false, nullable = false )
+	@Column(name = "cfMeasId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_measurement_identifier;
-	@Column(name = "cfCountInt", unique = false, nullable = false )
+	@Column(name = "cfCountInt", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_count_integer;
-	@Column(name = "cfValFloatP", unique = false, nullable = false )
+	@Column(name = "cfValFloatP", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_value_floating_point;
-	@Column(name = "cfValJudgeNum", unique = false, nullable = false )
+	@Column(name = "cfValJudgeNum", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_value_judgemental_numeric;
-	@Column(name = "cfCountIntChange", unique = false, nullable = false )
+	@Column(name = "cfCountIntChange", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_count_integer_change;
-	@Column(name = "cfCountFloatPChange", unique = false, nullable = false )
+	@Column(name = "cfCountFloatPChange", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_count_floating_point_change;
-	@Column(name = "cfValJudgeNumChange", unique = false, nullable = false )
+	@Column(name = "cfValJudgeNumChange", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_value_judgemental_numeric_change;
-	@Column(name = "cfValJudgeText", unique = false, nullable = false )
+	@Column(name = "cfValJudgeText", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_value_judgemental_text;
-	@Column(name = "cfValJudgeTextChange", unique = false, nullable = false )
+	@Column(name = "cfValJudgeTextChange", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_value_judgemental_text_change;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_meas_measurement")
 	private Set<CfEquip_Meas> cfequip_meas_measurementSet;

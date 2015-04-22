@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_FUNDING")
+@Table(name = "C1_FUNDING")
 public class CfFund implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,31 +38,34 @@ public class CfFund implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfFundId", unique = false, nullable = false )
+	@Column(name = "cfFundId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_funding_identifier;
-	@Column(name = "cfStartDate", unique = false, nullable = false )
+	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_start_date;
-	@Column(name = "cfEndDate", unique = false, nullable = false )
+	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_end_date;
-	@Column(name = "cfAcro", unique = false, nullable = false )
+	@Column(name = "cfAcro", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_acronym;
-	@Column(name = "cfAmount", unique = false, nullable = false )
+	@Column(name = "cfAmount", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_amount;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
 	@ManyToOne
 	@JoinColumn(name="cffund_currency", referencedColumnName="ID",  nullable = true)
 	private CfCurrency cffund_currency;
+	@ManyToOne
+	@JoinColumn(name="cffund_fundingIntegrated", referencedColumnName="ID",  nullable = true)
+	private Fundingintegrated cffund_fundingIntegrated;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_fund_funding")
 	private Set<CfEquip_Fund> cfequip_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_fund_funding")
 	private Set<CfEvent_Fund> cfevent_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_fund_funding")
 	private Set<CfFacil_Fund> cffacil_fund_fundingSet;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_fund_funding1")
-	private Set<CfFund_Fund> cffund_fund_funding1Set;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_fund_funding2")
-	private Set<CfFund_Fund> cffund_fund_funding2Set;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_fund_funding")
+	private Set<CfFund_Fund> cffund_fund_fundingSet;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_fund_fundinga")
+	private Set<CfFund_Fund> cffund_fund_fundingaSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_class_funding")
 	private Set<CfFund_Class> cffund_class_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffunddescr_funding")
@@ -159,6 +162,14 @@ public class CfFund implements java.io.Serializable {
 		this.cffund_currency = cffund_currency;
 	}
 	
+	public Fundingintegrated getCffund_fundingIntegrated() {
+		return this.cffund_fundingIntegrated;
+	}
+	
+	public void setCffund_fundingIntegrated(Fundingintegrated cffund_fundingIntegrated) {
+		this.cffund_fundingIntegrated = cffund_fundingIntegrated;
+	}
+	
 	public Set<CfEquip_Fund> getCfequip_fund_fundingSet() {
 		return this.cfequip_fund_fundingSet;
 	}
@@ -183,20 +194,20 @@ public class CfFund implements java.io.Serializable {
 		this.cffacil_fund_fundingSet = cffacil_fund_fundingSet;
 	}
 	
-	public Set<CfFund_Fund> getCffund_fund_funding1Set() {
-		return this.cffund_fund_funding1Set;
+	public Set<CfFund_Fund> getCffund_fund_fundingSet() {
+		return this.cffund_fund_fundingSet;
 	}
 	
-	public void setCffund_fund_funding1Set(Set<CfFund_Fund> cffund_fund_funding1Set) {
-		this.cffund_fund_funding1Set = cffund_fund_funding1Set;
+	public void setCffund_fund_fundingSet(Set<CfFund_Fund> cffund_fund_fundingSet) {
+		this.cffund_fund_fundingSet = cffund_fund_fundingSet;
 	}
 	
-	public Set<CfFund_Fund> getCffund_fund_funding2Set() {
-		return this.cffund_fund_funding2Set;
+	public Set<CfFund_Fund> getCffund_fund_fundingaSet() {
+		return this.cffund_fund_fundingaSet;
 	}
 	
-	public void setCffund_fund_funding2Set(Set<CfFund_Fund> cffund_fund_funding2Set) {
-		this.cffund_fund_funding2Set = cffund_fund_funding2Set;
+	public void setCffund_fund_fundingaSet(Set<CfFund_Fund> cffund_fund_fundingaSet) {
+		this.cffund_fund_fundingaSet = cffund_fund_fundingaSet;
 	}
 	
 	public Set<CfFund_Class> getCffund_class_fundingSet() {

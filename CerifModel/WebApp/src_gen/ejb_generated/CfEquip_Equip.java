@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_EQUIPMENT_EQUIPMENT")
+@Table(name = "C1_EQUIPMENT_EQUIPMENT")
 public class CfEquip_Equip implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,21 +38,21 @@ public class CfEquip_Equip implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfStartDate", unique = false, nullable = false )
+	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_start_date;
-	@Column(name = "cfEndDate", unique = false, nullable = false )
+	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_end_date;
-	@Column(name = "cfFraction", unique = false, nullable = false )
+	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_fraction;
 	@ManyToOne
 	@JoinColumn(name="cfequip_equip_classification", referencedColumnName="ID",  nullable = true)
 	private CfClass cfequip_equip_classification;
 	@ManyToOne
-	@JoinColumn(name="cfequip_equip_equipment1", referencedColumnName="ID",  nullable = true)
-	private CfEquip cfequip_equip_equipment1;
+	@JoinColumn(name="cfequip_equip_equipment", referencedColumnName="ID",  nullable = true)
+	private CfEquip cfequip_equip_equipment;
 	@ManyToOne
-	@JoinColumn(name="cfequip_equip_equipment2", referencedColumnName="ID",  nullable = true)
-	private CfEquip cfequip_equip_equipment2;
+	@JoinColumn(name="cfequip_equip_equipmenta", referencedColumnName="ID",  nullable = true)
+	private CfEquip cfequip_equip_equipmenta;
 	
 	public CfEquip_Equip(){
 	}
@@ -97,20 +97,20 @@ public class CfEquip_Equip implements java.io.Serializable {
 		this.cfequip_equip_classification = cfequip_equip_classification;
 	}
 	
-	public CfEquip getCfequip_equip_equipment1() {
-		return this.cfequip_equip_equipment1;
+	public CfEquip getCfequip_equip_equipment() {
+		return this.cfequip_equip_equipment;
 	}
 	
-	public void setCfequip_equip_equipment1(CfEquip cfequip_equip_equipment1) {
-		this.cfequip_equip_equipment1 = cfequip_equip_equipment1;
+	public void setCfequip_equip_equipment(CfEquip cfequip_equip_equipment) {
+		this.cfequip_equip_equipment = cfequip_equip_equipment;
 	}
 	
-	public CfEquip getCfequip_equip_equipment2() {
-		return this.cfequip_equip_equipment2;
+	public CfEquip getCfequip_equip_equipmenta() {
+		return this.cfequip_equip_equipmenta;
 	}
 	
-	public void setCfequip_equip_equipment2(CfEquip cfequip_equip_equipment2) {
-		this.cfequip_equip_equipment2 = cfequip_equip_equipment2;
+	public void setCfequip_equip_equipmenta(CfEquip cfequip_equip_equipmenta) {
+		this.cfequip_equip_equipmenta = cfequip_equip_equipmenta;
 	}
 	
 }

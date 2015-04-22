@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_EXPERTISE_AND_SKILLS_DESCRIPTION")
+@Table(name = "C1_EXPERTISE_AND_SKILLS_DESCRIPTION")
 public class CfExpSkillsDescr implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,9 +38,7 @@ public class CfExpSkillsDescr implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfTrans", unique = false, nullable = false )
-	private java.lang.String a_translation_kind;
-	@Column(name = "cfDescr", unique = false, nullable = false )
+	@Column(name = "cfDescr", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_description;
 	@ManyToOne
 	@JoinColumn(name="cfexpskillsdescr_language", referencedColumnName="ID",  nullable = true)
@@ -48,6 +46,11 @@ public class CfExpSkillsDescr implements java.io.Serializable {
 	@ManyToOne
 	@JoinColumn(name="cfexpskillsdescr_expertiseAndSkills", referencedColumnName="ID",  nullable = true)
 	private CfExpSkills cfexpskillsdescr_expertiseAndSkills;
+	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
+	private java.lang.String a_translation_kind;
+	@ManyToOne
+	@JoinColumn(name="cfexpskillsdescr_expertiseAndSkillsIntegrated", referencedColumnName="ID",  nullable = true)
+	private Expertiseandskillsintegrated cfexpskillsdescr_expertiseAndSkillsIntegrated;
 	
 	public CfExpSkillsDescr(){
 	}
@@ -58,14 +61,6 @@ public class CfExpSkillsDescr implements java.io.Serializable {
 	
 	public void setId(Long id) {
 		this.id = id;
-	}
-	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
-	}
-	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
 	}
 	
 	public java.lang.String getA_description() {
@@ -90,6 +85,22 @@ public class CfExpSkillsDescr implements java.io.Serializable {
 	
 	public void setCfexpskillsdescr_expertiseAndSkills(CfExpSkills cfexpskillsdescr_expertiseAndSkills) {
 		this.cfexpskillsdescr_expertiseAndSkills = cfexpskillsdescr_expertiseAndSkills;
+	}
+	
+	public java.lang.String getA_translation_kind() {
+		return this.a_translation_kind;
+	}
+	
+	public void setA_translation_kind(java.lang.String a_translation_kind) {
+		this.a_translation_kind = a_translation_kind;
+	}
+	
+	public Expertiseandskillsintegrated getCfexpskillsdescr_expertiseAndSkillsIntegrated() {
+		return this.cfexpskillsdescr_expertiseAndSkillsIntegrated;
+	}
+	
+	public void setCfexpskillsdescr_expertiseAndSkillsIntegrated(Expertiseandskillsintegrated cfexpskillsdescr_expertiseAndSkillsIntegrated) {
+		this.cfexpskillsdescr_expertiseAndSkillsIntegrated = cfexpskillsdescr_expertiseAndSkillsIntegrated;
 	}
 	
 }

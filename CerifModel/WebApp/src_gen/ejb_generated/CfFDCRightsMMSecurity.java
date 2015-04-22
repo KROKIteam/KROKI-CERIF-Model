@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_FORMALISED_DUBLIN_CORE_RIGHTS_MANAGEMENT_SECURITY")
+@Table(name = "C1_FORMALISED_DUBLIN_CORE_RIGHTS_MANAGEMENT_SECURITY")
 public class CfFDCRightsMMSecurity implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,11 +38,11 @@ public class CfFDCRightsMMSecurity implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfDCLangTag", unique = false, nullable = false )
+	@Column(name = "cfDCLangTag", unique = false, nullable = false , length = 5, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_dc_language_tag;
-	@Column(name = "cfFDCTrans", unique = false, nullable = false )
+	@Column(name = "cfFDCTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_formalised_dublin_core_translation;
-	@Column(name = "cfFDCSecurityConstraint", unique = false, nullable = false )
+	@Column(name = "cfFDCSecurityConstraint", unique = false, nullable = false , length = 32, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_formalised_dc_security_constraint;
 	@ManyToOne
 	@JoinColumn(name="cffdcrightsmmsecurity_dublinCore", referencedColumnName="ID",  nullable = true)

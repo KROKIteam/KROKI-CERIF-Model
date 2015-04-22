@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_CLASSIFICATION")
+@Table(name = "C1_CLASSIFICATION")
 public class CfClass implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,13 +38,13 @@ public class CfClass implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfClassId", unique = false, nullable = false )
+	@Column(name = "cfClassId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_classification_identifier;
-	@Column(name = "cfStartDate", unique = false, nullable = false )
+	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_start_date;
-	@Column(name = "cfEndDate", unique = false, nullable = false )
+	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_end_date;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
 	@ManyToOne
 	@JoinColumn(name="cfclass_classificationScheme", referencedColumnName="ID",  nullable = true)
@@ -63,18 +63,16 @@ public class CfClass implements java.io.Serializable {
 	private Set<CfClassDef> cfclassdef_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassdescr_classification")
 	private Set<CfClassDescr> cfclassdescr_classificationSet;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassex_classification")
-	private Set<CfClassEx> cfclassex_classificationSet;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassscheme_classscheme_classification")
-	private Set<CfClassScheme_ClassScheme> cfclassscheme_classscheme_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassterm_classification")
 	private Set<CfClassTerm> cfclassterm_classificationSet;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassscheme_classscheme_classification")
+	private Set<CfClassScheme_ClassScheme> cfclassscheme_classscheme_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcountry_class_classification")
 	private Set<CfCountry_Class> cfcountry_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcurrency_class_classification")
 	private Set<CfCurrency_Class> cfcurrency_class_classificationSet;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcv_class_classification")
-	private Set<CfCV_Class> cfcv_class_classificationSet;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "fcv_class_classification")
+	private Set<FCV_Class> fcv_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfeaddr_class_classification")
 	private Set<CfEAddr_Class> cfeaddr_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_class_classification")
@@ -205,10 +203,6 @@ public class CfClass implements java.io.Serializable {
 	private Set<CfOrgUnit_ResPubl> cforgunit_respubl_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_srv_classification")
 	private Set<CfOrgUnit_Srv> cforgunit_srv_classificationSet;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpaddr_class_classification")
-	private Set<CfPAddr_Class> cfpaddr_class_classificationSet;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpaddr_geobbox_classification")
-	private Set<CfPAddr_GeoBBox> cfpaddr_geobbox_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_class_classification")
 	private Set<CfPers_Class> cfpers_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_country_classification")
@@ -257,6 +251,10 @@ public class CfClass implements java.io.Serializable {
 	private Set<CfPers_ResPubl> cfpers_respubl_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_srv_classification")
 	private Set<CfPers_Srv> cfpers_srv_classificationSet;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpaddr_class_classification")
+	private Set<CfPAddr_Class> cfpaddr_class_classificationSet;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpaddr_geobbox_classification")
+	private Set<CfPAddr_GeoBBox> cfpaddr_geobbox_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprize_class_classification")
 	private Set<CfPrize_Class> cfprize_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_proj_classification")
@@ -487,12 +485,12 @@ public class CfClass implements java.io.Serializable {
 		this.cfclassdescr_classificationSet = cfclassdescr_classificationSet;
 	}
 	
-	public Set<CfClassEx> getCfclassex_classificationSet() {
-		return this.cfclassex_classificationSet;
+	public Set<CfClassTerm> getCfclassterm_classificationSet() {
+		return this.cfclassterm_classificationSet;
 	}
 	
-	public void setCfclassex_classificationSet(Set<CfClassEx> cfclassex_classificationSet) {
-		this.cfclassex_classificationSet = cfclassex_classificationSet;
+	public void setCfclassterm_classificationSet(Set<CfClassTerm> cfclassterm_classificationSet) {
+		this.cfclassterm_classificationSet = cfclassterm_classificationSet;
 	}
 	
 	public Set<CfClassScheme_ClassScheme> getCfclassscheme_classscheme_classificationSet() {
@@ -501,14 +499,6 @@ public class CfClass implements java.io.Serializable {
 	
 	public void setCfclassscheme_classscheme_classificationSet(Set<CfClassScheme_ClassScheme> cfclassscheme_classscheme_classificationSet) {
 		this.cfclassscheme_classscheme_classificationSet = cfclassscheme_classscheme_classificationSet;
-	}
-	
-	public Set<CfClassTerm> getCfclassterm_classificationSet() {
-		return this.cfclassterm_classificationSet;
-	}
-	
-	public void setCfclassterm_classificationSet(Set<CfClassTerm> cfclassterm_classificationSet) {
-		this.cfclassterm_classificationSet = cfclassterm_classificationSet;
 	}
 	
 	public Set<CfCountry_Class> getCfcountry_class_classificationSet() {
@@ -527,12 +517,12 @@ public class CfClass implements java.io.Serializable {
 		this.cfcurrency_class_classificationSet = cfcurrency_class_classificationSet;
 	}
 	
-	public Set<CfCV_Class> getCfcv_class_classificationSet() {
-		return this.cfcv_class_classificationSet;
+	public Set<FCV_Class> getFcv_class_classificationSet() {
+		return this.fcv_class_classificationSet;
 	}
 	
-	public void setCfcv_class_classificationSet(Set<CfCV_Class> cfcv_class_classificationSet) {
-		this.cfcv_class_classificationSet = cfcv_class_classificationSet;
+	public void setFcv_class_classificationSet(Set<FCV_Class> fcv_class_classificationSet) {
+		this.fcv_class_classificationSet = fcv_class_classificationSet;
 	}
 	
 	public Set<CfEAddr_Class> getCfeaddr_class_classificationSet() {
@@ -1055,22 +1045,6 @@ public class CfClass implements java.io.Serializable {
 		this.cforgunit_srv_classificationSet = cforgunit_srv_classificationSet;
 	}
 	
-	public Set<CfPAddr_Class> getCfpaddr_class_classificationSet() {
-		return this.cfpaddr_class_classificationSet;
-	}
-	
-	public void setCfpaddr_class_classificationSet(Set<CfPAddr_Class> cfpaddr_class_classificationSet) {
-		this.cfpaddr_class_classificationSet = cfpaddr_class_classificationSet;
-	}
-	
-	public Set<CfPAddr_GeoBBox> getCfpaddr_geobbox_classificationSet() {
-		return this.cfpaddr_geobbox_classificationSet;
-	}
-	
-	public void setCfpaddr_geobbox_classificationSet(Set<CfPAddr_GeoBBox> cfpaddr_geobbox_classificationSet) {
-		this.cfpaddr_geobbox_classificationSet = cfpaddr_geobbox_classificationSet;
-	}
-	
 	public Set<CfPers_Class> getCfpers_class_classificationSet() {
 		return this.cfpers_class_classificationSet;
 	}
@@ -1261,6 +1235,22 @@ public class CfClass implements java.io.Serializable {
 	
 	public void setCfpers_srv_classificationSet(Set<CfPers_Srv> cfpers_srv_classificationSet) {
 		this.cfpers_srv_classificationSet = cfpers_srv_classificationSet;
+	}
+	
+	public Set<CfPAddr_Class> getCfpaddr_class_classificationSet() {
+		return this.cfpaddr_class_classificationSet;
+	}
+	
+	public void setCfpaddr_class_classificationSet(Set<CfPAddr_Class> cfpaddr_class_classificationSet) {
+		this.cfpaddr_class_classificationSet = cfpaddr_class_classificationSet;
+	}
+	
+	public Set<CfPAddr_GeoBBox> getCfpaddr_geobbox_classificationSet() {
+		return this.cfpaddr_geobbox_classificationSet;
+	}
+	
+	public void setCfpaddr_geobbox_classificationSet(Set<CfPAddr_GeoBBox> cfpaddr_geobbox_classificationSet) {
+		this.cfpaddr_geobbox_classificationSet = cfpaddr_geobbox_classificationSet;
 	}
 	
 	public Set<CfPrize_Class> getCfprize_class_classificationSet() {

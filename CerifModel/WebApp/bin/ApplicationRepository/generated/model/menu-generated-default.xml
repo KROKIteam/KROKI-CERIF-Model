@@ -4,7 +4,7 @@
 <roles/>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
-<submenu_name>Citation</submenu_name>
+<submenu_name>Cite</submenu_name>
 <menu_item>
 <menu_name>Citation</menu_name>
 <form_name>Citation</form_name>
@@ -35,6 +35,12 @@
 <activate>cfcitetitle_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
+<menu_item>
+<menu_name>Citation integrated</menu_name>
+<form_name>Citation integrated</form_name>
+<activate>Citation_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
+</menu_item>
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
@@ -64,11 +70,21 @@
 <panel_type>standard-panel</panel_type>
 </menu_item>
 <menu_item>
-<menu_name>Classification Example</menu_name>
-<form_name>Classification Example</form_name>
-<activate>cfclassex_st</activate>
+<menu_name>Classification Term</menu_name>
+<form_name>Classification Term</form_name>
+<activate>cfclassterm_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
+<menu_item>
+<menu_name>Clasification integrated</menu_name>
+<form_name>Clasification integrated</form_name>
+<activate>Clasification_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
+</menu_item>
+</submenu>
+<submenu>
+<submenu_parent>Menu</submenu_parent>
+<submenu_name>Classification scheme description</submenu_name>
 <menu_item>
 <menu_name>Classification Scheme</menu_name>
 <form_name>Classification Scheme</form_name>
@@ -94,10 +110,10 @@
 <panel_type>standard-panel</panel_type>
 </menu_item>
 <menu_item>
-<menu_name>Classification Term</menu_name>
-<form_name>Classification Term</form_name>
-<activate>cfclassterm_st</activate>
-<panel_type>standard-panel</panel_type>
+<menu_name>Clasification scheme integrated</menu_name>
+<form_name>Clasification scheme integrated</form_name>
+<activate>Clasification_scheme_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
 </menu_item>
 </submenu>
 <submenu>
@@ -120,6 +136,12 @@
 <form_name>Country Name</form_name>
 <activate>cfcountryname_st</activate>
 <panel_type>standard-panel</panel_type>
+</menu_item>
+<menu_item>
+<menu_name>Country integrated</menu_name>
+<form_name>Country integrated</form_name>
+<activate>Country_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
 </menu_item>
 </submenu>
 <submenu>
@@ -149,10 +171,16 @@
 <activate>cfcurrencyname_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
+<menu_item>
+<menu_name>Currency integrated</menu_name>
+<form_name>Currency integrated</form_name>
+<activate>Currency_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
+</menu_item>
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
-<submenu_name>Curriculum Vitae</submenu_name>
+<submenu_name>Curriculum vitae</submenu_name>
 <menu_item>
 <menu_name>Curriculum Vitae</menu_name>
 <form_name>Curriculum Vitae</form_name>
@@ -162,13 +190,13 @@
 <menu_item>
 <menu_name>Curriculum Vitae - Classification</menu_name>
 <form_name>Curriculum Vitae - Classification</form_name>
-<activate>cfcv_class_st</activate>
+<activate>fcv_class_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
-<submenu_name>Doublin Core</submenu_name>
+<submenu_name>Doublin core</submenu_name>
 <menu_item>
 <menu_name>Dublin Core</menu_name>
 <form_name>Dublin Core</form_name>
@@ -310,7 +338,7 @@
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
-<submenu_name>Electronic Address</submenu_name>
+<submenu_name>Electronic address</submenu_name>
 <menu_item>
 <menu_name>Electronic Address</menu_name>
 <form_name>Electronic Address</form_name>
@@ -405,6 +433,12 @@
 <activate>cfequip_srv_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
+<menu_item>
+<menu_name>Equipment integrated</menu_name>
+<form_name>Equipment integrated</form_name>
+<activate>Equipment_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
+</menu_item>
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
@@ -469,10 +503,16 @@
 <activate>cfeventname_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
+<menu_item>
+<menu_name>Event integrated</menu_name>
+<form_name>Event integrated</form_name>
+<activate>Event_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
+</menu_item>
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
-<submenu_name>Expertise And Skills</submenu_name>
+<submenu_name>Expertise and skills</submenu_name>
 <menu_item>
 <menu_name>Expertise And Skills</menu_name>
 <form_name>Expertise And Skills</form_name>
@@ -492,6 +532,12 @@
 <panel_type>standard-panel</panel_type>
 </menu_item>
 <menu_item>
+<menu_name>Expertise and skills integrated</menu_name>
+<form_name>Expertise and skills integrated</form_name>
+<activate>expertiseandskillsintegrated_st</activate>
+<panel_type>standard-panel</panel_type>
+</menu_item>
+<menu_item>
 <menu_name>Expertise And Skills Keywords</menu_name>
 <form_name>Expertise And Skills Keywords</form_name>
 <activate>cfexpskillskeyw_st</activate>
@@ -501,34 +547,6 @@
 <menu_name>Expertise And Skills Name</menu_name>
 <form_name>Expertise And Skills Name</form_name>
 <activate>cfexpskillsname_st</activate>
-<panel_type>standard-panel</panel_type>
-</menu_item>
-</submenu>
-<submenu>
-<submenu_parent>Menu</submenu_parent>
-<submenu_name>Formalised Dublin Core Rights</submenu_name>
-<menu_item>
-<menu_name>Formalised Dublin Core Rights Management Pricing</menu_name>
-<form_name>Formalised Dublin Core Rights Management Pricing</form_name>
-<activate>cffdcrightsmmpricing_st</activate>
-<panel_type>standard-panel</panel_type>
-</menu_item>
-<menu_item>
-<menu_name>Formalised Dublin Core Rights Management Privacy</menu_name>
-<form_name>Formalised Dublin Core Rights Management Privacy</form_name>
-<activate>cffdcrightsmmprivacy_st</activate>
-<panel_type>standard-panel</panel_type>
-</menu_item>
-<menu_item>
-<menu_name>Formalised Dublin Core Rights Management Rights</menu_name>
-<form_name>Formalised Dublin Core Rights Management Rights</form_name>
-<activate>cffdcrightsmmrights_st</activate>
-<panel_type>standard-panel</panel_type>
-</menu_item>
-<menu_item>
-<menu_name>Formalised Dublin Core Rights Management Security</menu_name>
-<form_name>Formalised Dublin Core Rights Management Security</form_name>
-<activate>cffdcrightsmmsecurity_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
 </submenu>
@@ -619,10 +637,16 @@
 <activate>cffacil_srv_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
+<menu_item>
+<menu_name>Facility integrated</menu_name>
+<form_name>Facility integrated</form_name>
+<activate>Facility_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
+</menu_item>
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
-<submenu_name>Federated Identifier</submenu_name>
+<submenu_name>Federated identifier</submenu_name>
 <menu_item>
 <menu_name>Federated Identifier</menu_name>
 <form_name>Federated Identifier</form_name>
@@ -633,6 +657,34 @@
 <menu_name>Federated Identifier Classification</menu_name>
 <form_name>Federated Identifier Classification</form_name>
 <activate>cffedid_class_st</activate>
+<panel_type>standard-panel</panel_type>
+</menu_item>
+</submenu>
+<submenu>
+<submenu_parent>Menu</submenu_parent>
+<submenu_name>Formalised dublin core rights</submenu_name>
+<menu_item>
+<menu_name>Formalised Dublin Core Rights Management Pricing</menu_name>
+<form_name>Formalised Dublin Core Rights Management Pricing</form_name>
+<activate>cffdcrightsmmpricing_st</activate>
+<panel_type>standard-panel</panel_type>
+</menu_item>
+<menu_item>
+<menu_name>Formalised Dublin Core Rights Management Privacy</menu_name>
+<form_name>Formalised Dublin Core Rights Management Privacy</form_name>
+<activate>cffdcrightsmmprivacy_st</activate>
+<panel_type>standard-panel</panel_type>
+</menu_item>
+<menu_item>
+<menu_name>Formalised Dublin Core Rights Management Rights</menu_name>
+<form_name>Formalised Dublin Core Rights Management Rights</form_name>
+<activate>cffdcrightsmmrights_st</activate>
+<panel_type>standard-panel</panel_type>
+</menu_item>
+<menu_item>
+<menu_name>Formalised Dublin Core Rights Management Security</menu_name>
+<form_name>Formalised Dublin Core Rights Management Security</form_name>
+<activate>cffdcrightsmmsecurity_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
 </submenu>
@@ -670,6 +722,12 @@
 <panel_type>standard-panel</panel_type>
 </menu_item>
 <menu_item>
+<menu_name>Funding integrated</menu_name>
+<form_name>Funding integrated</form_name>
+<activate>fundingintegrated_st</activate>
+<panel_type>standard-panel</panel_type>
+</menu_item>
+<menu_item>
 <menu_name>Funding Keywords</menu_name>
 <form_name>Funding Keywords</form_name>
 <activate>cffundkeyw_st</activate>
@@ -690,7 +748,7 @@
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
-<submenu_name>Geographic Bounding Box</submenu_name>
+<submenu_name>Geographic bounding box</submenu_name>
 <menu_item>
 <menu_name>Geographic Bounding Box</menu_name>
 <form_name>Geographic Bounding Box</form_name>
@@ -726,6 +784,12 @@
 <form_name>Geographic Bounding Box Name</form_name>
 <activate>cfgeobboxname_st</activate>
 <panel_type>standard-panel</panel_type>
+</menu_item>
+<menu_item>
+<menu_name>Geographic bounding box integrated</menu_name>
+<form_name>Geographic bounding box integrated</form_name>
+<activate>Geographic_bounding_box_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
 </menu_item>
 </submenu>
 <submenu>
@@ -772,6 +836,12 @@
 <form_name>Indicator Name</form_name>
 <activate>cfindicname_st</activate>
 <panel_type>standard-panel</panel_type>
+</menu_item>
+<menu_item>
+<menu_name>Indicator integrated</menu_name>
+<form_name>Indicator integrated</form_name>
+<activate>Indicator_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
 </menu_item>
 </submenu>
 <submenu>
@@ -835,6 +905,12 @@
 <activate>cfmeasname_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
+<menu_item>
+<menu_name>Measurement integrated</menu_name>
+<form_name>Measurement integrated</form_name>
+<activate>Measurement_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
+</menu_item>
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
@@ -893,6 +969,12 @@
 <activate>cfmediumtitle_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
+<menu_item>
+<menu_name>Medium integrated</menu_name>
+<form_name>Medium integrated</form_name>
+<activate>Medium_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
+</menu_item>
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
@@ -927,10 +1009,16 @@
 <activate>cfmetricsname_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
+<menu_item>
+<menu_name>Metrics integrated</menu_name>
+<form_name>Metrics integrated</form_name>
+<activate>Metrics_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
+</menu_item>
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
-<submenu_name>Organisation Unit</submenu_name>
+<submenu_name>Organisation unit</submenu_name>
 <menu_item>
 <menu_name>Organisation Unit</menu_name>
 <form_name>Organisation Unit</form_name>
@@ -1061,28 +1149,6 @@
 <menu_name>Organisation Unit Service</menu_name>
 <form_name>Organisation Unit Service</form_name>
 <activate>cforgunit_srv_st</activate>
-<panel_type>standard-panel</panel_type>
-</menu_item>
-</submenu>
-<submenu>
-<submenu_parent>Menu</submenu_parent>
-<submenu_name>Post Address</submenu_name>
-<menu_item>
-<menu_name>Post Address</menu_name>
-<form_name>Post Address</form_name>
-<activate>cfpaddr_st</activate>
-<panel_type>standard-panel</panel_type>
-</menu_item>
-<menu_item>
-<menu_name>Post Address Classification</menu_name>
-<form_name>Post Address Classification</form_name>
-<activate>cfpaddr_class_st</activate>
-<panel_type>standard-panel</panel_type>
-</menu_item>
-<menu_item>
-<menu_name>Post Address Geographic Bounding Box</menu_name>
-<form_name>Post Address Geographic Bounding Box</form_name>
-<activate>cfpaddr_geobbox_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
 </submenu>
@@ -1257,10 +1323,38 @@
 <activate>cfpers_srv_st</activate>
 <panel_type>standard-panel</panel_type>
 </menu_item>
+<menu_item>
+<menu_name>Person integrated</menu_name>
+<form_name>Person integrated</form_name>
+<activate>Person_integrated_pc</activate>
+<panel_type>parent-child</panel_type>
+</menu_item>
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
-<submenu_name>Prize Award</submenu_name>
+<submenu_name>Post address</submenu_name>
+<menu_item>
+<menu_name>Post Address</menu_name>
+<form_name>Post Address</form_name>
+<activate>cfpaddr_st</activate>
+<panel_type>standard-panel</panel_type>
+</menu_item>
+<menu_item>
+<menu_name>Post Address Classification</menu_name>
+<form_name>Post Address Classification</form_name>
+<activate>cfpaddr_class_st</activate>
+<panel_type>standard-panel</panel_type>
+</menu_item>
+<menu_item>
+<menu_name>Post Address Geographic Bounding Box</menu_name>
+<form_name>Post Address Geographic Bounding Box</form_name>
+<activate>cfpaddr_geobbox_st</activate>
+<panel_type>standard-panel</panel_type>
+</menu_item>
+</submenu>
+<submenu>
+<submenu_parent>Menu</submenu_parent>
+<submenu_name>Prize award</submenu_name>
 <menu_item>
 <menu_name>Prize Award</menu_name>
 <form_name>Prize Award</form_name>
@@ -1458,7 +1552,7 @@
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
-<submenu_name>Result Patent</submenu_name>
+<submenu_name>Result patent</submenu_name>
 <menu_item>
 <menu_name>Result Patent</menu_name>
 <form_name>Result Patent</form_name>
@@ -1546,7 +1640,7 @@
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
-<submenu_name>Result Product</submenu_name>
+<submenu_name>Result product</submenu_name>
 <menu_item>
 <menu_name>Result Product</menu_name>
 <form_name>Result Product</form_name>
@@ -1634,7 +1728,7 @@
 </submenu>
 <submenu>
 <submenu_parent>Menu</submenu_parent>
-<submenu_name>Result Publication</submenu_name>
+<submenu_name>Result publication</submenu_name>
 <menu_item>
 <menu_name>Result Publication</menu_name>
 <form_name>Result Publication</form_name>

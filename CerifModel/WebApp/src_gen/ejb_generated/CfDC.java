@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_DUBLIN_CORE")
+@Table(name = "C1_DUBLIN_CORE")
 public class CfDC implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,11 +38,11 @@ public class CfDC implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfDCId", unique = false, nullable = false )
+	@Column(name = "cfDCId", unique = false, nullable = false , length = 32, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_dc_identifier;
-	@Column(name = "cfDCScheme", unique = false, nullable = false )
+	@Column(name = "cfDCScheme", unique = false, nullable = false , length = 32, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_dc_scheme;
-	@Column(name = "cfDCSchemeURI", unique = false, nullable = false )
+	@Column(name = "cfDCSchemeURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_dc_scheme_uri;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcaudience_dublinCore")
 	private Set<CfDCAudience> cfdcaudience_dublinCoreSet;

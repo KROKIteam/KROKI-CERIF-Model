@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_ORGANISATION_UNIT")
+@Table(name = "C1_ORGANISATION_UNIT")
 public class CfOrgUnit implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,23 +38,23 @@ public class CfOrgUnit implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfOrgUnitId", unique = false, nullable = false )
+	@Column(name = "cfOrgUnitId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_orgisation_unit_identifier;
-	@Column(name = "cfAcro", unique = false, nullable = false )
+	@Column(name = "cfAcro", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_acronym;
-	@Column(name = "cfHeadcount", unique = false, nullable = false )
+	@Column(name = "cfHeadcount", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_headcount;
-	@Column(name = "cfTurn", unique = false, nullable = false )
+	@Column(name = "cfTurn", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_turnover;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
 	@ManyToOne
 	@JoinColumn(name="cforgunit_currency", referencedColumnName="ID",  nullable = true)
 	private CfCurrency cforgunit_currency;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_orgunit_organisationUnit")
-	private Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_organisationUnitSet;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_orgunit_organisationUnita")
-	private Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_organisationUnitaSet;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_orgunit_organisationUnit1")
+	private Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_organisationUnit1Set;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_orgunit_organisationUnit2")
+	private Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_organisationUnit2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_class_organisationUnit")
 	private Set<CfOrgUnit_Class> cforgunit_class_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_dc_organisationUnit")
@@ -159,20 +159,20 @@ public class CfOrgUnit implements java.io.Serializable {
 		this.cforgunit_currency = cforgunit_currency;
 	}
 	
-	public Set<CfOrgUnit_OrgUnit> getCforgunit_orgunit_organisationUnitSet() {
-		return this.cforgunit_orgunit_organisationUnitSet;
+	public Set<CfOrgUnit_OrgUnit> getCforgunit_orgunit_organisationUnit1Set() {
+		return this.cforgunit_orgunit_organisationUnit1Set;
 	}
 	
-	public void setCforgunit_orgunit_organisationUnitSet(Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_organisationUnitSet) {
-		this.cforgunit_orgunit_organisationUnitSet = cforgunit_orgunit_organisationUnitSet;
+	public void setCforgunit_orgunit_organisationUnit1Set(Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_organisationUnit1Set) {
+		this.cforgunit_orgunit_organisationUnit1Set = cforgunit_orgunit_organisationUnit1Set;
 	}
 	
-	public Set<CfOrgUnit_OrgUnit> getCforgunit_orgunit_organisationUnitaSet() {
-		return this.cforgunit_orgunit_organisationUnitaSet;
+	public Set<CfOrgUnit_OrgUnit> getCforgunit_orgunit_organisationUnit2Set() {
+		return this.cforgunit_orgunit_organisationUnit2Set;
 	}
 	
-	public void setCforgunit_orgunit_organisationUnitaSet(Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_organisationUnitaSet) {
-		this.cforgunit_orgunit_organisationUnitaSet = cforgunit_orgunit_organisationUnitaSet;
+	public void setCforgunit_orgunit_organisationUnit2Set(Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_organisationUnit2Set) {
+		this.cforgunit_orgunit_organisationUnit2Set = cforgunit_orgunit_organisationUnit2Set;
 	}
 	
 	public Set<CfOrgUnit_Class> getCforgunit_class_organisationUnitSet() {

@@ -2,10 +2,10 @@
 <entity class-name="ejb_generated.CfClass" label="Classification" name="CFCLASS">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_classification_identifier" hidden="false" key="false" label="Classification Identifier" length="0" name="a_classification_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_classification_identifier" hidden="false" key="false" label="Classification Identifier" length="128" name="a_classification_identifier" precision="0" type="java.lang.String"/>
 <column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
 <column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
-<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="0" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="128" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfClassScheme" field-name="cfclass_classificationScheme" label="Classification scheme" name="cfclass_classificationScheme" zoomed-by="id">
 <column-ref label="Classification scheme ID" name="id"/>
 </zoom-attribute>

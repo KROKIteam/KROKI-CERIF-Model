@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_PROJECT_FUNDING")
+@Table(name = "C1_PROJECT_FUNDING")
 public class CfProj_Fund implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,13 +38,13 @@ public class CfProj_Fund implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfStartDate", unique = false, nullable = false )
+	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_start_date;
-	@Column(name = "cfEndDate", unique = false, nullable = false )
+	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_end_date;
-	@Column(name = "cfFraction", unique = false, nullable = false )
+	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_fraction;
-	@Column(name = "cfAmount", unique = false, nullable = false )
+	@Column(name = "cfAmount", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_amount;
 	@ManyToOne
 	@JoinColumn(name="cfproj_fund_classification", referencedColumnName="ID",  nullable = true)

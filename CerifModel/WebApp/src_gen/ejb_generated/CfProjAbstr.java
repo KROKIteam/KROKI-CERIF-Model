@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_PROJECT_ABSTRACT")
+@Table(name = "C1_PROJECT_ABSTRACT")
 public class CfProjAbstr implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,16 +38,16 @@ public class CfProjAbstr implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfTrans", unique = false, nullable = false )
-	private java.lang.String a_translation_kind;
-	@Column(name = "cfAbstr", unique = false, nullable = false )
-	private java.lang.String a_abstract;
 	@ManyToOne
 	@JoinColumn(name="cfprojabstr_language", referencedColumnName="ID",  nullable = true)
 	private CfLang cfprojabstr_language;
 	@ManyToOne
 	@JoinColumn(name="cfprojabstr_project", referencedColumnName="ID",  nullable = true)
 	private CfProj cfprojabstr_project;
+	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
+	private java.lang.String a_translation_kind;
+	@Column(name = "cfAbstr", unique = false, nullable = false ,columnDefinition = "TEXT")
+	private java.lang.String a_abstract;
 	
 	public CfProjAbstr(){
 	}
@@ -58,22 +58,6 @@ public class CfProjAbstr implements java.io.Serializable {
 	
 	public void setId(Long id) {
 		this.id = id;
-	}
-	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
-	}
-	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
-	}
-	
-	public java.lang.String getA_abstract() {
-		return this.a_abstract;
-	}
-	
-	public void setA_abstract(java.lang.String a_abstract) {
-		this.a_abstract = a_abstract;
 	}
 	
 	public CfLang getCfprojabstr_language() {
@@ -90,6 +74,22 @@ public class CfProjAbstr implements java.io.Serializable {
 	
 	public void setCfprojabstr_project(CfProj cfprojabstr_project) {
 		this.cfprojabstr_project = cfprojabstr_project;
+	}
+	
+	public java.lang.String getA_translation_kind() {
+		return this.a_translation_kind;
+	}
+	
+	public void setA_translation_kind(java.lang.String a_translation_kind) {
+		this.a_translation_kind = a_translation_kind;
+	}
+	
+	public java.lang.String getA_abstract() {
+		return this.a_abstract;
+	}
+	
+	public void setA_abstract(java.lang.String a_abstract) {
+		this.a_abstract = a_abstract;
 	}
 	
 }

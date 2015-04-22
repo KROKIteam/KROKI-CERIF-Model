@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_PERSON_SERVICE")
+@Table(name = "C1_PERSON_SERVICE")
 public class CfPers_Srv implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,17 +38,17 @@ public class CfPers_Srv implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfStartDate", unique = false, nullable = false )
+	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_start_date;
-	@Column(name = "cfEndDate", unique = false, nullable = false )
+	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_end_date;
-	@Column(name = "cfFraction", unique = false, nullable = false )
+	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_fraction;
-	@Column(name = "cfConditions", unique = false, nullable = false )
+	@Column(name = "cfConditions", unique = false, nullable = false , length = 255, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_conditions;
-	@Column(name = "cfAvailability", unique = false, nullable = false )
+	@Column(name = "cfAvailability", unique = false, nullable = false , length = 64, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_availability;
-	@Column(name = "cfPrice", unique = false, nullable = false )
+	@Column(name = "cfPrice", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_price;
 	@ManyToOne
 	@JoinColumn(name="cfpers_srv_classification", referencedColumnName="ID",  nullable = true)

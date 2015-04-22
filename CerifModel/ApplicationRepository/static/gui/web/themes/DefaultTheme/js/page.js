@@ -288,7 +288,7 @@
 		//if the form that needs to ne displayed is parent-child form
 		//get containing panels with ajax call to /getInfo/panelName
 		//and get data for each form by envoking standard panel ajax call to server
-		if(panelType == "parent-child") {
+		if(panelType == "PARENTCHILDPANEL") {
 			//get JSON data from server
 			$.getJSON("/getInfo/" + resourceId, function(data) {
 				//Create <div> element for each contained panel
@@ -300,12 +300,19 @@
                     newStandardForm.addClass("standardForms");
                     newStandardForm.attr("data-activate", "/show/" + activate);
                     newStandardForm.attr("data-assocend", associationEnd);
-                    newStandardForm.css({"height": (90/data.panels.length) + "%"});
+                    newStandardForm.css({"height": (100/data.panels.length) + "%"});
                     newStandardForm.attr("data-resourceId", activate);
 
                     newWindowBody.append(newStandardForm);
                     loadDataToForm(newStandardForm, true, false);
                     updateBounds(newWindowBody);
+
+                    $(".datepicker").datepicker({
+                        changeMonth: true,
+                        changeYear:  true,
+                        dateFormat:  "dd.mm.yy.",
+                        yearRange:   "1900:2100"
+                    });
 
 					var newHeight = (data.panels.length) * 200;
 					if(newHeight < $("#container").height()) {
@@ -332,6 +339,7 @@
         }
 
         forms = newWindow.find("div.standardForms").length;
+
         if(forms > 2) {
             var newHeight = forms*200;
             if(newHeight < $("#container").height()) {
@@ -744,7 +752,8 @@
 				 */
 				newWindow = form.closest(".windows");
 		        var columns = newWindow.find("th").length;
-		        if(columns > 6) {
+		        var siblings = newWindow.find(".standardForms").length;
+                if(columns > 6) {
 		            var newWidth = columns*200;
 		            if(newWidth<$("#container").width()) {
 		                newWindow.width(newWidth);
@@ -758,6 +767,11 @@
 		               });
 		            }
 		        }
+
+                if(siblings > 1) {
+                    form.find(".operationsDiv").css("max-height", "100%");
+                }
+
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
         	   window.remove();

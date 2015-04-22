@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_SERVICE")
+@Table(name = "C1_SERVICE")
 public class CfSrv implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,11 +38,11 @@ public class CfSrv implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfSrvId", unique = false, nullable = false )
+	@Column(name = "cfSrvId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_service_identifier;
-	@Column(name = "cfAcro", unique = false, nullable = false )
+	@Column(name = "cfAcro", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_acronym;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_srv_service")
 	private Set<CfEquip_Srv> cfequip_srv_serviceSet;

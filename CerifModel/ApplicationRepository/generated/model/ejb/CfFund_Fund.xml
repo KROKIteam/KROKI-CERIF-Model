@@ -8,11 +8,11 @@
 <zoom-attribute class-name="ejb_generated.CfClass" field-name="cffund_fund_classification" label="Classification" name="cffund_fund_classification" zoomed-by="id">
 <column-ref label="Classification ID" name="id"/>
 </zoom-attribute>
-<zoom-attribute class-name="ejb_generated.CfFund" field-name="cffund_fund_funding1" label="Funding1" name="cffund_fund_funding1" zoomed-by="id">
-<column-ref label="Funding1 ID" name="id"/>
+<zoom-attribute class-name="ejb_generated.CfFund" field-name="cffund_fund_funding" label="Funding" name="cffund_fund_funding" zoomed-by="id">
+<column-ref label="Funding ID" name="id"/>
 </zoom-attribute>
-<zoom-attribute class-name="ejb_generated.CfFund" field-name="cffund_fund_funding2" label="Funding2" name="cffund_fund_funding2" zoomed-by="id">
-<column-ref label="Funding2 ID" name="id"/>
+<zoom-attribute class-name="ejb_generated.CfFund" field-name="cffund_fund_fundinga" label="Fundinga" name="cffund_fund_fundinga" zoomed-by="id">
+<column-ref label="Fundinga ID" name="id"/>
 </zoom-attribute>
 </attributes>
 </entity>

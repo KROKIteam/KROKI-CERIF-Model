@@ -2,8 +2,8 @@
 <entity class-name="ejb_generated.CfDC" label="Dublin Core" name="CFDC">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_dc_identifier" hidden="false" key="false" label="DC Identifier" length="0" name="a_dc_identifier" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_dc_scheme" hidden="false" key="false" label="DC Scheme" length="0" name="a_dc_scheme" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_dc_scheme_uri" hidden="false" key="false" label="DC Scheme URI" length="0" name="a_dc_scheme_uri" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_dc_identifier" hidden="false" key="false" label="DC Identifier" length="32" name="a_dc_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_dc_scheme" hidden="false" key="false" label="DC Scheme" length="32" name="a_dc_scheme" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_dc_scheme_uri" hidden="false" key="false" label="DC Scheme URI" length="128" name="a_dc_scheme_uri" precision="0" type="java.lang.String"/>
 </attributes>
 </entity>

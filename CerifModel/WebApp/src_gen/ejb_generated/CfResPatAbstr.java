@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_RESULT_PATENT_ABSTRACT")
+@Table(name = "C1_RESULT_PATENT_ABSTRACT")
 public class CfResPatAbstr implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,9 +38,9 @@ public class CfResPatAbstr implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfTrans", unique = false, nullable = false )
+	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_translation_kind;
-	@Column(name = "cfAbstr", unique = false, nullable = false )
+	@Column(name = "cfAbstr", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_abstract;
 	@ManyToOne
 	@JoinColumn(name="cfrespatabstr_language", referencedColumnName="ID",  nullable = true)

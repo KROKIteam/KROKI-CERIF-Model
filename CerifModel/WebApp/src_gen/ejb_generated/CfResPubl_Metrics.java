@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_RESULT_PUBLICATION_METRICS")
+@Table(name = "C1_RESULT_PUBLICATION_METRICS")
 public class CfResPubl_Metrics implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,15 +38,15 @@ public class CfResPubl_Metrics implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfStartDate", unique = false, nullable = false )
+	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_start_date;
-	@Column(name = "cfEndDate", unique = false, nullable = false )
+	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_end_date;
-	@Column(name = "cfFraction", unique = false, nullable = false )
+	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_fraction;
-	@Column(name = "cfYear", unique = false, nullable = false )
+	@Column(name = "cfYear", unique = false, nullable = false ,columnDefinition = "TEXT")
 	private java.lang.String a_year;
-	@Column(name = "cfCount", unique = false, nullable = false )
+	@Column(name = "cfCount", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_count;
 	@ManyToOne
 	@JoinColumn(name="cfrespubl_metrics_classification", referencedColumnName="ID",  nullable = true)

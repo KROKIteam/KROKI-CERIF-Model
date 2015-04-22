@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_SERVICE_FEDERATED_IDENTIFIER")
+@Table(name = "C1_SERVICE_FEDERATED_IDENTIFIER")
 public class CfSrv_FedId implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,11 +38,11 @@ public class CfSrv_FedId implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfStartDate", unique = false, nullable = false )
+	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_start_date;
-	@Column(name = "cEndDate", unique = false, nullable = false )
-	private java.util.Date a_c_end_date;
-	@Column(name = "cfFraction", unique = false, nullable = false )
+	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
+	private java.util.Date a_end_date;
+	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_fraction;
 	@ManyToOne
 	@JoinColumn(name="cfsrv_fedid_classification", referencedColumnName="ID",  nullable = true)
@@ -73,12 +73,12 @@ public class CfSrv_FedId implements java.io.Serializable {
 		this.a_start_date = a_start_date;
 	}
 	
-	public java.util.Date getA_c_end_date() {
-		return this.a_c_end_date;
+	public java.util.Date getA_end_date() {
+		return this.a_end_date;
 	}
 	
-	public void setA_c_end_date(java.util.Date a_c_end_date) {
-		this.a_c_end_date = a_c_end_date;
+	public void setA_end_date(java.util.Date a_end_date) {
+		this.a_end_date = a_end_date;
 	}
 	
 	public java.math.BigDecimal getA_fraction() {

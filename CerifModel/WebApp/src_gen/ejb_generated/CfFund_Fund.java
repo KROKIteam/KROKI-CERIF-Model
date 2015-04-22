@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_FUNDING__FUNDING")
+@Table(name = "C1_FUNDING__FUNDING")
 public class CfFund_Fund implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,21 +38,21 @@ public class CfFund_Fund implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfStartDate", unique = false, nullable = false )
+	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_start_date;
-	@Column(name = "cfEndDate", unique = false, nullable = false )
+	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_end_date;
-	@Column(name = "cfFraction", unique = false, nullable = false )
+	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
 	private java.math.BigDecimal a_fraction;
 	@ManyToOne
 	@JoinColumn(name="cffund_fund_classification", referencedColumnName="ID",  nullable = true)
 	private CfClass cffund_fund_classification;
 	@ManyToOne
-	@JoinColumn(name="cffund_fund_funding1", referencedColumnName="ID",  nullable = true)
-	private CfFund cffund_fund_funding1;
+	@JoinColumn(name="cffund_fund_funding", referencedColumnName="ID",  nullable = true)
+	private CfFund cffund_fund_funding;
 	@ManyToOne
-	@JoinColumn(name="cffund_fund_funding2", referencedColumnName="ID",  nullable = true)
-	private CfFund cffund_fund_funding2;
+	@JoinColumn(name="cffund_fund_fundinga", referencedColumnName="ID",  nullable = true)
+	private CfFund cffund_fund_fundinga;
 	
 	public CfFund_Fund(){
 	}
@@ -97,20 +97,20 @@ public class CfFund_Fund implements java.io.Serializable {
 		this.cffund_fund_classification = cffund_fund_classification;
 	}
 	
-	public CfFund getCffund_fund_funding1() {
-		return this.cffund_fund_funding1;
+	public CfFund getCffund_fund_funding() {
+		return this.cffund_fund_funding;
 	}
 	
-	public void setCffund_fund_funding1(CfFund cffund_fund_funding1) {
-		this.cffund_fund_funding1 = cffund_fund_funding1;
+	public void setCffund_fund_funding(CfFund cffund_fund_funding) {
+		this.cffund_fund_funding = cffund_fund_funding;
 	}
 	
-	public CfFund getCffund_fund_funding2() {
-		return this.cffund_fund_funding2;
+	public CfFund getCffund_fund_fundinga() {
+		return this.cffund_fund_fundinga;
 	}
 	
-	public void setCffund_fund_funding2(CfFund cffund_fund_funding2) {
-		this.cffund_fund_funding2 = cffund_fund_funding2;
+	public void setCffund_fund_fundinga(CfFund cffund_fund_fundinga) {
+		this.cffund_fund_fundinga = cffund_fund_fundinga;
 	}
 	
 }

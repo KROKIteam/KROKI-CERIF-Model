@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_COUNTRY")
+@Table(name = "C1_COUNTRY")
 public class CfCountry implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,9 +38,9 @@ public class CfCountry implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfCountryCode", unique = false, nullable = false )
+	@Column(name = "cfCountryCode", unique = false, nullable = false , length = 2, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_country_code;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcountry_class_country")
 	private Set<CfCountry_Class> cfcountry_class_countrySet;
@@ -48,10 +48,10 @@ public class CfCountry implements java.io.Serializable {
 	private Set<CfCountryName> cfcountryname_countrySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_country")
 	private Set<CfEvent> cfevent_countrySet;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpaddr_country")
-	private Set<CfPAddr> cfpaddr_countrySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_country_country")
 	private Set<CfPers_Country> cfpers_country_countrySet;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpaddr_country")
+	private Set<CfPAddr> cfpaddr_countrySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_country")
 	private Set<CfResPat> cfrespat_countrySet;
 	
@@ -106,20 +106,20 @@ public class CfCountry implements java.io.Serializable {
 		this.cfevent_countrySet = cfevent_countrySet;
 	}
 	
-	public Set<CfPAddr> getCfpaddr_countrySet() {
-		return this.cfpaddr_countrySet;
-	}
-	
-	public void setCfpaddr_countrySet(Set<CfPAddr> cfpaddr_countrySet) {
-		this.cfpaddr_countrySet = cfpaddr_countrySet;
-	}
-	
 	public Set<CfPers_Country> getCfpers_country_countrySet() {
 		return this.cfpers_country_countrySet;
 	}
 	
 	public void setCfpers_country_countrySet(Set<CfPers_Country> cfpers_country_countrySet) {
 		this.cfpers_country_countrySet = cfpers_country_countrySet;
+	}
+	
+	public Set<CfPAddr> getCfpaddr_countrySet() {
+		return this.cfpaddr_countrySet;
+	}
+	
+	public void setCfpaddr_countrySet(Set<CfPAddr> cfpaddr_countrySet) {
+		this.cfpaddr_countrySet = cfpaddr_countrySet;
 	}
 	
 	public Set<CfResPat> getCfrespat_countrySet() {

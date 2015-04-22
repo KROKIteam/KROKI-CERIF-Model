@@ -2,10 +2,10 @@
 <entity class-name="ejb_generated.CfMedium" label="Medium" name="CFMEDIUM">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_medium_identifier" hidden="false" key="false" label="Medium Identifier" length="0" name="a_medium_identifier" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_medium_creation_date" hidden="false" key="false" label="Medium Creation Date" length="0" name="a_medium_creation_date" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_medium_identifier" hidden="false" key="false" label="Medium Identifier" length="128" name="a_medium_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_medium_creation_date" hidden="false" key="false" label="Medium Creation Date" length="30" name="a_medium_creation_date" precision="0" type="java.lang.String"/>
 <column-attribute field-name="a_size" hidden="false" key="false" label="Size" length="0" name="a_size" precision="0" type="java.math.BigDecimal"/>
-<column-attribute field-name="a_mime_type" hidden="false" key="false" label="Mime Type" length="0" name="a_mime_type" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="0" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_mime_type" hidden="false" key="false" label="Mime Type" length="30" name="a_mime_type" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="128" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
 </attributes>
 </entity>

@@ -5,8 +5,8 @@
 <column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
 <column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
 <column-attribute field-name="a_fraction" hidden="false" key="false" label="Fraction" length="0" name="a_fraction" precision="0" type="java.math.BigDecimal"/>
-<column-attribute field-name="a_availability" hidden="false" key="false" label="Availability" length="0" name="a_availability" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_conditions" hidden="false" key="false" label="Conditions" length="0" name="a_conditions" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_availability" hidden="false" key="false" label="Availability" length="64" name="a_availability" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_conditions" hidden="false" key="false" label="Conditions" length="255" name="a_conditions" precision="0" type="java.lang.String"/>
 <column-attribute field-name="a_price" hidden="false" key="false" label="Price" length="0" name="a_price" precision="0" type="java.math.BigDecimal"/>
 <zoom-attribute class-name="ejb_generated.CfClass" field-name="cfpers_expskills_classification" label="Classification" name="cfpers_expskills_classification" zoomed-by="id">
 <column-ref label="Classification ID" name="id"/>

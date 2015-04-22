@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_PERSON")
+@Table(name = "C1_PERSON")
 public class CfPers implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,14 +38,14 @@ public class CfPers implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfPersId", unique = false, nullable = false )
+	@Column(name = "cfPersId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_person_identifier;
-	@Column(name = "cfBirthdate", unique = false, nullable = false )
+	@Column(name = "cfBirthdate", unique = false, nullable = false ,columnDefinition = "DATETIME")
 	private java.util.Date a_birthdate;
-	@Column(name = "cfGender", unique = false, nullable = false )
-	private java.lang.String a_gender;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
+	@Column(name = "cfGender", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
+	private java.lang.String a_gender;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_class_person")
 	private Set<CfPers_Class> cfpers_class_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_country_person")
@@ -130,20 +130,20 @@ public class CfPers implements java.io.Serializable {
 		this.a_birthdate = a_birthdate;
 	}
 	
-	public java.lang.String getA_gender() {
-		return this.a_gender;
-	}
-	
-	public void setA_gender(java.lang.String a_gender) {
-		this.a_gender = a_gender;
-	}
-	
 	public java.lang.String getA_uniform_resource_identifier() {
 		return this.a_uniform_resource_identifier;
 	}
 	
 	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
 		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	}
+	
+	public java.lang.String getA_gender() {
+		return this.a_gender;
+	}
+	
+	public void setA_gender(java.lang.String a_gender) {
+		this.a_gender = a_gender;
 	}
 	
 	public Set<CfPers_Class> getCfpers_class_personSet() {

@@ -2,7 +2,7 @@
 <entity class-name="ejb_generated.CfResPatAbstr" label="Result Patent Abstract" name="CFRESPATABSTR">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_translation_kind" hidden="false" key="false" label="Translation Kind" length="0" name="a_translation_kind" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_translation_kind" hidden="false" key="false" label="Translation Kind" length="1" name="a_translation_kind" precision="0" type="java.lang.String"/>
 <column-attribute field-name="a_abstract" hidden="false" key="false" label="Abstract" length="0" name="a_abstract" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfLang" field-name="cfrespatabstr_language" label="Language" name="cfrespatabstr_language" zoomed-by="id">
 <column-ref label="Language ID" name="id"/>

@@ -2,8 +2,8 @@
 <entity class-name="ejb_generated.CfFDCRightsMMPricing" label="Formalised Dublin Core Rights Management Pricing" name="CFFDCRIGHTSMMPRICING">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_dc_language_tag" hidden="false" key="false" label="DC Language Tag" length="0" name="a_dc_language_tag" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_formalised_dublin_core_translation" hidden="false" key="false" label="Formalised Dublin Core Translation" length="0" name="a_formalised_dublin_core_translation" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_dc_language_tag" hidden="false" key="false" label="DC Language Tag" length="5" name="a_dc_language_tag" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_formalised_dublin_core_translation" hidden="false" key="false" label="Formalised Dublin Core Translation" length="1" name="a_formalised_dublin_core_translation" precision="0" type="java.lang.String"/>
 <column-attribute field-name="a_formalised_dc_price_constraint" hidden="false" key="false" label="Formalised DC Price Constraint" length="0" name="a_formalised_dc_price_constraint" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfDC" field-name="cffdcrightsmmpricing_dublinCore" label="Dublin core" name="cffdcrightsmmpricing_dublinCore" zoomed-by="id">
 <column-ref label="Dublin core ID" name="id"/>

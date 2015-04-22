@@ -2,11 +2,11 @@
 <entity class-name="ejb_generated.CfResPublBiblNote" label="Result Publication Bibliographic Note" name="CFRESPUBLBIBLNOTE">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_language_code" hidden="false" key="false" label="Language Code" length="0" name="a_language_code" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_translation_kind" hidden="false" key="false" label="Translation Kind" length="0" name="a_translation_kind" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_bibliographic_note" hidden="false" key="false" label="Bibliographic Note" length="0" name="a_bibliographic_note" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_language_code" hidden="false" key="false" label="Language Code" length="5" name="a_language_code" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_bibliographic_note" hidden="false" key="false" label="Bibliographic Note" length="255" name="a_bibliographic_note" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfResPubl" field-name="cfrespublbiblnote_resultPublication" label="Result publication" name="cfrespublbiblnote_resultPublication" zoomed-by="id">
 <column-ref label="Result publication ID" name="id"/>
 </zoom-attribute>
+<column-attribute enum="TranslationKindResult_publication_bibliographic_noteEnum" field-name="a_translation_kind" hidden="false" key="false" label="Translation Kind" length="1" name="a_translation_kind" precision="0" type="java.lang.String"/>
 </attributes>
 </entity>

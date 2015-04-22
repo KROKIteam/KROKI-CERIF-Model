@@ -2,10 +2,9 @@
 <entity class-name="ejb_generated.CfClassTerm" label="Classification Term" name="CFCLASSTERM">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_translation_kind" hidden="false" key="false" label="Translation Kind" length="0" name="a_translation_kind" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_term" hidden="false" key="false" label="Term" length="0" name="a_term" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_role_expression" hidden="false" key="false" label="Role Expression" length="0" name="a_role_expression" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_role_expression_opposite" hidden="false" key="false" label="Role Expression Opposite" length="0" name="a_role_expression_opposite" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_term" hidden="false" key="false" label="Term" length="64" name="a_term" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_role_expression" hidden="false" key="false" label="Role Expression" length="128" name="a_role_expression" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_role_expression_opposite" hidden="false" key="false" label="Role Expression Opposite" length="128" name="a_role_expression_opposite" precision="0" type="java.lang.String"/>
 <column-attribute field-name="a_term_source" hidden="false" key="false" label="Term Source" length="0" name="a_term_source" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfLang" field-name="cfclassterm_language" label="Language" name="cfclassterm_language" zoomed-by="id">
 <column-ref label="Language ID" name="id"/>
@@ -13,5 +12,6 @@
 <zoom-attribute class-name="ejb_generated.CfClass" field-name="cfclassterm_classification" label="Classification" name="cfclassterm_classification" zoomed-by="id">
 <column-ref label="Classification ID" name="id"/>
 </zoom-attribute>
+<column-attribute enum="TranslationKindClassification_termEnum" field-name="a_translation_kind" hidden="false" key="false" label="Translation Kind" length="1" name="a_translation_kind" precision="0" type="java.lang.String"/>
 </attributes>
 </entity>

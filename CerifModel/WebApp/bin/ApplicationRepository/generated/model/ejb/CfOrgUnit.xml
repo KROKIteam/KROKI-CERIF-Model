@@ -2,11 +2,11 @@
 <entity class-name="ejb_generated.CfOrgUnit" label="Organisation Unit" name="CFORGUNIT">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_orgisation_unit_identifier" hidden="false" key="false" label="Orgisation Unit Identifier" length="0" name="a_orgisation_unit_identifier" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_acronym" hidden="false" key="false" label="Acronym" length="0" name="a_acronym" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_orgisation_unit_identifier" hidden="false" key="false" label="Orgisation Unit Identifier" length="128" name="a_orgisation_unit_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_acronym" hidden="false" key="false" label="Acronym" length="16" name="a_acronym" precision="0" type="java.lang.String"/>
 <column-attribute field-name="a_headcount" hidden="false" key="false" label="Headcount" length="0" name="a_headcount" precision="0" type="java.lang.String"/>
 <column-attribute field-name="a_turnover" hidden="false" key="false" label="Turnover" length="0" name="a_turnover" precision="0" type="java.math.BigDecimal"/>
-<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="0" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="128" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfCurrency" field-name="cforgunit_currency" label="Currency" name="cforgunit_currency" zoomed-by="id">
 <column-ref label="Currency ID" name="id"/>
 </zoom-attribute>

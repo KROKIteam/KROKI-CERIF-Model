@@ -24,11 +24,11 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 31.03.2015  10:28:05h
+   Creation date: 22.04.2015  15:41:53h
    **/
 
 @Entity
-@Table(name = "CM_LANGUAGE")
+@Table(name = "C1_LANGUAGE")
 public class CfLang implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -38,9 +38,9 @@ public class CfLang implements java.io.Serializable {
 	@Column(name = "ID", unique = true, nullable = false)
 	private java.lang.Long id;
 
-	@Column(name = "cfLangCode", unique = false, nullable = false )
+	@Column(name = "cfLangCode", unique = false, nullable = false , length = 5, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_language_code;
-	@Column(name = "cfURI", unique = false, nullable = false )
+	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
 	private java.lang.String a_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcitedescr_language")
 	private Set<CfCiteDescr> cfcitedescr_languageSet;
@@ -50,14 +50,12 @@ public class CfLang implements java.io.Serializable {
 	private Set<CfClassDef> cfclassdef_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassdescr_language")
 	private Set<CfClassDescr> cfclassdescr_languageSet;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassex_language")
-	private Set<CfClassEx> cfclassex_languageSet;
+	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassterm_language")
+	private Set<CfClassTerm> cfclassterm_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassschemedescr_language")
 	private Set<CfClassSchemeDescr> cfclassschemedescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassschemename_language")
 	private Set<CfClassSchemeName> cfclassschemename_languageSet;
-	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassterm_language")
-	private Set<CfClassTerm> cfclassterm_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcountryname_language")
 	private Set<CfCountryName> cfcountryname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcurrencyentname_language")
@@ -252,12 +250,12 @@ public class CfLang implements java.io.Serializable {
 		this.cfclassdescr_languageSet = cfclassdescr_languageSet;
 	}
 	
-	public Set<CfClassEx> getCfclassex_languageSet() {
-		return this.cfclassex_languageSet;
+	public Set<CfClassTerm> getCfclassterm_languageSet() {
+		return this.cfclassterm_languageSet;
 	}
 	
-	public void setCfclassex_languageSet(Set<CfClassEx> cfclassex_languageSet) {
-		this.cfclassex_languageSet = cfclassex_languageSet;
+	public void setCfclassterm_languageSet(Set<CfClassTerm> cfclassterm_languageSet) {
+		this.cfclassterm_languageSet = cfclassterm_languageSet;
 	}
 	
 	public Set<CfClassSchemeDescr> getCfclassschemedescr_languageSet() {
@@ -274,14 +272,6 @@ public class CfLang implements java.io.Serializable {
 	
 	public void setCfclassschemename_languageSet(Set<CfClassSchemeName> cfclassschemename_languageSet) {
 		this.cfclassschemename_languageSet = cfclassschemename_languageSet;
-	}
-	
-	public Set<CfClassTerm> getCfclassterm_languageSet() {
-		return this.cfclassterm_languageSet;
-	}
-	
-	public void setCfclassterm_languageSet(Set<CfClassTerm> cfclassterm_languageSet) {
-		this.cfclassterm_languageSet = cfclassterm_languageSet;
 	}
 	
 	public Set<CfCountryName> getCfcountryname_languageSet() {
