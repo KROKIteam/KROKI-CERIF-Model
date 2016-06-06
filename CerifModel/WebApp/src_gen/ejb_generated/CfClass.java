@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,347 +36,347 @@ public class CfClass implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfClassId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_classification_identifier;
+	protected java.lang.String ka_classification_identifier;
 	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_start_date;
+	protected java.util.Date ka_start_date;
 	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_end_date;
+	protected java.util.Date ka_end_date;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@ManyToOne
 	@JoinColumn(name="cfclass_classificationScheme", referencedColumnName="ID",  nullable = true)
-	private CfClassScheme cfclass_classificationScheme;
+	protected CfClassScheme cfclass_classificationScheme;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcite_class_classification")
-	private Set<CfCite_Class> cfcite_class_classificationSet;
+	protected Set<CfCite_Class> cfcite_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcite_medium_classification")
-	private Set<CfCite_Medium> cfcite_medium_classificationSet;
+	protected Set<CfCite_Medium> cfcite_medium_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclass_class_classification")
-	private Set<CfClass_Class> cfclass_class_classificationSet;
+	protected Set<CfClass_Class> cfclass_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclass_class_classification1")
-	private Set<CfClass_Class> cfclass_class_classification1Set;
+	protected Set<CfClass_Class> cfclass_class_classification1Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclass_class_classification2")
-	private Set<CfClass_Class> cfclass_class_classification2Set;
+	protected Set<CfClass_Class> cfclass_class_classification2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassdef_classification")
-	private Set<CfClassDef> cfclassdef_classificationSet;
+	protected Set<CfClassDef> cfclassdef_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassdescr_classification")
-	private Set<CfClassDescr> cfclassdescr_classificationSet;
+	protected Set<CfClassDescr> cfclassdescr_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassterm_classification")
-	private Set<CfClassTerm> cfclassterm_classificationSet;
+	protected Set<CfClassTerm> cfclassterm_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassscheme_classscheme_classification")
-	private Set<CfClassScheme_ClassScheme> cfclassscheme_classscheme_classificationSet;
+	protected Set<CfClassScheme_ClassScheme> cfclassscheme_classscheme_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcountry_class_classification")
-	private Set<CfCountry_Class> cfcountry_class_classificationSet;
+	protected Set<CfCountry_Class> cfcountry_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcurrency_class_classification")
-	private Set<CfCurrency_Class> cfcurrency_class_classificationSet;
+	protected Set<CfCurrency_Class> cfcurrency_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "fcv_class_classification")
-	private Set<FCV_Class> fcv_class_classificationSet;
+	protected Set<FCV_Class> fcv_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfeaddr_class_classification")
-	private Set<CfEAddr_Class> cfeaddr_class_classificationSet;
+	protected Set<CfEAddr_Class> cfeaddr_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_class_classification")
-	private Set<CfEquip_Class> cfequip_class_classificationSet;
+	protected Set<CfEquip_Class> cfequip_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_equip_classification")
-	private Set<CfEquip_Equip> cfequip_equip_classificationSet;
+	protected Set<CfEquip_Equip> cfequip_equip_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_event_classification")
-	private Set<CfEquip_Event> cfequip_event_classificationSet;
+	protected Set<CfEquip_Event> cfequip_event_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_fund_classification")
-	private Set<CfEquip_Fund> cfequip_fund_classificationSet;
+	protected Set<CfEquip_Fund> cfequip_fund_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_indic_classification")
-	private Set<CfEquip_Indic> cfequip_indic_classificationSet;
+	protected Set<CfEquip_Indic> cfequip_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_meas_classification")
-	private Set<CfEquip_Meas> cfequip_meas_classificationSet;
+	protected Set<CfEquip_Meas> cfequip_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_medium_classification")
-	private Set<CfEquip_Medium> cfequip_medium_classificationSet;
+	protected Set<CfEquip_Medium> cfequip_medium_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_paddr_classification")
-	private Set<CfEquip_PAddr> cfequip_paddr_classificationSet;
+	protected Set<CfEquip_PAddr> cfequip_paddr_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_srv_classification")
-	private Set<CfEquip_Srv> cfequip_srv_classificationSet;
+	protected Set<CfEquip_Srv> cfequip_srv_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_class_classification")
-	private Set<CfEvent_Class> cfevent_class_classificationSet;
+	protected Set<CfEvent_Class> cfevent_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_event_classification")
-	private Set<CfEvent_Event> cfevent_event_classificationSet;
+	protected Set<CfEvent_Event> cfevent_event_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_fund_classification")
-	private Set<CfEvent_Fund> cfevent_fund_classificationSet;
+	protected Set<CfEvent_Fund> cfevent_fund_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_indic_classification")
-	private Set<CfEvent_Indic> cfevent_indic_classificationSet;
+	protected Set<CfEvent_Indic> cfevent_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_meas_classification")
-	private Set<CfEvent_Meas> cfevent_meas_classificationSet;
+	protected Set<CfEvent_Meas> cfevent_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_medium_classification")
-	private Set<CfEvent_Medium> cfevent_medium_classificationSet;
+	protected Set<CfEvent_Medium> cfevent_medium_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskills_class_classification")
-	private Set<CfExpSkills_Class> cfexpskills_class_classificationSet;
+	protected Set<CfExpSkills_Class> cfexpskills_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_class_classification")
-	private Set<CfFacil_Class> cffacil_class_classificationSet;
+	protected Set<CfFacil_Class> cffacil_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_equip_classification")
-	private Set<CfFacil_Equip> cffacil_equip_classificationSet;
+	protected Set<CfFacil_Equip> cffacil_equip_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_event_classification")
-	private Set<CfFacil_Event> cffacil_event_classificationSet;
+	protected Set<CfFacil_Event> cffacil_event_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_facil_classification")
-	private Set<CfFacil_Facil> cffacil_facil_classificationSet;
+	protected Set<CfFacil_Facil> cffacil_facil_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_fund_classification")
-	private Set<CfFacil_Fund> cffacil_fund_classificationSet;
+	protected Set<CfFacil_Fund> cffacil_fund_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_indic_classification")
-	private Set<CfFacil_Indic> cffacil_indic_classificationSet;
+	protected Set<CfFacil_Indic> cffacil_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_meas_classification")
-	private Set<CfFacil_Meas> cffacil_meas_classificationSet;
+	protected Set<CfFacil_Meas> cffacil_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_medium_classification")
-	private Set<CfFacil_Medium> cffacil_medium_classificationSet;
+	protected Set<CfFacil_Medium> cffacil_medium_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_paddr_classification")
-	private Set<CfFacil_PAddr> cffacil_paddr_classificationSet;
+	protected Set<CfFacil_PAddr> cffacil_paddr_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_srv_classification")
-	private Set<CfFacil_Srv> cffacil_srv_classificationSet;
+	protected Set<CfFacil_Srv> cffacil_srv_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffedid_classification")
-	private Set<CfFedId> cffedid_classificationSet;
+	protected Set<CfFedId> cffedid_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffedid_class_classification")
-	private Set<CfFedId_Class> cffedid_class_classificationSet;
+	protected Set<CfFedId_Class> cffedid_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_fund_classification")
-	private Set<CfFund_Fund> cffund_fund_classificationSet;
+	protected Set<CfFund_Fund> cffund_fund_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_class_classification")
-	private Set<CfFund_Class> cffund_class_classificationSet;
+	protected Set<CfFund_Class> cffund_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_indic_classification")
-	private Set<CfFund_Indic> cffund_indic_classificationSet;
+	protected Set<CfFund_Indic> cffund_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_meas_classification")
-	private Set<CfFund_Meas> cffund_meas_classificationSet;
+	protected Set<CfFund_Meas> cffund_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfgeobbox_geobbox_classification")
-	private Set<CfGeoBBox_GeoBBox> cfgeobbox_geobbox_classificationSet;
+	protected Set<CfGeoBBox_GeoBBox> cfgeobbox_geobbox_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfgeobbox_class_classification")
-	private Set<CfGeoBBox_Class> cfgeobbox_class_classificationSet;
+	protected Set<CfGeoBBox_Class> cfgeobbox_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindic_indic_classification")
-	private Set<CfIndic_Indic> cfindic_indic_classificationSet;
+	protected Set<CfIndic_Indic> cfindic_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindic_class_classification")
-	private Set<CfIndic_Class> cfindic_class_classificationSet;
+	protected Set<CfIndic_Class> cfindic_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindic_meas_classification")
-	private Set<CfIndic_Meas> cfindic_meas_classificationSet;
+	protected Set<CfIndic_Meas> cfindic_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cflang_class_classification")
-	private Set<CfLang_Class> cflang_class_classificationSet;
+	protected Set<CfLang_Class> cflang_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmeas_meas_classification")
-	private Set<CfMeas_Meas> cfmeas_meas_classificationSet;
+	protected Set<CfMeas_Meas> cfmeas_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmeas_class_classification")
-	private Set<CfMeas_Class> cfmeas_class_classificationSet;
+	protected Set<CfMeas_Class> cfmeas_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_meas_classification")
-	private Set<CfMedium_Meas> cfmedium_meas_classificationSet;
+	protected Set<CfMedium_Meas> cfmedium_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_medium_classification")
-	private Set<CfMedium_Medium> cfmedium_medium_classificationSet;
+	protected Set<CfMedium_Medium> cfmedium_medium_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_class_classification")
-	private Set<CfMedium_Class> cfmedium_class_classificationSet;
+	protected Set<CfMedium_Class> cfmedium_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_fund_classification")
-	private Set<CfMedium_Fund> cfmedium_fund_classificationSet;
+	protected Set<CfMedium_Fund> cfmedium_fund_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_indic_classification")
-	private Set<CfMedium_Indic> cfmedium_indic_classificationSet;
+	protected Set<CfMedium_Indic> cfmedium_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmetrics_class_classification")
-	private Set<CfMetrics_Class> cfmetrics_class_classificationSet;
+	protected Set<CfMetrics_Class> cfmetrics_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_orgunit_classification")
-	private Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_classificationSet;
+	protected Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_class_classification")
-	private Set<CfOrgUnit_Class> cforgunit_class_classificationSet;
+	protected Set<CfOrgUnit_Class> cforgunit_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_dc_classification")
-	private Set<CfOrgUnit_DC> cforgunit_dc_classificationSet;
+	protected Set<CfOrgUnit_DC> cforgunit_dc_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_eaddr_classification")
-	private Set<CfOrgUnit_EAddr> cforgunit_eaddr_classificationSet;
+	protected Set<CfOrgUnit_EAddr> cforgunit_eaddr_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_equip_classification")
-	private Set<CfOrgUnit_Equip> cforgunit_equip_classificationSet;
+	protected Set<CfOrgUnit_Equip> cforgunit_equip_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_event_classification")
-	private Set<CfOrgUnit_Event> cforgunit_event_classificationSet;
+	protected Set<CfOrgUnit_Event> cforgunit_event_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_expskills_classification")
-	private Set<CfOrgUnit_ExpSkills> cforgunit_expskills_classificationSet;
+	protected Set<CfOrgUnit_ExpSkills> cforgunit_expskills_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_facil_classification")
-	private Set<CfOrgUnit_Facil> cforgunit_facil_classificationSet;
+	protected Set<CfOrgUnit_Facil> cforgunit_facil_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_fund_classification")
-	private Set<CfOrgUnit_Fund> cforgunit_fund_classificationSet;
+	protected Set<CfOrgUnit_Fund> cforgunit_fund_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_indic_classification")
-	private Set<CfOrgUnit_Indic> cforgunit_indic_classificationSet;
+	protected Set<CfOrgUnit_Indic> cforgunit_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_meas_classification")
-	private Set<CfOrgUnit_Meas> cforgunit_meas_classificationSet;
+	protected Set<CfOrgUnit_Meas> cforgunit_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_medium_classification")
-	private Set<CfOrgUnit_Medium> cforgunit_medium_classificationSet;
+	protected Set<CfOrgUnit_Medium> cforgunit_medium_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_paddr_classification")
-	private Set<CfOrgUnit_PAddr> cforgunit_paddr_classificationSet;
+	protected Set<CfOrgUnit_PAddr> cforgunit_paddr_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_prize_classification")
-	private Set<CfOrgUnit_Prize> cforgunit_prize_classificationSet;
+	protected Set<CfOrgUnit_Prize> cforgunit_prize_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_respat_classification")
-	private Set<CfOrgUnit_ResPat> cforgunit_respat_classificationSet;
+	protected Set<CfOrgUnit_ResPat> cforgunit_respat_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_resprod_classification")
-	private Set<CfOrgUnit_ResProd> cforgunit_resprod_classificationSet;
+	protected Set<CfOrgUnit_ResProd> cforgunit_resprod_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_respubl_classification")
-	private Set<CfOrgUnit_ResPubl> cforgunit_respubl_classificationSet;
+	protected Set<CfOrgUnit_ResPubl> cforgunit_respubl_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_srv_classification")
-	private Set<CfOrgUnit_Srv> cforgunit_srv_classificationSet;
+	protected Set<CfOrgUnit_Srv> cforgunit_srv_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_class_classification")
-	private Set<CfPers_Class> cfpers_class_classificationSet;
+	protected Set<CfPers_Class> cfpers_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_country_classification")
-	private Set<CfPers_Country> cfpers_country_classificationSet;
+	protected Set<CfPers_Country> cfpers_country_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_cv_classification")
-	private Set<CfPers_CV> cfpers_cv_classificationSet;
+	protected Set<CfPers_CV> cfpers_cv_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_dc_classification")
-	private Set<CfPers_DC> cfpers_dc_classificationSet;
+	protected Set<CfPers_DC> cfpers_dc_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_eaddr_classification")
-	private Set<CfPers_EAddr> cfpers_eaddr_classificationSet;
+	protected Set<CfPers_EAddr> cfpers_eaddr_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_equip_classification")
-	private Set<CfPers_Equip> cfpers_equip_classificationSet;
+	protected Set<CfPers_Equip> cfpers_equip_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_event_classification")
-	private Set<CfPers_Event> cfpers_event_classificationSet;
+	protected Set<CfPers_Event> cfpers_event_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_expskills_classification")
-	private Set<CfPers_ExpSkills> cfpers_expskills_classificationSet;
+	protected Set<CfPers_ExpSkills> cfpers_expskills_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_facil_classification")
-	private Set<CfPers_Facil> cfpers_facil_classificationSet;
+	protected Set<CfPers_Facil> cfpers_facil_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_fund_classification")
-	private Set<CfPers_Fund> cfpers_fund_classificationSet;
+	protected Set<CfPers_Fund> cfpers_fund_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_indic_classification")
-	private Set<CfPers_Indic> cfpers_indic_classificationSet;
+	protected Set<CfPers_Indic> cfpers_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_lang_classification")
-	private Set<CfPers_Lang> cfpers_lang_classificationSet;
+	protected Set<CfPers_Lang> cfpers_lang_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_meas_classification")
-	private Set<CfPers_Meas> cfpers_meas_classificationSet;
+	protected Set<CfPers_Meas> cfpers_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_medium_classification")
-	private Set<CfPers_Medium> cfpers_medium_classificationSet;
+	protected Set<CfPers_Medium> cfpers_medium_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpersname_pers_classification")
-	private Set<CfPersName_Pers> cfpersname_pers_classificationSet;
+	protected Set<CfPersName_Pers> cfpersname_pers_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_orgunit_classification")
-	private Set<CfPers_OrgUnit> cfpers_orgunit_classificationSet;
+	protected Set<CfPers_OrgUnit> cfpers_orgunit_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_pers_classification")
-	private Set<CfPers_Pers> cfpers_pers_classificationSet;
+	protected Set<CfPers_Pers> cfpers_pers_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_paddr_classification")
-	private Set<CfPers_PAddr> cfpers_paddr_classificationSet;
+	protected Set<CfPers_PAddr> cfpers_paddr_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_prize_classification")
-	private Set<CfPers_Prize> cfpers_prize_classificationSet;
+	protected Set<CfPers_Prize> cfpers_prize_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_qual_classification")
-	private Set<CfPers_Qual> cfpers_qual_classificationSet;
+	protected Set<CfPers_Qual> cfpers_qual_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_respat_classification")
-	private Set<CfPers_ResPat> cfpers_respat_classificationSet;
+	protected Set<CfPers_ResPat> cfpers_respat_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_resprod_classification")
-	private Set<CfPers_ResProd> cfpers_resprod_classificationSet;
+	protected Set<CfPers_ResProd> cfpers_resprod_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_respubl_classification")
-	private Set<CfPers_ResPubl> cfpers_respubl_classificationSet;
+	protected Set<CfPers_ResPubl> cfpers_respubl_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_srv_classification")
-	private Set<CfPers_Srv> cfpers_srv_classificationSet;
+	protected Set<CfPers_Srv> cfpers_srv_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpaddr_class_classification")
-	private Set<CfPAddr_Class> cfpaddr_class_classificationSet;
+	protected Set<CfPAddr_Class> cfpaddr_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpaddr_geobbox_classification")
-	private Set<CfPAddr_GeoBBox> cfpaddr_geobbox_classificationSet;
+	protected Set<CfPAddr_GeoBBox> cfpaddr_geobbox_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprize_class_classification")
-	private Set<CfPrize_Class> cfprize_class_classificationSet;
+	protected Set<CfPrize_Class> cfprize_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_proj_classification")
-	private Set<CfProj_Proj> cfproj_proj_classificationSet;
+	protected Set<CfProj_Proj> cfproj_proj_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_class_classification")
-	private Set<CfProj_Class> cfproj_class_classificationSet;
+	protected Set<CfProj_Class> cfproj_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_dc_classification")
-	private Set<CfProj_DC> cfproj_dc_classificationSet;
+	protected Set<CfProj_DC> cfproj_dc_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_equip_classification")
-	private Set<CfProj_Equip> cfproj_equip_classificationSet;
+	protected Set<CfProj_Equip> cfproj_equip_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_event_classification")
-	private Set<CfProj_Event> cfproj_event_classificationSet;
+	protected Set<CfProj_Event> cfproj_event_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_facil_classification")
-	private Set<CfProj_Facil> cfproj_facil_classificationSet;
+	protected Set<CfProj_Facil> cfproj_facil_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_fund_classification")
-	private Set<CfProj_Fund> cfproj_fund_classificationSet;
+	protected Set<CfProj_Fund> cfproj_fund_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_indic_classification")
-	private Set<CfProj_Indic> cfproj_indic_classificationSet;
+	protected Set<CfProj_Indic> cfproj_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_meas_classification")
-	private Set<CfProj_Meas> cfproj_meas_classificationSet;
+	protected Set<CfProj_Meas> cfproj_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_medium_classification")
-	private Set<CfProj_Medium> cfproj_medium_classificationSet;
+	protected Set<CfProj_Medium> cfproj_medium_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_orgunit_classification")
-	private Set<CfProj_OrgUnit> cfproj_orgunit_classificationSet;
+	protected Set<CfProj_OrgUnit> cfproj_orgunit_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_pers_classification")
-	private Set<CfProj_Pers> cfproj_pers_classificationSet;
+	protected Set<CfProj_Pers> cfproj_pers_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_prize_classification")
-	private Set<CfProj_Prize> cfproj_prize_classificationSet;
+	protected Set<CfProj_Prize> cfproj_prize_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_respat_classification")
-	private Set<CfProj_ResPat> cfproj_respat_classificationSet;
+	protected Set<CfProj_ResPat> cfproj_respat_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_resprod_classification")
-	private Set<CfProj_ResProd> cfproj_resprod_classificationSet;
+	protected Set<CfProj_ResProd> cfproj_resprod_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_respubl_classification")
-	private Set<CfProj_ResPubl> cfproj_respubl_classificationSet;
+	protected Set<CfProj_ResPubl> cfproj_respubl_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_srv_classification")
-	private Set<CfProj_Srv> cfproj_srv_classificationSet;
+	protected Set<CfProj_Srv> cfproj_srv_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfqual_class_classification")
-	private Set<CfQual_Class> cfqual_class_classificationSet;
+	protected Set<CfQual_Class> cfqual_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_respat_classification")
-	private Set<CfResPat_ResPat> cfrespat_respat_classificationSet;
+	protected Set<CfResPat_ResPat> cfrespat_respat_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_class_classification")
-	private Set<CfResPat_Class> cfrespat_class_classificationSet;
+	protected Set<CfResPat_Class> cfrespat_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_equip_classification")
-	private Set<CfResPat_Equip> cfrespat_equip_classificationSet;
+	protected Set<CfResPat_Equip> cfrespat_equip_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_facil_classification")
-	private Set<CfResPat_Facil> cfrespat_facil_classificationSet;
+	protected Set<CfResPat_Facil> cfrespat_facil_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_fund_classification")
-	private Set<CfResPat_Fund> cfrespat_fund_classificationSet;
+	protected Set<CfResPat_Fund> cfrespat_fund_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_indic_classification")
-	private Set<CfResPat_Indic> cfrespat_indic_classificationSet;
+	protected Set<CfResPat_Indic> cfrespat_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_meas_classification")
-	private Set<CfResPat_Meas> cfrespat_meas_classificationSet;
+	protected Set<CfResPat_Meas> cfrespat_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_medium_classification")
-	private Set<CfResPat_Medium> cfrespat_medium_classificationSet;
+	protected Set<CfResPat_Medium> cfrespat_medium_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_srv_classification")
-	private Set<CfResPat_Srv> cfrespat_srv_classificationSet;
+	protected Set<CfResPat_Srv> cfrespat_srv_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_resprod_classification")
-	private Set<CfResProd_ResProd> cfresprod_resprod_classificationSet;
+	protected Set<CfResProd_ResProd> cfresprod_resprod_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_class_classification")
-	private Set<CfResProd_Class> cfresprod_class_classificationSet;
+	protected Set<CfResProd_Class> cfresprod_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_equip_classification")
-	private Set<CfResProd_Equip> cfresprod_equip_classificationSet;
+	protected Set<CfResProd_Equip> cfresprod_equip_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_facil_classification")
-	private Set<CfResProd_Facil> cfresprod_facil_classificationSet;
+	protected Set<CfResProd_Facil> cfresprod_facil_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_fund_classification")
-	private Set<CfResProd_Fund> cfresprod_fund_classificationSet;
+	protected Set<CfResProd_Fund> cfresprod_fund_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_indic_classification")
-	private Set<CfResProd_Indic> cfresprod_indic_classificationSet;
+	protected Set<CfResProd_Indic> cfresprod_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_meas_classification")
-	private Set<CfResProd_Meas> cfresprod_meas_classificationSet;
+	protected Set<CfResProd_Meas> cfresprod_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_medium_classification")
-	private Set<CfResProd_Medium> cfresprod_medium_classificationSet;
+	protected Set<CfResProd_Medium> cfresprod_medium_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_srv_classification")
-	private Set<CfResProd_Srv> cfresprod_srv_classificationSet;
+	protected Set<CfResProd_Srv> cfresprod_srv_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_respat_classification")
-	private Set<CfResPubl_ResPat> cfrespubl_respat_classificationSet;
+	protected Set<CfResPubl_ResPat> cfrespubl_respat_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_resprod_classification")
-	private Set<CfResPubl_ResProd> cfrespubl_resprod_classificationSet;
+	protected Set<CfResPubl_ResProd> cfrespubl_resprod_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_respubl_classification")
-	private Set<CfResPubl_ResPubl> cfrespubl_respubl_classificationSet;
+	protected Set<CfResPubl_ResPubl> cfrespubl_respubl_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_cite_classification")
-	private Set<CfResPubl_Cite> cfrespubl_cite_classificationSet;
+	protected Set<CfResPubl_Cite> cfrespubl_cite_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_class_classification")
-	private Set<CfResPubl_Class> cfrespubl_class_classificationSet;
+	protected Set<CfResPubl_Class> cfrespubl_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_dc_classification")
-	private Set<CfResPubl_DC> cfrespubl_dc_classificationSet;
+	protected Set<CfResPubl_DC> cfrespubl_dc_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_equip_classification")
-	private Set<CfResPubl_Equip> cfrespubl_equip_classificationSet;
+	protected Set<CfResPubl_Equip> cfrespubl_equip_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_event_classification")
-	private Set<CfResPubl_Event> cfrespubl_event_classificationSet;
+	protected Set<CfResPubl_Event> cfrespubl_event_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_facil_classification")
-	private Set<CfResPubl_Facil> cfrespubl_facil_classificationSet;
+	protected Set<CfResPubl_Facil> cfrespubl_facil_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_fund_classification")
-	private Set<CfResPubl_Fund> cfrespubl_fund_classificationSet;
+	protected Set<CfResPubl_Fund> cfrespubl_fund_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_indic_classification")
-	private Set<CfResPubl_Indic> cfrespubl_indic_classificationSet;
+	protected Set<CfResPubl_Indic> cfrespubl_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_meas_classification")
-	private Set<CfResPubl_Meas> cfrespubl_meas_classificationSet;
+	protected Set<CfResPubl_Meas> cfrespubl_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_medium_classification")
-	private Set<CfResPubl_Medium> cfrespubl_medium_classificationSet;
+	protected Set<CfResPubl_Medium> cfrespubl_medium_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_metrics_classification")
-	private Set<CfResPubl_Metrics> cfrespubl_metrics_classificationSet;
+	protected Set<CfResPubl_Metrics> cfrespubl_metrics_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_srv_classification")
-	private Set<CfResPubl_Srv> cfrespubl_srv_classificationSet;
+	protected Set<CfResPubl_Srv> cfrespubl_srv_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_srv_classification")
-	private Set<CfSrv_Srv> cfsrv_srv_classificationSet;
+	protected Set<CfSrv_Srv> cfsrv_srv_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_class_classification")
-	private Set<CfSrv_Class> cfsrv_class_classificationSet;
+	protected Set<CfSrv_Class> cfsrv_class_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_event_classification")
-	private Set<CfSrv_Event> cfsrv_event_classificationSet;
+	protected Set<CfSrv_Event> cfsrv_event_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_fedid_classification")
-	private Set<CfSrv_FedId> cfsrv_fedid_classificationSet;
+	protected Set<CfSrv_FedId> cfsrv_fedid_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_fund_classification")
-	private Set<CfSrv_Fund> cfsrv_fund_classificationSet;
+	protected Set<CfSrv_Fund> cfsrv_fund_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_indic_classification")
-	private Set<CfSrv_Indic> cfsrv_indic_classificationSet;
+	protected Set<CfSrv_Indic> cfsrv_indic_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_meas_classification")
-	private Set<CfSrv_Meas> cfsrv_meas_classificationSet;
+	protected Set<CfSrv_Meas> cfsrv_meas_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_medium_classification")
-	private Set<CfSrv_Medium> cfsrv_medium_classificationSet;
+	protected Set<CfSrv_Medium> cfsrv_medium_classificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_paddr_classification")
-	private Set<CfSrv_PAddr> cfsrv_paddr_classificationSet;
+	protected Set<CfSrv_PAddr> cfsrv_paddr_classificationSet;
 	
 	public CfClass(){
 	}
@@ -389,36 +389,36 @@ public class CfClass implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_classification_identifier() {
-		return this.a_classification_identifier;
+	public java.lang.String getKa_classification_identifier() {
+		return this.ka_classification_identifier;
 	}
 	
-	public void setA_classification_identifier(java.lang.String a_classification_identifier) {
-		this.a_classification_identifier = a_classification_identifier;
+	public void setKa_classification_identifier(java.lang.String ka_classification_identifier) {
+		this.ka_classification_identifier = ka_classification_identifier;
 	}
 	
-	public java.util.Date getA_start_date() {
-		return this.a_start_date;
+	public java.util.Date getKa_start_date() {
+		return this.ka_start_date;
 	}
 	
-	public void setA_start_date(java.util.Date a_start_date) {
-		this.a_start_date = a_start_date;
+	public void setKa_start_date(java.util.Date ka_start_date) {
+		this.ka_start_date = ka_start_date;
 	}
 	
-	public java.util.Date getA_end_date() {
-		return this.a_end_date;
+	public java.util.Date getKa_end_date() {
+		return this.ka_end_date;
 	}
 	
-	public void setA_end_date(java.util.Date a_end_date) {
-		this.a_end_date = a_end_date;
+	public void setKa_end_date(java.util.Date ka_end_date) {
+		this.ka_end_date = ka_end_date;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public CfClassScheme getCfclass_classificationScheme() {

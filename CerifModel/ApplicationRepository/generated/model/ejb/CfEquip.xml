@@ -2,8 +2,8 @@
 <entity class-name="ejb_generated.CfEquip" label="Equipment" name="CFEQUIP">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_equipment_identifier" hidden="false" key="false" label="Equipment Identifier" length="128" name="a_equipment_identifier" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_acronym" hidden="false" key="false" label="Acronym" length="16" name="a_acronym" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="128" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_equipment_identifier" hidden="false" key="false" label="Equipment Identifier" length="128" name="ka_equipment_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_acronym" hidden="false" key="false" label="Acronym" length="16" name="ka_acronym" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="128" name="ka_uniform_resource_identifier" precision="0" type="java.lang.String"/>
 </attributes>
 </entity>

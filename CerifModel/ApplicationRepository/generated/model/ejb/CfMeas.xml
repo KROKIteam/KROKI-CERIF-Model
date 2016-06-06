@@ -2,15 +2,15 @@
 <entity class-name="ejb_generated.CfMeas" label="Measurement" name="CFMEAS">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_measurement_identifier" hidden="false" key="false" label="Measurement Identifier" length="128" name="a_measurement_identifier" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_count_integer" hidden="false" key="false" label="Count Integer" length="0" name="a_count_integer" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_value_floating_point" hidden="false" key="false" label="Value Floating Point" length="0" name="a_value_floating_point" precision="0" type="java.math.BigDecimal"/>
-<column-attribute field-name="a_value_judgemental_numeric" hidden="false" key="false" label="Value Judgemental Numeric" length="0" name="a_value_judgemental_numeric" precision="0" type="java.math.BigDecimal"/>
-<column-attribute field-name="a_count_integer_change" hidden="false" key="false" label="Count Integer Change" length="0" name="a_count_integer_change" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_count_floating_point_change" hidden="false" key="false" label="Count Floating Point Change" length="0" name="a_count_floating_point_change" precision="0" type="java.math.BigDecimal"/>
-<column-attribute field-name="a_value_judgemental_numeric_change" hidden="false" key="false" label="Value Judgemental Numeric Change" length="0" name="a_value_judgemental_numeric_change" precision="0" type="java.math.BigDecimal"/>
-<column-attribute field-name="a_value_judgemental_text" hidden="false" key="false" label="Value Judgemental Text" length="0" name="a_value_judgemental_text" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_value_judgemental_text_change" hidden="false" key="false" label="Value Judgemental Text Change" length="0" name="a_value_judgemental_text_change" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="128" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_measurement_identifier" hidden="false" key="false" label="Measurement Identifier" length="128" name="ka_measurement_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_count_integer" hidden="false" key="false" label="Count Integer" length="0" name="ka_count_integer" precision="0" type="java.lang.Integer"/>
+<column-attribute field-name="ka_value_floating_point" hidden="false" key="false" label="Value Floating Point" length="0" name="ka_value_floating_point" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="ka_value_judgemental_numeric" hidden="false" key="false" label="Value Judgemental Numeric" length="0" name="ka_value_judgemental_numeric" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="ka_count_integer_change" hidden="false" key="false" label="Count Integer Change" length="0" name="ka_count_integer_change" precision="0" type="java.lang.Integer"/>
+<column-attribute field-name="ka_count_floating_point_change" hidden="false" key="false" label="Count Floating Point Change" length="0" name="ka_count_floating_point_change" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="ka_value_judgemental_numeric_change" hidden="false" key="false" label="Value Judgemental Numeric Change" length="0" name="ka_value_judgemental_numeric_change" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="ka_value_judgemental_text" hidden="false" key="false" label="Value Judgemental Text" length="0" name="ka_value_judgemental_text" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_value_judgemental_text_change" hidden="false" key="false" label="Value Judgemental Text Change" length="0" name="ka_value_judgemental_text_change" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="128" name="ka_uniform_resource_identifier" precision="0" type="java.lang.String"/>
 </attributes>
 </entity>

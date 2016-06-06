@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,58 +36,58 @@ public class CfMedium implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfMediumId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_medium_identifier;
+	protected java.lang.String ka_medium_identifier;
 	@Column(name = "cfMediumCreationDate", unique = false, nullable = false , length = 30, precision = 0,columnDefinition = "VARCHAR")
-	private java.lang.String a_medium_creation_date;
+	protected java.lang.String ka_medium_creation_date;
 	@Column(name = "cfSize", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_size;
+	protected java.math.BigDecimal ka_size;
 	@Column(name = "cfMimeType", unique = false, nullable = false , length = 30, precision = 0,columnDefinition = "VARCHAR")
-	private java.lang.String a_mime_type;
+	protected java.lang.String ka_mime_type;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcite_medium_medium")
-	private Set<CfCite_Medium> cfcite_medium_mediumSet;
+	protected Set<CfCite_Medium> cfcite_medium_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_medium_medium")
-	private Set<CfEquip_Medium> cfequip_medium_mediumSet;
+	protected Set<CfEquip_Medium> cfequip_medium_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_medium_medium")
-	private Set<CfEvent_Medium> cfevent_medium_mediumSet;
+	protected Set<CfEvent_Medium> cfevent_medium_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_medium_medium")
-	private Set<CfFacil_Medium> cffacil_medium_mediumSet;
+	protected Set<CfFacil_Medium> cffacil_medium_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_meas_medium")
-	private Set<CfMedium_Meas> cfmedium_meas_mediumSet;
+	protected Set<CfMedium_Meas> cfmedium_meas_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_medium_medium1")
-	private Set<CfMedium_Medium> cfmedium_medium_medium1Set;
+	protected Set<CfMedium_Medium> cfmedium_medium_medium1Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_medium_medium2")
-	private Set<CfMedium_Medium> cfmedium_medium_medium2Set;
+	protected Set<CfMedium_Medium> cfmedium_medium_medium2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_class_medium")
-	private Set<CfMedium_Class> cfmedium_class_mediumSet;
+	protected Set<CfMedium_Class> cfmedium_class_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmediumdescr_medium")
-	private Set<CfMediumDescr> cfmediumdescr_mediumSet;
+	protected Set<CfMediumDescr> cfmediumdescr_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_fund_medium")
-	private Set<CfMedium_Fund> cfmedium_fund_mediumSet;
+	protected Set<CfMedium_Fund> cfmedium_fund_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_indic_medium")
-	private Set<CfMedium_Indic> cfmedium_indic_mediumSet;
+	protected Set<CfMedium_Indic> cfmedium_indic_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmediumkeyw_medium")
-	private Set<CfMediumKeyw> cfmediumkeyw_mediumSet;
+	protected Set<CfMediumKeyw> cfmediumkeyw_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmediumtitle_medium")
-	private Set<CfMediumTitle> cfmediumtitle_mediumSet;
+	protected Set<CfMediumTitle> cfmediumtitle_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_medium_medium")
-	private Set<CfOrgUnit_Medium> cforgunit_medium_mediumSet;
+	protected Set<CfOrgUnit_Medium> cforgunit_medium_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_medium_medium")
-	private Set<CfPers_Medium> cfpers_medium_mediumSet;
+	protected Set<CfPers_Medium> cfpers_medium_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_medium_medium")
-	private Set<CfProj_Medium> cfproj_medium_mediumSet;
+	protected Set<CfProj_Medium> cfproj_medium_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_medium_medium")
-	private Set<CfResPat_Medium> cfrespat_medium_mediumSet;
+	protected Set<CfResPat_Medium> cfrespat_medium_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_medium_medium")
-	private Set<CfResProd_Medium> cfresprod_medium_mediumSet;
+	protected Set<CfResProd_Medium> cfresprod_medium_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_medium_medium")
-	private Set<CfResPubl_Medium> cfrespubl_medium_mediumSet;
+	protected Set<CfResPubl_Medium> cfrespubl_medium_mediumSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_medium_medium")
-	private Set<CfSrv_Medium> cfsrv_medium_mediumSet;
+	protected Set<CfSrv_Medium> cfsrv_medium_mediumSet;
 	
 	public CfMedium(){
 	}
@@ -100,44 +100,44 @@ public class CfMedium implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_medium_identifier() {
-		return this.a_medium_identifier;
+	public java.lang.String getKa_medium_identifier() {
+		return this.ka_medium_identifier;
 	}
 	
-	public void setA_medium_identifier(java.lang.String a_medium_identifier) {
-		this.a_medium_identifier = a_medium_identifier;
+	public void setKa_medium_identifier(java.lang.String ka_medium_identifier) {
+		this.ka_medium_identifier = ka_medium_identifier;
 	}
 	
-	public java.lang.String getA_medium_creation_date() {
-		return this.a_medium_creation_date;
+	public java.lang.String getKa_medium_creation_date() {
+		return this.ka_medium_creation_date;
 	}
 	
-	public void setA_medium_creation_date(java.lang.String a_medium_creation_date) {
-		this.a_medium_creation_date = a_medium_creation_date;
+	public void setKa_medium_creation_date(java.lang.String ka_medium_creation_date) {
+		this.ka_medium_creation_date = ka_medium_creation_date;
 	}
 	
-	public java.math.BigDecimal getA_size() {
-		return this.a_size;
+	public java.math.BigDecimal getKa_size() {
+		return this.ka_size;
 	}
 	
-	public void setA_size(java.math.BigDecimal a_size) {
-		this.a_size = a_size;
+	public void setKa_size(java.math.BigDecimal ka_size) {
+		this.ka_size = ka_size;
 	}
 	
-	public java.lang.String getA_mime_type() {
-		return this.a_mime_type;
+	public java.lang.String getKa_mime_type() {
+		return this.ka_mime_type;
 	}
 	
-	public void setA_mime_type(java.lang.String a_mime_type) {
-		this.a_mime_type = a_mime_type;
+	public void setKa_mime_type(java.lang.String ka_mime_type) {
+		this.ka_mime_type = ka_mime_type;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfCite_Medium> getCfcite_medium_mediumSet() {

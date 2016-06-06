@@ -1603,82 +1603,82 @@
 <parent-child-panels>
 <parent-child id="Citation_integrated_pc" label="Citation integrated">
 <panel id="Citation" level="0" panel-ref="cfcite_st"/>
-<panel id="Citation_Title" level="1" panel-ref="cfcitetitle_st"/>
-<panel id="Citation_Description" level="1" panel-ref="cfcitedescr_st"/>
+<panel association-end="Citation" id="Citation_Title" level="1" panel-ref="cfcitetitle_st"/>
+<panel association-end="Citation" id="Citation_Description" level="1" panel-ref="cfcitedescr_st"/>
 </parent-child>
 <parent-child id="Clasification_integrated_pc" label="Clasification integrated">
 <panel id="Classification" level="0" panel-ref="cfclass_st"/>
-<panel id="Classification_Definition" level="1" panel-ref="cfclassdef_st"/>
-<panel id="Classification_Description" level="1" panel-ref="cfclassdescr_st"/>
-<panel id="Classification_Term" level="1" panel-ref="cfclassterm_st"/>
+<panel association-end="Classification" id="Classification_Definition" level="1" panel-ref="cfclassdef_st"/>
+<panel association-end="Classification" id="Classification_Description" level="1" panel-ref="cfclassdescr_st"/>
+<panel association-end="Classification" id="Classification_Term" level="1" panel-ref="cfclassterm_st"/>
 </parent-child>
 <parent-child id="Clasification_scheme_integrated_pc" label="Clasification scheme integrated">
 <panel id="Classification_Scheme" level="0" panel-ref="cfclassscheme_st"/>
-<panel id="Classification_Scheme_Name" level="1" panel-ref="cfclassschemename_st"/>
-<panel id="Classification_Scheme_Description" level="1" panel-ref="cfclassschemedescr_st"/>
+<panel association-end="Classification_scheme" id="Classification_Scheme_Name" level="1" panel-ref="cfclassschemename_st"/>
+<panel association-end="Classification_scheme" id="Classification_Scheme_Description" level="1" panel-ref="cfclassschemedescr_st"/>
 </parent-child>
 <parent-child id="Country_integrated_pc" label="Country integrated">
 <panel id="Country" level="0" panel-ref="cfcountry_st"/>
-<panel id="Country_Name" level="1" panel-ref="cfcountryname_st"/>
+<panel association-end="Country" id="Country_Name" level="1" panel-ref="cfcountryname_st"/>
 </parent-child>
 <parent-child id="Currency_integrated_pc" label="Currency integrated">
 <panel id="Currency" level="0" panel-ref="cfcurrency_st"/>
-<panel id="Currency_Name" level="1" panel-ref="cfcurrencyname_st"/>
-<panel id="Currency_Entity_Name" level="1" panel-ref="cfcurrencyentname_st"/>
+<panel association-end="Currency" id="Currency_Name" level="1" panel-ref="cfcurrencyname_st"/>
+<panel association-end="Currency" id="Currency_Entity_Name" level="1" panel-ref="cfcurrencyentname_st"/>
 </parent-child>
 <parent-child id="Equipment_integrated_pc" label="Equipment integrated">
 <panel id="Equipment" level="0" panel-ref="cfequip_st"/>
-<panel id="Equipment_Name" level="1" panel-ref="cfequipname_st"/>
-<panel id="Equipment_Description" level="1" panel-ref="cfequipdescr_st"/>
-<panel id="Equipment_Keywords" level="1" panel-ref="cfequipkeyw_st"/>
+<panel association-end="Equipment" id="Equipment_Name" level="1" panel-ref="cfequipname_st"/>
+<panel association-end="Equipment" id="Equipment_Description" level="1" panel-ref="cfequipdescr_st"/>
+<panel association-end="Equipment" id="Equipment_Keywords" level="1" panel-ref="cfequipkeyw_st"/>
 </parent-child>
 <parent-child id="Event_integrated_pc" label="Event integrated">
 <panel id="Event" level="0" panel-ref="cfevent_st"/>
-<panel id="Event_Name" level="1" panel-ref="cfeventname_st"/>
-<panel id="Event_Description" level="1" panel-ref="cfeventdescr_st"/>
-<panel id="Event_Keywords" level="1" panel-ref="cfeventkeyw_st"/>
+<panel association-end="Event" id="Event_Name" level="1" panel-ref="cfeventname_st"/>
+<panel association-end="Event" id="Event_Description" level="1" panel-ref="cfeventdescr_st"/>
+<panel association-end="Event" id="Event_Keywords" level="1" panel-ref="cfeventkeyw_st"/>
 </parent-child>
 <parent-child id="Facility_integrated_pc" label="Facility integrated">
 <panel id="Facility" level="0" panel-ref="cffacil_st"/>
-<panel id="Facility_Name" level="1" panel-ref="cffacilname_st"/>
-<panel id="Facility_Description" level="1" panel-ref="cffacildescr_st"/>
-<panel id="Facility_Kewords" level="1" panel-ref="cffacilkeyw_st"/>
+<panel association-end="Facility" id="Facility_Name" level="1" panel-ref="cffacilname_st"/>
+<panel association-end="Facility" id="Facility_Description" level="1" panel-ref="cffacildescr_st"/>
+<panel association-end="Facility" id="Facility_Kewords" level="1" panel-ref="cffacilkeyw_st"/>
 </parent-child>
 <parent-child id="Geographic_bounding_box_integrated_pc" label="Geographic bounding box integrated">
 <panel id="Geographic_Bounding_Box" level="0" panel-ref="cfgeobbox_st"/>
-<panel id="Geographic_Bounding_Box_Name" level="1" panel-ref="cfgeobboxname_st"/>
-<panel id="Geographic_Bounding_Box_Description" level="1" panel-ref="cfgeobboxdescr_st"/>
-<panel id="Geographic_Bounding_Box_Keywords" level="1" panel-ref="cfgeobboxkeyw_st"/>
+<panel association-end="Geographic_bounding_box" id="Geographic_Bounding_Box_Name" level="1" panel-ref="cfgeobboxname_st"/>
+<panel association-end="Geographic_bounding_box" id="Geographic_Bounding_Box_Description" level="1" panel-ref="cfgeobboxdescr_st"/>
+<panel association-end="Geographic_bounding_box" id="Geographic_Bounding_Box_Keywords" level="1" panel-ref="cfgeobboxkeyw_st"/>
 </parent-child>
 <parent-child id="Indicator_integrated_pc" label="Indicator integrated">
 <panel id="Indicator" level="0" panel-ref="cfindic_st"/>
-<panel id="Indicator_Name" level="1" panel-ref="cfindicname_st"/>
-<panel id="Indicator_Description" level="1" panel-ref="cfindicdescr_st"/>
-<panel id="Indicator_Keywords" level="1" panel-ref="cfindickeyw_st"/>
+<panel association-end="Indicator" id="Indicator_Name" level="1" panel-ref="cfindicname_st"/>
+<panel association-end="Indicator" id="Indicator_Description" level="1" panel-ref="cfindicdescr_st"/>
+<panel association-end="Indicator" id="Indicator_Keywords" level="1" panel-ref="cfindickeyw_st"/>
 </parent-child>
 <parent-child id="Measurement_integrated_pc" label="Measurement integrated">
 <panel id="Measurement" level="0" panel-ref="cfmeas_st"/>
-<panel id="Measurement_Name" level="1" panel-ref="cfmeasname_st"/>
-<panel id="Measurement_Description" level="1" panel-ref="cfmeasdescr_st"/>
-<panel id="Measurement_Keywords" level="1" panel-ref="cfmeaskeyw_st"/>
+<panel association-end="Measurement" id="Measurement_Name" level="1" panel-ref="cfmeasname_st"/>
+<panel association-end="Measurement" id="Measurement_Description" level="1" panel-ref="cfmeasdescr_st"/>
+<panel association-end="Measurement" id="Measurement_Keywords" level="1" panel-ref="cfmeaskeyw_st"/>
 </parent-child>
 <parent-child id="Medium_integrated_pc" label="Medium integrated">
 <panel id="Medium" level="0" panel-ref="cfmedium_st"/>
-<panel id="Medium_Title" level="1" panel-ref="cfmediumtitle_st"/>
-<panel id="Medium_Description" level="1" panel-ref="cfmediumdescr_st"/>
-<panel id="Medium_Keywords" level="1" panel-ref="cfmediumkeyw_st"/>
+<panel association-end="Medium" id="Medium_Title" level="1" panel-ref="cfmediumtitle_st"/>
+<panel association-end="Medium" id="Medium_Description" level="1" panel-ref="cfmediumdescr_st"/>
+<panel association-end="Medium" id="Medium_Keywords" level="1" panel-ref="cfmediumkeyw_st"/>
 </parent-child>
 <parent-child id="Metrics_integrated_pc" label="Metrics integrated">
 <panel id="Metrics" level="0" panel-ref="cfmetrics_st"/>
-<panel id="Metrics_Name" level="1" panel-ref="cfmetricsname_st"/>
-<panel id="Metrics_Description" level="1" panel-ref="cfmetricsdescr_st"/>
-<panel id="Metrics_Keywords" level="1" panel-ref="cfmetricskeyw_st"/>
+<panel association-end="Metrics" id="Metrics_Name" level="1" panel-ref="cfmetricsname_st"/>
+<panel association-end="Metrics" id="Metrics_Description" level="1" panel-ref="cfmetricsdescr_st"/>
+<panel association-end="Metrics" id="Metrics_Keywords" level="1" panel-ref="cfmetricskeyw_st"/>
 </parent-child>
 <parent-child id="Person_integrated_pc" label="Person integrated">
 <panel id="Person" level="0" panel-ref="cfpers_st"/>
-<panel id="Person_Name_-_Person" level="1" panel-ref="cfpersname_pers_st"/>
-<panel id="Person_Research_Interest" level="1" panel-ref="cfpersresint_st"/>
-<panel id="Person_Keywords" level="1" panel-ref="cfperskeyw_st"/>
+<panel association-end="Person" id="Person_Name_-_Person" level="1" panel-ref="cfpersname_pers_st"/>
+<panel association-end="Person" id="Person_Research_Interest" level="1" panel-ref="cfpersresint_st"/>
+<panel association-end="Person" id="Person_Keywords" level="1" panel-ref="cfperskeyw_st"/>
 </parent-child>
 </parent-child-panels>
 <many-to-many-panels/>

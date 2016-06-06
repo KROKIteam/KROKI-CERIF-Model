@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,20 +36,20 @@ public class CfClassDef implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfDef", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_definition;
+	protected java.lang.String ka_definition;
 	@Column(name = "cfDefSrc", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_definition_source;
+	protected java.lang.String ka_definition_source;
 	@ManyToOne
 	@JoinColumn(name="cfclassdef_language", referencedColumnName="ID",  nullable = true)
-	private CfLang cfclassdef_language;
+	protected CfLang cfclassdef_language;
 	@ManyToOne
 	@JoinColumn(name="cfclassdef_classification", referencedColumnName="ID",  nullable = true)
-	private CfClass cfclassdef_classification;
+	protected CfClass cfclassdef_classification;
 	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_translation_kind;
+	protected java.lang.String ka_translation_kind;
 	
 	public CfClassDef(){
 	}
@@ -62,20 +62,20 @@ public class CfClassDef implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_definition() {
-		return this.a_definition;
+	public java.lang.String getKa_definition() {
+		return this.ka_definition;
 	}
 	
-	public void setA_definition(java.lang.String a_definition) {
-		this.a_definition = a_definition;
+	public void setKa_definition(java.lang.String ka_definition) {
+		this.ka_definition = ka_definition;
 	}
 	
-	public java.lang.String getA_definition_source() {
-		return this.a_definition_source;
+	public java.lang.String getKa_definition_source() {
+		return this.ka_definition_source;
 	}
 	
-	public void setA_definition_source(java.lang.String a_definition_source) {
-		this.a_definition_source = a_definition_source;
+	public void setKa_definition_source(java.lang.String ka_definition_source) {
+		this.ka_definition_source = ka_definition_source;
 	}
 	
 	public CfLang getCfclassdef_language() {
@@ -94,12 +94,12 @@ public class CfClassDef implements java.io.Serializable {
 		this.cfclassdef_classification = cfclassdef_classification;
 	}
 	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
+	public java.lang.String getKa_translation_kind() {
+		return this.ka_translation_kind;
 	}
 	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
+	public void setKa_translation_kind(java.lang.String ka_translation_kind) {
+		this.ka_translation_kind = ka_translation_kind;
 	}
 	
 }

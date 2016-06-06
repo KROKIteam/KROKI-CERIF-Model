@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,18 +36,18 @@ public class CfOrgUnitResAct implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_translation_kind;
+	protected java.lang.String ka_translation_kind;
 	@Column(name = "cfResAct", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_research_activity;
+	protected java.lang.String ka_research_activity;
 	@ManyToOne
 	@JoinColumn(name="cforgunitresact_language", referencedColumnName="ID",  nullable = true)
-	private CfLang cforgunitresact_language;
+	protected CfLang cforgunitresact_language;
 	@ManyToOne
 	@JoinColumn(name="cforgunitresact_organisationUnit", referencedColumnName="ID",  nullable = true)
-	private CfOrgUnit cforgunitresact_organisationUnit;
+	protected CfOrgUnit cforgunitresact_organisationUnit;
 	
 	public CfOrgUnitResAct(){
 	}
@@ -60,20 +60,20 @@ public class CfOrgUnitResAct implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
+	public java.lang.String getKa_translation_kind() {
+		return this.ka_translation_kind;
 	}
 	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
+	public void setKa_translation_kind(java.lang.String ka_translation_kind) {
+		this.ka_translation_kind = ka_translation_kind;
 	}
 	
-	public java.lang.String getA_research_activity() {
-		return this.a_research_activity;
+	public java.lang.String getKa_research_activity() {
+		return this.ka_research_activity;
 	}
 	
-	public void setA_research_activity(java.lang.String a_research_activity) {
-		this.a_research_activity = a_research_activity;
+	public void setKa_research_activity(java.lang.String ka_research_activity) {
+		this.ka_research_activity = ka_research_activity;
 	}
 	
 	public CfLang getCforgunitresact_language() {

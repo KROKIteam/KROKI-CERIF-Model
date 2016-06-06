@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,160 +36,160 @@ public class CfLang implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfLangCode", unique = false, nullable = false , length = 5, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_language_code;
+	protected java.lang.String ka_language_code;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcitedescr_language")
-	private Set<CfCiteDescr> cfcitedescr_languageSet;
+	protected Set<CfCiteDescr> cfcitedescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcitetitle_language")
-	private Set<CfCiteTitle> cfcitetitle_languageSet;
+	protected Set<CfCiteTitle> cfcitetitle_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassdef_language")
-	private Set<CfClassDef> cfclassdef_languageSet;
+	protected Set<CfClassDef> cfclassdef_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassdescr_language")
-	private Set<CfClassDescr> cfclassdescr_languageSet;
+	protected Set<CfClassDescr> cfclassdescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassterm_language")
-	private Set<CfClassTerm> cfclassterm_languageSet;
+	protected Set<CfClassTerm> cfclassterm_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassschemedescr_language")
-	private Set<CfClassSchemeDescr> cfclassschemedescr_languageSet;
+	protected Set<CfClassSchemeDescr> cfclassschemedescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassschemename_language")
-	private Set<CfClassSchemeName> cfclassschemename_languageSet;
+	protected Set<CfClassSchemeName> cfclassschemename_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcountryname_language")
-	private Set<CfCountryName> cfcountryname_languageSet;
+	protected Set<CfCountryName> cfcountryname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcurrencyentname_language")
-	private Set<CfCurrencyEntName> cfcurrencyentname_languageSet;
+	protected Set<CfCurrencyEntName> cfcurrencyentname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcurrencyname_language")
-	private Set<CfCurrencyName> cfcurrencyname_languageSet;
+	protected Set<CfCurrencyName> cfcurrencyname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequipdescr_language")
-	private Set<CfEquipDescr> cfequipdescr_languageSet;
+	protected Set<CfEquipDescr> cfequipdescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequipkeyw_language")
-	private Set<CfEquipKeyw> cfequipkeyw_languageSet;
+	protected Set<CfEquipKeyw> cfequipkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequipname_language")
-	private Set<CfEquipName> cfequipname_languageSet;
+	protected Set<CfEquipName> cfequipname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfeventdescr_language")
-	private Set<CfEventDescr> cfeventdescr_languageSet;
+	protected Set<CfEventDescr> cfeventdescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfeventkeyw_language")
-	private Set<CfEventKeyw> cfeventkeyw_languageSet;
+	protected Set<CfEventKeyw> cfeventkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfeventname_language")
-	private Set<CfEventName> cfeventname_languageSet;
+	protected Set<CfEventName> cfeventname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskillsdescr_language")
-	private Set<CfExpSkillsDescr> cfexpskillsdescr_languageSet;
+	protected Set<CfExpSkillsDescr> cfexpskillsdescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskillskeyw_language")
-	private Set<CfExpSkillsKeyw> cfexpskillskeyw_languageSet;
+	protected Set<CfExpSkillsKeyw> cfexpskillskeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskillsname_language")
-	private Set<CfExpSkillsName> cfexpskillsname_languageSet;
+	protected Set<CfExpSkillsName> cfexpskillsname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacildescr_language")
-	private Set<CfFacilDescr> cffacildescr_languageSet;
+	protected Set<CfFacilDescr> cffacildescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacilkeyw_language")
-	private Set<CfFacilKeyw> cffacilkeyw_languageSet;
+	protected Set<CfFacilKeyw> cffacilkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacilname_language")
-	private Set<CfFacilName> cffacilname_languageSet;
+	protected Set<CfFacilName> cffacilname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffunddescr_language")
-	private Set<CfFundDescr> cffunddescr_languageSet;
+	protected Set<CfFundDescr> cffunddescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffundkeyw_language")
-	private Set<CfFundKeyw> cffundkeyw_languageSet;
+	protected Set<CfFundKeyw> cffundkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffundname_language")
-	private Set<CfFundName> cffundname_languageSet;
+	protected Set<CfFundName> cffundname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfgeobboxdescr_language")
-	private Set<CfGeoBBoxDescr> cfgeobboxdescr_languageSet;
+	protected Set<CfGeoBBoxDescr> cfgeobboxdescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfgeobboxkeyw_language")
-	private Set<CfGeoBBoxKeyw> cfgeobboxkeyw_languageSet;
+	protected Set<CfGeoBBoxKeyw> cfgeobboxkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfgeobboxname_language")
-	private Set<CfGeoBBoxName> cfgeobboxname_languageSet;
+	protected Set<CfGeoBBoxName> cfgeobboxname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindicdescr_language")
-	private Set<CfIndicDescr> cfindicdescr_languageSet;
+	protected Set<CfIndicDescr> cfindicdescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindickeyw_language")
-	private Set<CfIndicKeyw> cfindickeyw_languageSet;
+	protected Set<CfIndicKeyw> cfindickeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindicname_language")
-	private Set<CfIndicName> cfindicname_languageSet;
+	protected Set<CfIndicName> cfindicname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cflang_class_language")
-	private Set<CfLang_Class> cflang_class_languageSet;
+	protected Set<CfLang_Class> cflang_class_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cflangname_language")
-	private Set<CfLangName> cflangname_languageSet;
+	protected Set<CfLangName> cflangname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cflangname_languagea")
-	private Set<CfLangName> cflangname_languageaSet;
+	protected Set<CfLangName> cflangname_languageaSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmeasdescr_language")
-	private Set<CfMeasDescr> cfmeasdescr_languageSet;
+	protected Set<CfMeasDescr> cfmeasdescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmeaskeyw_language")
-	private Set<CfMeasKeyw> cfmeaskeyw_languageSet;
+	protected Set<CfMeasKeyw> cfmeaskeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmeasname_language")
-	private Set<CfMeasName> cfmeasname_languageSet;
+	protected Set<CfMeasName> cfmeasname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmediumdescr_language")
-	private Set<CfMediumDescr> cfmediumdescr_languageSet;
+	protected Set<CfMediumDescr> cfmediumdescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmediumkeyw_language")
-	private Set<CfMediumKeyw> cfmediumkeyw_languageSet;
+	protected Set<CfMediumKeyw> cfmediumkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmediumtitle_language")
-	private Set<CfMediumTitle> cfmediumtitle_languageSet;
+	protected Set<CfMediumTitle> cfmediumtitle_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmetricsdescr_language")
-	private Set<CfMetricsDescr> cfmetricsdescr_languageSet;
+	protected Set<CfMetricsDescr> cfmetricsdescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmetricskeyw_language")
-	private Set<CfMetricsKeyw> cfmetricskeyw_languageSet;
+	protected Set<CfMetricsKeyw> cfmetricskeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmetricsname_language")
-	private Set<CfMetricsName> cfmetricsname_languageSet;
+	protected Set<CfMetricsName> cfmetricsname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunitkeyw_language")
-	private Set<CfOrgUnitKeyw> cforgunitkeyw_languageSet;
+	protected Set<CfOrgUnitKeyw> cforgunitkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunitname_language")
-	private Set<CfOrgUnitName> cforgunitname_languageSet;
+	protected Set<CfOrgUnitName> cforgunitname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunitresact_language")
-	private Set<CfOrgUnitResAct> cforgunitresact_languageSet;
+	protected Set<CfOrgUnitResAct> cforgunitresact_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfperskeyw_language")
-	private Set<CfPersKeyw> cfperskeyw_languageSet;
+	protected Set<CfPersKeyw> cfperskeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_lang_language")
-	private Set<CfPers_Lang> cfpers_lang_languageSet;
+	protected Set<CfPers_Lang> cfpers_lang_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpersresint_language")
-	private Set<CfPersResInt> cfpersresint_languageSet;
+	protected Set<CfPersResInt> cfpersresint_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprizedescr_language")
-	private Set<CfPrizeDescr> cfprizedescr_languageSet;
+	protected Set<CfPrizeDescr> cfprizedescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprizekeyw_language")
-	private Set<CfPrizeKeyw> cfprizekeyw_languageSet;
+	protected Set<CfPrizeKeyw> cfprizekeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprizename_language")
-	private Set<CfPrizeName> cfprizename_languageSet;
+	protected Set<CfPrizeName> cfprizename_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprojabstr_language")
-	private Set<CfProjAbstr> cfprojabstr_languageSet;
+	protected Set<CfProjAbstr> cfprojabstr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprojkeyw_language")
-	private Set<CfProjKeyw> cfprojkeyw_languageSet;
+	protected Set<CfProjKeyw> cfprojkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprojtitle_language")
-	private Set<CfProjTitle> cfprojtitle_languageSet;
+	protected Set<CfProjTitle> cfprojtitle_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfqualdescr_language")
-	private Set<CfQualDescr> cfqualdescr_languageSet;
+	protected Set<CfQualDescr> cfqualdescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfqualkeyw_language")
-	private Set<CfQualKeyw> cfqualkeyw_languageSet;
+	protected Set<CfQualKeyw> cfqualkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfqualtitle_language")
-	private Set<CfQualTitle> cfqualtitle_languageSet;
+	protected Set<CfQualTitle> cfqualtitle_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespatabstr_language")
-	private Set<CfResPatAbstr> cfrespatabstr_languageSet;
+	protected Set<CfResPatAbstr> cfrespatabstr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespatkeyw_language")
-	private Set<CfResPatKeyw> cfrespatkeyw_languageSet;
+	protected Set<CfResPatKeyw> cfrespatkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespattitle_language")
-	private Set<CfResPatTitle> cfrespattitle_languageSet;
+	protected Set<CfResPatTitle> cfrespattitle_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespatversinfo_language")
-	private Set<CfResPatVersInfo> cfrespatversinfo_languageSet;
+	protected Set<CfResPatVersInfo> cfrespatversinfo_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresproddescr_language")
-	private Set<CfResProdDescr> cfresproddescr_languageSet;
+	protected Set<CfResProdDescr> cfresproddescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprodkeyw_language")
-	private Set<CfResProdKeyw> cfresprodkeyw_languageSet;
+	protected Set<CfResProdKeyw> cfresprodkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprodname_language")
-	private Set<CfResProdName> cfresprodname_languageSet;
+	protected Set<CfResProdName> cfresprodname_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprodversinfo_language")
-	private Set<CfResProdVersInfo> cfresprodversinfo_languageSet;
+	protected Set<CfResProdVersInfo> cfresprodversinfo_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespublabstr_language")
-	private Set<CfResPublAbstr> cfrespublabstr_languageSet;
+	protected Set<CfResPublAbstr> cfrespublabstr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespublkeyw_language")
-	private Set<CfResPublKeyw> cfrespublkeyw_languageSet;
+	protected Set<CfResPublKeyw> cfrespublkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespublsubtitle_language")
-	private Set<CfResPublSubtitle> cfrespublsubtitle_languageSet;
+	protected Set<CfResPublSubtitle> cfrespublsubtitle_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubltitle_language")
-	private Set<CfResPublTitle> cfrespubltitle_languageSet;
+	protected Set<CfResPublTitle> cfrespubltitle_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespublversinfo_language")
-	private Set<CfResPublVersInfo> cfrespublversinfo_languageSet;
+	protected Set<CfResPublVersInfo> cfrespublversinfo_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrvdescr_language")
-	private Set<CfSrvDescr> cfsrvdescr_languageSet;
+	protected Set<CfSrvDescr> cfsrvdescr_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrvkeyw_language")
-	private Set<CfSrvKeyw> cfsrvkeyw_languageSet;
+	protected Set<CfSrvKeyw> cfsrvkeyw_languageSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrvname_language")
-	private Set<CfSrvName> cfsrvname_languageSet;
+	protected Set<CfSrvName> cfsrvname_languageSet;
 	
 	public CfLang(){
 	}
@@ -202,20 +202,20 @@ public class CfLang implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_language_code() {
-		return this.a_language_code;
+	public java.lang.String getKa_language_code() {
+		return this.ka_language_code;
 	}
 	
-	public void setA_language_code(java.lang.String a_language_code) {
-		this.a_language_code = a_language_code;
+	public void setKa_language_code(java.lang.String ka_language_code) {
+		this.ka_language_code = ka_language_code;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfCiteDescr> getCfcitedescr_languageSet() {

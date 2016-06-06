@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,38 +36,38 @@ public class CfGeoBBox implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfGeoBBoxId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_geographic_bounding_box_identifier;
+	protected java.lang.String ka_geographic_bounding_box_identifier;
 	@Column(name = "cfWBLong", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_west_bound_longitude;
+	protected java.math.BigDecimal ka_west_bound_longitude;
 	@Column(name = "cfEBLong", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_east_bound_longitude;
+	protected java.math.BigDecimal ka_east_bound_longitude;
 	@Column(name = "cfSBLat", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_south_bound_latitude;
+	protected java.math.BigDecimal ka_south_bound_latitude;
 	@Column(name = "cfNBLat", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_north_bound_latitude;
+	protected java.math.BigDecimal ka_north_bound_latitude;
 	@Column(name = "cfMinElev", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_minimum_elevation;
+	protected java.math.BigDecimal ka_minimum_elevation;
 	@Column(name = "cfMaxElev", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_maximum_elevation;
+	protected java.math.BigDecimal ka_maximum_elevation;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfgeobbox_geobbox_geographicBoundingBox1")
-	private Set<CfGeoBBox_GeoBBox> cfgeobbox_geobbox_geographicBoundingBox1Set;
+	protected Set<CfGeoBBox_GeoBBox> cfgeobbox_geobbox_geographicBoundingBox1Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfgeobbox_geobbox_geographicBoundingBox2")
-	private Set<CfGeoBBox_GeoBBox> cfgeobbox_geobbox_geographicBoundingBox2Set;
+	protected Set<CfGeoBBox_GeoBBox> cfgeobbox_geobbox_geographicBoundingBox2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfgeobbox_class_geographicBoundingBox")
-	private Set<CfGeoBBox_Class> cfgeobbox_class_geographicBoundingBoxSet;
+	protected Set<CfGeoBBox_Class> cfgeobbox_class_geographicBoundingBoxSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfgeobboxdescr_geographicBoundingBox")
-	private Set<CfGeoBBoxDescr> cfgeobboxdescr_geographicBoundingBoxSet;
+	protected Set<CfGeoBBoxDescr> cfgeobboxdescr_geographicBoundingBoxSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfgeobboxkeyw_geographicBoundingBox")
-	private Set<CfGeoBBoxKeyw> cfgeobboxkeyw_geographicBoundingBoxSet;
+	protected Set<CfGeoBBoxKeyw> cfgeobboxkeyw_geographicBoundingBoxSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfgeobboxname_geographicBoundingBox")
-	private Set<CfGeoBBoxName> cfgeobboxname_geographicBoundingBoxSet;
+	protected Set<CfGeoBBoxName> cfgeobboxname_geographicBoundingBoxSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpaddr_geobbox_geographicBoundingBox")
-	private Set<CfPAddr_GeoBBox> cfpaddr_geobbox_geographicBoundingBoxSet;
+	protected Set<CfPAddr_GeoBBox> cfpaddr_geobbox_geographicBoundingBoxSet;
 	
 	public CfGeoBBox(){
 	}
@@ -80,68 +80,68 @@ public class CfGeoBBox implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_geographic_bounding_box_identifier() {
-		return this.a_geographic_bounding_box_identifier;
+	public java.lang.String getKa_geographic_bounding_box_identifier() {
+		return this.ka_geographic_bounding_box_identifier;
 	}
 	
-	public void setA_geographic_bounding_box_identifier(java.lang.String a_geographic_bounding_box_identifier) {
-		this.a_geographic_bounding_box_identifier = a_geographic_bounding_box_identifier;
+	public void setKa_geographic_bounding_box_identifier(java.lang.String ka_geographic_bounding_box_identifier) {
+		this.ka_geographic_bounding_box_identifier = ka_geographic_bounding_box_identifier;
 	}
 	
-	public java.math.BigDecimal getA_west_bound_longitude() {
-		return this.a_west_bound_longitude;
+	public java.math.BigDecimal getKa_west_bound_longitude() {
+		return this.ka_west_bound_longitude;
 	}
 	
-	public void setA_west_bound_longitude(java.math.BigDecimal a_west_bound_longitude) {
-		this.a_west_bound_longitude = a_west_bound_longitude;
+	public void setKa_west_bound_longitude(java.math.BigDecimal ka_west_bound_longitude) {
+		this.ka_west_bound_longitude = ka_west_bound_longitude;
 	}
 	
-	public java.math.BigDecimal getA_east_bound_longitude() {
-		return this.a_east_bound_longitude;
+	public java.math.BigDecimal getKa_east_bound_longitude() {
+		return this.ka_east_bound_longitude;
 	}
 	
-	public void setA_east_bound_longitude(java.math.BigDecimal a_east_bound_longitude) {
-		this.a_east_bound_longitude = a_east_bound_longitude;
+	public void setKa_east_bound_longitude(java.math.BigDecimal ka_east_bound_longitude) {
+		this.ka_east_bound_longitude = ka_east_bound_longitude;
 	}
 	
-	public java.math.BigDecimal getA_south_bound_latitude() {
-		return this.a_south_bound_latitude;
+	public java.math.BigDecimal getKa_south_bound_latitude() {
+		return this.ka_south_bound_latitude;
 	}
 	
-	public void setA_south_bound_latitude(java.math.BigDecimal a_south_bound_latitude) {
-		this.a_south_bound_latitude = a_south_bound_latitude;
+	public void setKa_south_bound_latitude(java.math.BigDecimal ka_south_bound_latitude) {
+		this.ka_south_bound_latitude = ka_south_bound_latitude;
 	}
 	
-	public java.math.BigDecimal getA_north_bound_latitude() {
-		return this.a_north_bound_latitude;
+	public java.math.BigDecimal getKa_north_bound_latitude() {
+		return this.ka_north_bound_latitude;
 	}
 	
-	public void setA_north_bound_latitude(java.math.BigDecimal a_north_bound_latitude) {
-		this.a_north_bound_latitude = a_north_bound_latitude;
+	public void setKa_north_bound_latitude(java.math.BigDecimal ka_north_bound_latitude) {
+		this.ka_north_bound_latitude = ka_north_bound_latitude;
 	}
 	
-	public java.math.BigDecimal getA_minimum_elevation() {
-		return this.a_minimum_elevation;
+	public java.math.BigDecimal getKa_minimum_elevation() {
+		return this.ka_minimum_elevation;
 	}
 	
-	public void setA_minimum_elevation(java.math.BigDecimal a_minimum_elevation) {
-		this.a_minimum_elevation = a_minimum_elevation;
+	public void setKa_minimum_elevation(java.math.BigDecimal ka_minimum_elevation) {
+		this.ka_minimum_elevation = ka_minimum_elevation;
 	}
 	
-	public java.math.BigDecimal getA_maximum_elevation() {
-		return this.a_maximum_elevation;
+	public java.math.BigDecimal getKa_maximum_elevation() {
+		return this.ka_maximum_elevation;
 	}
 	
-	public void setA_maximum_elevation(java.math.BigDecimal a_maximum_elevation) {
-		this.a_maximum_elevation = a_maximum_elevation;
+	public void setKa_maximum_elevation(java.math.BigDecimal ka_maximum_elevation) {
+		this.ka_maximum_elevation = ka_maximum_elevation;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfGeoBBox_GeoBBox> getCfgeobbox_geobbox_geographicBoundingBox1Set() {

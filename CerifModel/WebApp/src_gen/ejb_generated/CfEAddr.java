@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,21 +36,21 @@ public class CfEAddr implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfEAddrId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_electronic_address_identifier;
+	protected java.lang.String ka_electronic_address_identifier;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@ManyToOne
 	@JoinColumn(name="cfeaddr_postAddress", referencedColumnName="ID",  nullable = true)
-	private CfPAddr cfeaddr_postAddress;
+	protected CfPAddr cfeaddr_postAddress;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfeaddr_class_electronicAddress")
-	private Set<CfEAddr_Class> cfeaddr_class_electronicAddressSet;
+	protected Set<CfEAddr_Class> cfeaddr_class_electronicAddressSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_eaddr_electronicAddress")
-	private Set<CfOrgUnit_EAddr> cforgunit_eaddr_electronicAddressSet;
+	protected Set<CfOrgUnit_EAddr> cforgunit_eaddr_electronicAddressSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_eaddr_electronicAddress")
-	private Set<CfPers_EAddr> cfpers_eaddr_electronicAddressSet;
+	protected Set<CfPers_EAddr> cfpers_eaddr_electronicAddressSet;
 	
 	public CfEAddr(){
 	}
@@ -63,20 +63,20 @@ public class CfEAddr implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_electronic_address_identifier() {
-		return this.a_electronic_address_identifier;
+	public java.lang.String getKa_electronic_address_identifier() {
+		return this.ka_electronic_address_identifier;
 	}
 	
-	public void setA_electronic_address_identifier(java.lang.String a_electronic_address_identifier) {
-		this.a_electronic_address_identifier = a_electronic_address_identifier;
+	public void setKa_electronic_address_identifier(java.lang.String ka_electronic_address_identifier) {
+		this.ka_electronic_address_identifier = ka_electronic_address_identifier;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public CfPAddr getCfeaddr_postAddress() {

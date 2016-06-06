@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,23 +36,23 @@ public class CfOrgUnit_EAddr implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_start_date;
+	protected java.util.Date ka_start_date;
 	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_end_date;
+	protected java.util.Date ka_end_date;
 	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_fraction;
+	protected java.math.BigDecimal ka_fraction;
 	@ManyToOne
 	@JoinColumn(name="cforgunit_eaddr_classification", referencedColumnName="ID",  nullable = true)
-	private CfClass cforgunit_eaddr_classification;
+	protected CfClass cforgunit_eaddr_classification;
 	@ManyToOne
 	@JoinColumn(name="cforgunit_eaddr_electronicAddress", referencedColumnName="ID",  nullable = true)
-	private CfEAddr cforgunit_eaddr_electronicAddress;
+	protected CfEAddr cforgunit_eaddr_electronicAddress;
 	@ManyToOne
 	@JoinColumn(name="cforgunit_eaddr_organisationUnit", referencedColumnName="ID",  nullable = true)
-	private CfOrgUnit cforgunit_eaddr_organisationUnit;
+	protected CfOrgUnit cforgunit_eaddr_organisationUnit;
 	
 	public CfOrgUnit_EAddr(){
 	}
@@ -65,28 +65,28 @@ public class CfOrgUnit_EAddr implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.util.Date getA_start_date() {
-		return this.a_start_date;
+	public java.util.Date getKa_start_date() {
+		return this.ka_start_date;
 	}
 	
-	public void setA_start_date(java.util.Date a_start_date) {
-		this.a_start_date = a_start_date;
+	public void setKa_start_date(java.util.Date ka_start_date) {
+		this.ka_start_date = ka_start_date;
 	}
 	
-	public java.util.Date getA_end_date() {
-		return this.a_end_date;
+	public java.util.Date getKa_end_date() {
+		return this.ka_end_date;
 	}
 	
-	public void setA_end_date(java.util.Date a_end_date) {
-		this.a_end_date = a_end_date;
+	public void setKa_end_date(java.util.Date ka_end_date) {
+		this.ka_end_date = ka_end_date;
 	}
 	
-	public java.math.BigDecimal getA_fraction() {
-		return this.a_fraction;
+	public java.math.BigDecimal getKa_fraction() {
+		return this.ka_fraction;
 	}
 	
-	public void setA_fraction(java.math.BigDecimal a_fraction) {
-		this.a_fraction = a_fraction;
+	public void setKa_fraction(java.math.BigDecimal ka_fraction) {
+		this.ka_fraction = ka_fraction;
 	}
 	
 	public CfClass getCforgunit_eaddr_classification() {

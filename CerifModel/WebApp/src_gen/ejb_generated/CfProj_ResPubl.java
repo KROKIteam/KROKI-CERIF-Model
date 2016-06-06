@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,25 +36,25 @@ public class CfProj_ResPubl implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_start_date;
+	protected java.util.Date ka_start_date;
 	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_end_date;
+	protected java.util.Date ka_end_date;
 	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_fraction;
+	protected java.math.BigDecimal ka_fraction;
 	@Column(name = "cfCopyright", unique = false, nullable = false , length = 64, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_copyright;
+	protected java.lang.String ka_copyright;
 	@ManyToOne
 	@JoinColumn(name="cfproj_respubl_classification", referencedColumnName="ID",  nullable = true)
-	private CfClass cfproj_respubl_classification;
+	protected CfClass cfproj_respubl_classification;
 	@ManyToOne
 	@JoinColumn(name="cfproj_respubl_resultPublication", referencedColumnName="ID",  nullable = true)
-	private CfResPubl cfproj_respubl_resultPublication;
+	protected CfResPubl cfproj_respubl_resultPublication;
 	@ManyToOne
 	@JoinColumn(name="cfproj_respubl_project", referencedColumnName="ID",  nullable = true)
-	private CfProj cfproj_respubl_project;
+	protected CfProj cfproj_respubl_project;
 	
 	public CfProj_ResPubl(){
 	}
@@ -67,36 +67,36 @@ public class CfProj_ResPubl implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.util.Date getA_start_date() {
-		return this.a_start_date;
+	public java.util.Date getKa_start_date() {
+		return this.ka_start_date;
 	}
 	
-	public void setA_start_date(java.util.Date a_start_date) {
-		this.a_start_date = a_start_date;
+	public void setKa_start_date(java.util.Date ka_start_date) {
+		this.ka_start_date = ka_start_date;
 	}
 	
-	public java.util.Date getA_end_date() {
-		return this.a_end_date;
+	public java.util.Date getKa_end_date() {
+		return this.ka_end_date;
 	}
 	
-	public void setA_end_date(java.util.Date a_end_date) {
-		this.a_end_date = a_end_date;
+	public void setKa_end_date(java.util.Date ka_end_date) {
+		this.ka_end_date = ka_end_date;
 	}
 	
-	public java.math.BigDecimal getA_fraction() {
-		return this.a_fraction;
+	public java.math.BigDecimal getKa_fraction() {
+		return this.ka_fraction;
 	}
 	
-	public void setA_fraction(java.math.BigDecimal a_fraction) {
-		this.a_fraction = a_fraction;
+	public void setKa_fraction(java.math.BigDecimal ka_fraction) {
+		this.ka_fraction = ka_fraction;
 	}
 	
-	public java.lang.String getA_copyright() {
-		return this.a_copyright;
+	public java.lang.String getKa_copyright() {
+		return this.ka_copyright;
 	}
 	
-	public void setA_copyright(java.lang.String a_copyright) {
-		this.a_copyright = a_copyright;
+	public void setKa_copyright(java.lang.String ka_copyright) {
+		this.ka_copyright = ka_copyright;
 	}
 	
 	public CfClass getCfproj_respubl_classification() {

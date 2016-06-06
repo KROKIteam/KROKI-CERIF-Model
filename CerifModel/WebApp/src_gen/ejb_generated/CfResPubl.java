@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,86 +36,86 @@ public class CfResPubl implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfResPublId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_result_publication_identifier;
+	protected java.lang.String ka_result_publication_identifier;
 	@Column(name = "cfResPublDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_result_publication_date;
+	protected java.util.Date ka_result_publication_date;
 	@Column(name = "cfNum", unique = false, nullable = false , length = 32, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_number;
+	protected java.lang.String ka_number;
 	@Column(name = "cfVol", unique = false, nullable = false , length = 3, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_volume;
+	protected java.lang.String ka_volume;
 	@Column(name = "cfEdition", unique = false, nullable = false , length = 8, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_edition;
+	protected java.lang.String ka_edition;
 	@Column(name = "cfSeries", unique = false, nullable = false , length = 8, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_series;
+	protected java.lang.String ka_series;
 	@Column(name = "cfIssue", unique = false, nullable = false , length = 8, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_issue;
+	protected java.lang.String ka_issue;
 	@Column(name = "cfStartPage", unique = false, nullable = false , length = 8, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_start_page;
+	protected java.lang.String ka_start_page;
 	@Column(name = "cfEndPage", unique = false, nullable = false , length = 8, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_end_page;
+	protected java.lang.String ka_end_page;
 	@Column(name = "cfTotalPages", unique = false, nullable = false , length = 8, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_total_pages;
+	protected java.lang.String ka_total_pages;
 	@Column(name = "cfISBN", unique = false, nullable = false , length = 20, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_isbn;
+	protected java.lang.String ka_isbn;
 	@Column(name = "cfISSN", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_issn;
+	protected java.lang.String ka_issn;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_respubl_resultPublication")
-	private Set<CfOrgUnit_ResPubl> cforgunit_respubl_resultPublicationSet;
+	protected Set<CfOrgUnit_ResPubl> cforgunit_respubl_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_respubl_resultPublication")
-	private Set<CfPers_ResPubl> cfpers_respubl_resultPublicationSet;
+	protected Set<CfPers_ResPubl> cfpers_respubl_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_respubl_resultPublication")
-	private Set<CfProj_ResPubl> cfproj_respubl_resultPublicationSet;
+	protected Set<CfProj_ResPubl> cfproj_respubl_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_respat_resultPublication")
-	private Set<CfResPubl_ResPat> cfrespubl_respat_resultPublicationSet;
+	protected Set<CfResPubl_ResPat> cfrespubl_respat_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_resprod_resultPublication")
-	private Set<CfResPubl_ResProd> cfrespubl_resprod_resultPublicationSet;
+	protected Set<CfResPubl_ResProd> cfrespubl_resprod_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_respubl_resultPublication1")
-	private Set<CfResPubl_ResPubl> cfrespubl_respubl_resultPublication1Set;
+	protected Set<CfResPubl_ResPubl> cfrespubl_respubl_resultPublication1Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_respubl_resultPublication2")
-	private Set<CfResPubl_ResPubl> cfrespubl_respubl_resultPublication2Set;
+	protected Set<CfResPubl_ResPubl> cfrespubl_respubl_resultPublication2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespublabstr_resultPublication")
-	private Set<CfResPublAbstr> cfrespublabstr_resultPublicationSet;
+	protected Set<CfResPublAbstr> cfrespublabstr_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespublbiblnote_resultPublication")
-	private Set<CfResPublBiblNote> cfrespublbiblnote_resultPublicationSet;
+	protected Set<CfResPublBiblNote> cfrespublbiblnote_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_cite_resultPublication")
-	private Set<CfResPubl_Cite> cfrespubl_cite_resultPublicationSet;
+	protected Set<CfResPubl_Cite> cfrespubl_cite_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_class_resultPublication")
-	private Set<CfResPubl_Class> cfrespubl_class_resultPublicationSet;
+	protected Set<CfResPubl_Class> cfrespubl_class_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_dc_resultPublication")
-	private Set<CfResPubl_DC> cfrespubl_dc_resultPublicationSet;
+	protected Set<CfResPubl_DC> cfrespubl_dc_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_equip_resultPublication")
-	private Set<CfResPubl_Equip> cfrespubl_equip_resultPublicationSet;
+	protected Set<CfResPubl_Equip> cfrespubl_equip_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_event_resultPublication")
-	private Set<CfResPubl_Event> cfrespubl_event_resultPublicationSet;
+	protected Set<CfResPubl_Event> cfrespubl_event_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_facil_resultPublication")
-	private Set<CfResPubl_Facil> cfrespubl_facil_resultPublicationSet;
+	protected Set<CfResPubl_Facil> cfrespubl_facil_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_fund_resultPublication")
-	private Set<CfResPubl_Fund> cfrespubl_fund_resultPublicationSet;
+	protected Set<CfResPubl_Fund> cfrespubl_fund_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_indic_resultPublication")
-	private Set<CfResPubl_Indic> cfrespubl_indic_resultPublicationSet;
+	protected Set<CfResPubl_Indic> cfrespubl_indic_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespublkeyw_resultPublication")
-	private Set<CfResPublKeyw> cfrespublkeyw_resultPublicationSet;
+	protected Set<CfResPublKeyw> cfrespublkeyw_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_meas_resultPublication")
-	private Set<CfResPubl_Meas> cfrespubl_meas_resultPublicationSet;
+	protected Set<CfResPubl_Meas> cfrespubl_meas_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_medium_resultPublication")
-	private Set<CfResPubl_Medium> cfrespubl_medium_resultPublicationSet;
+	protected Set<CfResPubl_Medium> cfrespubl_medium_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_metrics_resultPublication")
-	private Set<CfResPubl_Metrics> cfrespubl_metrics_resultPublicationSet;
+	protected Set<CfResPubl_Metrics> cfrespubl_metrics_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespublnameabbrev_resultPublication")
-	private Set<CfResPublNameAbbrev> cfrespublnameabbrev_resultPublicationSet;
+	protected Set<CfResPublNameAbbrev> cfrespublnameabbrev_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_srv_resultPublication")
-	private Set<CfResPubl_Srv> cfrespubl_srv_resultPublicationSet;
+	protected Set<CfResPubl_Srv> cfrespubl_srv_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespublsubtitle_resultPublication")
-	private Set<CfResPublSubtitle> cfrespublsubtitle_resultPublicationSet;
+	protected Set<CfResPublSubtitle> cfrespublsubtitle_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubltitle_resultPublication")
-	private Set<CfResPublTitle> cfrespubltitle_resultPublicationSet;
+	protected Set<CfResPublTitle> cfrespubltitle_resultPublicationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespublversinfo_resultPublication")
-	private Set<CfResPublVersInfo> cfrespublversinfo_resultPublicationSet;
+	protected Set<CfResPublVersInfo> cfrespublversinfo_resultPublicationSet;
 	
 	public CfResPubl(){
 	}
@@ -128,108 +128,108 @@ public class CfResPubl implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_result_publication_identifier() {
-		return this.a_result_publication_identifier;
+	public java.lang.String getKa_result_publication_identifier() {
+		return this.ka_result_publication_identifier;
 	}
 	
-	public void setA_result_publication_identifier(java.lang.String a_result_publication_identifier) {
-		this.a_result_publication_identifier = a_result_publication_identifier;
+	public void setKa_result_publication_identifier(java.lang.String ka_result_publication_identifier) {
+		this.ka_result_publication_identifier = ka_result_publication_identifier;
 	}
 	
-	public java.util.Date getA_result_publication_date() {
-		return this.a_result_publication_date;
+	public java.util.Date getKa_result_publication_date() {
+		return this.ka_result_publication_date;
 	}
 	
-	public void setA_result_publication_date(java.util.Date a_result_publication_date) {
-		this.a_result_publication_date = a_result_publication_date;
+	public void setKa_result_publication_date(java.util.Date ka_result_publication_date) {
+		this.ka_result_publication_date = ka_result_publication_date;
 	}
 	
-	public java.lang.String getA_number() {
-		return this.a_number;
+	public java.lang.String getKa_number() {
+		return this.ka_number;
 	}
 	
-	public void setA_number(java.lang.String a_number) {
-		this.a_number = a_number;
+	public void setKa_number(java.lang.String ka_number) {
+		this.ka_number = ka_number;
 	}
 	
-	public java.lang.String getA_volume() {
-		return this.a_volume;
+	public java.lang.String getKa_volume() {
+		return this.ka_volume;
 	}
 	
-	public void setA_volume(java.lang.String a_volume) {
-		this.a_volume = a_volume;
+	public void setKa_volume(java.lang.String ka_volume) {
+		this.ka_volume = ka_volume;
 	}
 	
-	public java.lang.String getA_edition() {
-		return this.a_edition;
+	public java.lang.String getKa_edition() {
+		return this.ka_edition;
 	}
 	
-	public void setA_edition(java.lang.String a_edition) {
-		this.a_edition = a_edition;
+	public void setKa_edition(java.lang.String ka_edition) {
+		this.ka_edition = ka_edition;
 	}
 	
-	public java.lang.String getA_series() {
-		return this.a_series;
+	public java.lang.String getKa_series() {
+		return this.ka_series;
 	}
 	
-	public void setA_series(java.lang.String a_series) {
-		this.a_series = a_series;
+	public void setKa_series(java.lang.String ka_series) {
+		this.ka_series = ka_series;
 	}
 	
-	public java.lang.String getA_issue() {
-		return this.a_issue;
+	public java.lang.String getKa_issue() {
+		return this.ka_issue;
 	}
 	
-	public void setA_issue(java.lang.String a_issue) {
-		this.a_issue = a_issue;
+	public void setKa_issue(java.lang.String ka_issue) {
+		this.ka_issue = ka_issue;
 	}
 	
-	public java.lang.String getA_start_page() {
-		return this.a_start_page;
+	public java.lang.String getKa_start_page() {
+		return this.ka_start_page;
 	}
 	
-	public void setA_start_page(java.lang.String a_start_page) {
-		this.a_start_page = a_start_page;
+	public void setKa_start_page(java.lang.String ka_start_page) {
+		this.ka_start_page = ka_start_page;
 	}
 	
-	public java.lang.String getA_end_page() {
-		return this.a_end_page;
+	public java.lang.String getKa_end_page() {
+		return this.ka_end_page;
 	}
 	
-	public void setA_end_page(java.lang.String a_end_page) {
-		this.a_end_page = a_end_page;
+	public void setKa_end_page(java.lang.String ka_end_page) {
+		this.ka_end_page = ka_end_page;
 	}
 	
-	public java.lang.String getA_total_pages() {
-		return this.a_total_pages;
+	public java.lang.String getKa_total_pages() {
+		return this.ka_total_pages;
 	}
 	
-	public void setA_total_pages(java.lang.String a_total_pages) {
-		this.a_total_pages = a_total_pages;
+	public void setKa_total_pages(java.lang.String ka_total_pages) {
+		this.ka_total_pages = ka_total_pages;
 	}
 	
-	public java.lang.String getA_isbn() {
-		return this.a_isbn;
+	public java.lang.String getKa_isbn() {
+		return this.ka_isbn;
 	}
 	
-	public void setA_isbn(java.lang.String a_isbn) {
-		this.a_isbn = a_isbn;
+	public void setKa_isbn(java.lang.String ka_isbn) {
+		this.ka_isbn = ka_isbn;
 	}
 	
-	public java.lang.String getA_issn() {
-		return this.a_issn;
+	public java.lang.String getKa_issn() {
+		return this.ka_issn;
 	}
 	
-	public void setA_issn(java.lang.String a_issn) {
-		this.a_issn = a_issn;
+	public void setKa_issn(java.lang.String ka_issn) {
+		this.ka_issn = ka_issn;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfOrgUnit_ResPubl> getCforgunit_respubl_resultPublicationSet() {

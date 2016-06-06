@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,76 +36,76 @@ public class CfDC implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfDCId", unique = false, nullable = false , length = 32, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_dc_identifier;
+	protected java.lang.String ka_dc_identifier;
 	@Column(name = "cfDCScheme", unique = false, nullable = false , length = 32, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_dc_scheme;
+	protected java.lang.String ka_dc_scheme;
 	@Column(name = "cfDCSchemeURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_dc_scheme_uri;
+	protected java.lang.String ka_dc_scheme_uri;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcaudience_dublinCore")
-	private Set<CfDCAudience> cfdcaudience_dublinCoreSet;
+	protected Set<CfDCAudience> cfdcaudience_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdccontributor_dublinCore")
-	private Set<CfDCContributor> cfdccontributor_dublinCoreSet;
+	protected Set<CfDCContributor> cfdccontributor_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdccoverage_dublinCore")
-	private Set<CfDCCoverage> cfdccoverage_dublinCoreSet;
+	protected Set<CfDCCoverage> cfdccoverage_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdccoveragespatial_dublinCore")
-	private Set<CfDCCoverageSpatial> cfdccoveragespatial_dublinCoreSet;
+	protected Set<CfDCCoverageSpatial> cfdccoveragespatial_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdccoveragetemporal_dublinCore")
-	private Set<CfDCCoverageTemporal> cfdccoveragetemporal_dublinCoreSet;
+	protected Set<CfDCCoverageTemporal> cfdccoveragetemporal_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdccreator_dublinCore")
-	private Set<CfDCCreator> cfdccreator_dublinCoreSet;
+	protected Set<CfDCCreator> cfdccreator_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcdate_dublinCore")
-	private Set<CfDCDate> cfdcdate_dublinCoreSet;
+	protected Set<CfDCDate> cfdcdate_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcdescription_dublinCore")
-	private Set<CfDCDescription> cfdcdescription_dublinCoreSet;
+	protected Set<CfDCDescription> cfdcdescription_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcformat_dublinCore")
-	private Set<CfDCFormat> cfdcformat_dublinCoreSet;
+	protected Set<CfDCFormat> cfdcformat_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdclanguage_dublinCore")
-	private Set<CfDCLanguage> cfdclanguage_dublinCoreSet;
+	protected Set<CfDCLanguage> cfdclanguage_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcprovenance_dublinCore")
-	private Set<CfDCProvenance> cfdcprovenance_dublinCoreSet;
+	protected Set<CfDCProvenance> cfdcprovenance_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcpublisher_dublinCore")
-	private Set<CfDCPublisher> cfdcpublisher_dublinCoreSet;
+	protected Set<CfDCPublisher> cfdcpublisher_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcrelation_dublinCore")
-	private Set<CfDCRelation> cfdcrelation_dublinCoreSet;
+	protected Set<CfDCRelation> cfdcrelation_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcrelation_dublinCorea")
-	private Set<CfDCRelation> cfdcrelation_dublinCoreaSet;
+	protected Set<CfDCRelation> cfdcrelation_dublinCoreaSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcresourceidentifier_dublinCore")
-	private Set<CfDCResourceIdentifier> cfdcresourceidentifier_dublinCoreSet;
+	protected Set<CfDCResourceIdentifier> cfdcresourceidentifier_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcresourcetype_dublinCore")
-	private Set<CfDCResourceType> cfdcresourcetype_dublinCoreSet;
+	protected Set<CfDCResourceType> cfdcresourcetype_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcrightsholder_dublinCore")
-	private Set<CfDCRightsHolder> cfdcrightsholder_dublinCoreSet;
+	protected Set<CfDCRightsHolder> cfdcrightsholder_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcrightsmm_dublinCore")
-	private Set<CfDCRightsMM> cfdcrightsmm_dublinCoreSet;
+	protected Set<CfDCRightsMM> cfdcrightsmm_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcrightsmmaccessrights_dublinCore")
-	private Set<CfDCRightsMMAccessRights> cfdcrightsmmaccessrights_dublinCoreSet;
+	protected Set<CfDCRightsMMAccessRights> cfdcrightsmmaccessrights_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcrightsmmlicense_dublinCore")
-	private Set<CfDCRightsMMLicense> cfdcrightsmmlicense_dublinCoreSet;
+	protected Set<CfDCRightsMMLicense> cfdcrightsmmlicense_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcsource_dublinCore")
-	private Set<CfDCSource> cfdcsource_dublinCoreSet;
+	protected Set<CfDCSource> cfdcsource_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdcsubject_dublinCore")
-	private Set<CfDCSubject> cfdcsubject_dublinCoreSet;
+	protected Set<CfDCSubject> cfdcsubject_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfdctitle_dublinCore")
-	private Set<CfDCTitle> cfdctitle_dublinCoreSet;
+	protected Set<CfDCTitle> cfdctitle_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffdcrightsmmpricing_dublinCore")
-	private Set<CfFDCRightsMMPricing> cffdcrightsmmpricing_dublinCoreSet;
+	protected Set<CfFDCRightsMMPricing> cffdcrightsmmpricing_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffdcrightsmmprivacy_dublinCore")
-	private Set<CfFDCRightsMMPrivacy> cffdcrightsmmprivacy_dublinCoreSet;
+	protected Set<CfFDCRightsMMPrivacy> cffdcrightsmmprivacy_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffdcrightsmmrights_dublinCore")
-	private Set<CfFDCRightsMMRights> cffdcrightsmmrights_dublinCoreSet;
+	protected Set<CfFDCRightsMMRights> cffdcrightsmmrights_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffdcrightsmmsecurity_dublinCore")
-	private Set<CfFDCRightsMMSecurity> cffdcrightsmmsecurity_dublinCoreSet;
+	protected Set<CfFDCRightsMMSecurity> cffdcrightsmmsecurity_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_dc_dublinCore")
-	private Set<CfOrgUnit_DC> cforgunit_dc_dublinCoreSet;
+	protected Set<CfOrgUnit_DC> cforgunit_dc_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_dc_dublinCore")
-	private Set<CfPers_DC> cfpers_dc_dublinCoreSet;
+	protected Set<CfPers_DC> cfpers_dc_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_dc_dublinCore")
-	private Set<CfProj_DC> cfproj_dc_dublinCoreSet;
+	protected Set<CfProj_DC> cfproj_dc_dublinCoreSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_dc_dublinCore")
-	private Set<CfResPubl_DC> cfrespubl_dc_dublinCoreSet;
+	protected Set<CfResPubl_DC> cfrespubl_dc_dublinCoreSet;
 	
 	public CfDC(){
 	}
@@ -118,28 +118,28 @@ public class CfDC implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_dc_identifier() {
-		return this.a_dc_identifier;
+	public java.lang.String getKa_dc_identifier() {
+		return this.ka_dc_identifier;
 	}
 	
-	public void setA_dc_identifier(java.lang.String a_dc_identifier) {
-		this.a_dc_identifier = a_dc_identifier;
+	public void setKa_dc_identifier(java.lang.String ka_dc_identifier) {
+		this.ka_dc_identifier = ka_dc_identifier;
 	}
 	
-	public java.lang.String getA_dc_scheme() {
-		return this.a_dc_scheme;
+	public java.lang.String getKa_dc_scheme() {
+		return this.ka_dc_scheme;
 	}
 	
-	public void setA_dc_scheme(java.lang.String a_dc_scheme) {
-		this.a_dc_scheme = a_dc_scheme;
+	public void setKa_dc_scheme(java.lang.String ka_dc_scheme) {
+		this.ka_dc_scheme = ka_dc_scheme;
 	}
 	
-	public java.lang.String getA_dc_scheme_uri() {
-		return this.a_dc_scheme_uri;
+	public java.lang.String getKa_dc_scheme_uri() {
+		return this.ka_dc_scheme_uri;
 	}
 	
-	public void setA_dc_scheme_uri(java.lang.String a_dc_scheme_uri) {
-		this.a_dc_scheme_uri = a_dc_scheme_uri;
+	public void setKa_dc_scheme_uri(java.lang.String ka_dc_scheme_uri) {
+		this.ka_dc_scheme_uri = ka_dc_scheme_uri;
 	}
 	
 	public Set<CfDCAudience> getCfdcaudience_dublinCoreSet() {

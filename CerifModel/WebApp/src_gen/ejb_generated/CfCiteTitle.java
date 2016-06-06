@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,18 +36,18 @@ public class CfCiteTitle implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfTitle", unique = false, nullable = false , length = 255, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_title;
+	protected java.lang.String ka_title;
 	@ManyToOne
 	@JoinColumn(name="cfcitetitle_language", referencedColumnName="ID",  nullable = true)
-	private CfLang cfcitetitle_language;
+	protected CfLang cfcitetitle_language;
 	@ManyToOne
 	@JoinColumn(name="cfcitetitle_citation", referencedColumnName="ID",  nullable = true)
-	private CfCite cfcitetitle_citation;
+	protected CfCite cfcitetitle_citation;
 	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_translation_kind;
+	protected java.lang.String ka_translation_kind;
 	
 	public CfCiteTitle(){
 	}
@@ -60,12 +60,12 @@ public class CfCiteTitle implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_title() {
-		return this.a_title;
+	public java.lang.String getKa_title() {
+		return this.ka_title;
 	}
 	
-	public void setA_title(java.lang.String a_title) {
-		this.a_title = a_title;
+	public void setKa_title(java.lang.String ka_title) {
+		this.ka_title = ka_title;
 	}
 	
 	public CfLang getCfcitetitle_language() {
@@ -84,12 +84,12 @@ public class CfCiteTitle implements java.io.Serializable {
 		this.cfcitetitle_citation = cfcitetitle_citation;
 	}
 	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
+	public java.lang.String getKa_translation_kind() {
+		return this.ka_translation_kind;
 	}
 	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
+	public void setKa_translation_kind(java.lang.String ka_translation_kind) {
+		this.ka_translation_kind = ka_translation_kind;
 	}
 	
 }

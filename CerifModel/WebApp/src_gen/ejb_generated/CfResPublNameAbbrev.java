@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,17 +36,17 @@ public class CfResPublNameAbbrev implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfLangCode", unique = false, nullable = false , length = 5, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_language_code;
+	protected java.lang.String ka_language_code;
 	@Column(name = "cfNameAbbrev", unique = false, nullable = false , length = 255, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_name_abbreviation;
+	protected java.lang.String ka_name_abbreviation;
 	@ManyToOne
 	@JoinColumn(name="cfrespublnameabbrev_resultPublication", referencedColumnName="ID",  nullable = true)
-	private CfResPubl cfrespublnameabbrev_resultPublication;
+	protected CfResPubl cfrespublnameabbrev_resultPublication;
 	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_translation_kind;
+	protected java.lang.String ka_translation_kind;
 	
 	public CfResPublNameAbbrev(){
 	}
@@ -59,20 +59,20 @@ public class CfResPublNameAbbrev implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_language_code() {
-		return this.a_language_code;
+	public java.lang.String getKa_language_code() {
+		return this.ka_language_code;
 	}
 	
-	public void setA_language_code(java.lang.String a_language_code) {
-		this.a_language_code = a_language_code;
+	public void setKa_language_code(java.lang.String ka_language_code) {
+		this.ka_language_code = ka_language_code;
 	}
 	
-	public java.lang.String getA_name_abbreviation() {
-		return this.a_name_abbreviation;
+	public java.lang.String getKa_name_abbreviation() {
+		return this.ka_name_abbreviation;
 	}
 	
-	public void setA_name_abbreviation(java.lang.String a_name_abbreviation) {
-		this.a_name_abbreviation = a_name_abbreviation;
+	public void setKa_name_abbreviation(java.lang.String ka_name_abbreviation) {
+		this.ka_name_abbreviation = ka_name_abbreviation;
 	}
 	
 	public CfResPubl getCfrespublnameabbrev_resultPublication() {
@@ -83,12 +83,12 @@ public class CfResPublNameAbbrev implements java.io.Serializable {
 		this.cfrespublnameabbrev_resultPublication = cfrespublnameabbrev_resultPublication;
 	}
 	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
+	public java.lang.String getKa_translation_kind() {
+		return this.ka_translation_kind;
 	}
 	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
+	public void setKa_translation_kind(java.lang.String ka_translation_kind) {
+		this.ka_translation_kind = ka_translation_kind;
 	}
 	
 }

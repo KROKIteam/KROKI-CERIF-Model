@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,60 +36,60 @@ public class CfProj implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfProjId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_project_identifier;
+	protected java.lang.String ka_project_identifier;
 	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_start_date;
+	protected java.util.Date ka_start_date;
 	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_end_date;
+	protected java.util.Date ka_end_date;
 	@Column(name = "cfAcro", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_acronym;
+	protected java.lang.String ka_acronym;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_proj_project1")
-	private Set<CfProj_Proj> cfproj_proj_project1Set;
+	protected Set<CfProj_Proj> cfproj_proj_project1Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_proj_project2")
-	private Set<CfProj_Proj> cfproj_proj_project2Set;
+	protected Set<CfProj_Proj> cfproj_proj_project2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprojabstr_project")
-	private Set<CfProjAbstr> cfprojabstr_projectSet;
+	protected Set<CfProjAbstr> cfprojabstr_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_class_project")
-	private Set<CfProj_Class> cfproj_class_projectSet;
+	protected Set<CfProj_Class> cfproj_class_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_dc_project")
-	private Set<CfProj_DC> cfproj_dc_projectSet;
+	protected Set<CfProj_DC> cfproj_dc_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_equip_project")
-	private Set<CfProj_Equip> cfproj_equip_projectSet;
+	protected Set<CfProj_Equip> cfproj_equip_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_event_project")
-	private Set<CfProj_Event> cfproj_event_projectSet;
+	protected Set<CfProj_Event> cfproj_event_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_facil_project")
-	private Set<CfProj_Facil> cfproj_facil_projectSet;
+	protected Set<CfProj_Facil> cfproj_facil_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_fund_project")
-	private Set<CfProj_Fund> cfproj_fund_projectSet;
+	protected Set<CfProj_Fund> cfproj_fund_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_indic_project")
-	private Set<CfProj_Indic> cfproj_indic_projectSet;
+	protected Set<CfProj_Indic> cfproj_indic_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprojkeyw_project")
-	private Set<CfProjKeyw> cfprojkeyw_projectSet;
+	protected Set<CfProjKeyw> cfprojkeyw_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_meas_project")
-	private Set<CfProj_Meas> cfproj_meas_projectSet;
+	protected Set<CfProj_Meas> cfproj_meas_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_medium_project")
-	private Set<CfProj_Medium> cfproj_medium_projectSet;
+	protected Set<CfProj_Medium> cfproj_medium_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_orgunit_project")
-	private Set<CfProj_OrgUnit> cfproj_orgunit_projectSet;
+	protected Set<CfProj_OrgUnit> cfproj_orgunit_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_pers_project")
-	private Set<CfProj_Pers> cfproj_pers_projectSet;
+	protected Set<CfProj_Pers> cfproj_pers_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_prize_project")
-	private Set<CfProj_Prize> cfproj_prize_projectSet;
+	protected Set<CfProj_Prize> cfproj_prize_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_respat_project")
-	private Set<CfProj_ResPat> cfproj_respat_projectSet;
+	protected Set<CfProj_ResPat> cfproj_respat_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_resprod_project")
-	private Set<CfProj_ResProd> cfproj_resprod_projectSet;
+	protected Set<CfProj_ResProd> cfproj_resprod_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_respubl_project")
-	private Set<CfProj_ResPubl> cfproj_respubl_projectSet;
+	protected Set<CfProj_ResPubl> cfproj_respubl_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_srv_project")
-	private Set<CfProj_Srv> cfproj_srv_projectSet;
+	protected Set<CfProj_Srv> cfproj_srv_projectSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprojtitle_project")
-	private Set<CfProjTitle> cfprojtitle_projectSet;
+	protected Set<CfProjTitle> cfprojtitle_projectSet;
 	
 	public CfProj(){
 	}
@@ -102,44 +102,44 @@ public class CfProj implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_project_identifier() {
-		return this.a_project_identifier;
+	public java.lang.String getKa_project_identifier() {
+		return this.ka_project_identifier;
 	}
 	
-	public void setA_project_identifier(java.lang.String a_project_identifier) {
-		this.a_project_identifier = a_project_identifier;
+	public void setKa_project_identifier(java.lang.String ka_project_identifier) {
+		this.ka_project_identifier = ka_project_identifier;
 	}
 	
-	public java.util.Date getA_start_date() {
-		return this.a_start_date;
+	public java.util.Date getKa_start_date() {
+		return this.ka_start_date;
 	}
 	
-	public void setA_start_date(java.util.Date a_start_date) {
-		this.a_start_date = a_start_date;
+	public void setKa_start_date(java.util.Date ka_start_date) {
+		this.ka_start_date = ka_start_date;
 	}
 	
-	public java.util.Date getA_end_date() {
-		return this.a_end_date;
+	public java.util.Date getKa_end_date() {
+		return this.ka_end_date;
 	}
 	
-	public void setA_end_date(java.util.Date a_end_date) {
-		this.a_end_date = a_end_date;
+	public void setKa_end_date(java.util.Date ka_end_date) {
+		this.ka_end_date = ka_end_date;
 	}
 	
-	public java.lang.String getA_acronym() {
-		return this.a_acronym;
+	public java.lang.String getKa_acronym() {
+		return this.ka_acronym;
 	}
 	
-	public void setA_acronym(java.lang.String a_acronym) {
-		this.a_acronym = a_acronym;
+	public void setKa_acronym(java.lang.String ka_acronym) {
+		this.ka_acronym = ka_acronym;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfProj_Proj> getCfproj_proj_project1Set() {

@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,54 +36,54 @@ public class CfEquip implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfEquipId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_equipment_identifier;
+	protected java.lang.String ka_equipment_identifier;
 	@Column(name = "cfAcro", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_acronym;
+	protected java.lang.String ka_acronym;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_class_equipment")
-	private Set<CfEquip_Class> cfequip_class_equipmentSet;
+	protected Set<CfEquip_Class> cfequip_class_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequipdescr_equipment")
-	private Set<CfEquipDescr> cfequipdescr_equipmentSet;
+	protected Set<CfEquipDescr> cfequipdescr_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_equip_equipment")
-	private Set<CfEquip_Equip> cfequip_equip_equipmentSet;
+	protected Set<CfEquip_Equip> cfequip_equip_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_equip_equipmenta")
-	private Set<CfEquip_Equip> cfequip_equip_equipmentaSet;
+	protected Set<CfEquip_Equip> cfequip_equip_equipmentaSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_event_equipment")
-	private Set<CfEquip_Event> cfequip_event_equipmentSet;
+	protected Set<CfEquip_Event> cfequip_event_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_fund_equipment")
-	private Set<CfEquip_Fund> cfequip_fund_equipmentSet;
+	protected Set<CfEquip_Fund> cfequip_fund_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_indic_equipment")
-	private Set<CfEquip_Indic> cfequip_indic_equipmentSet;
+	protected Set<CfEquip_Indic> cfequip_indic_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequipkeyw_equipment")
-	private Set<CfEquipKeyw> cfequipkeyw_equipmentSet;
+	protected Set<CfEquipKeyw> cfequipkeyw_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_meas_equipment")
-	private Set<CfEquip_Meas> cfequip_meas_equipmentSet;
+	protected Set<CfEquip_Meas> cfequip_meas_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_medium_equipment")
-	private Set<CfEquip_Medium> cfequip_medium_equipmentSet;
+	protected Set<CfEquip_Medium> cfequip_medium_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequipname_equipment")
-	private Set<CfEquipName> cfequipname_equipmentSet;
+	protected Set<CfEquipName> cfequipname_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_paddr_equipment")
-	private Set<CfEquip_PAddr> cfequip_paddr_equipmentSet;
+	protected Set<CfEquip_PAddr> cfequip_paddr_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_srv_equipment")
-	private Set<CfEquip_Srv> cfequip_srv_equipmentSet;
+	protected Set<CfEquip_Srv> cfequip_srv_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_equip_equipment")
-	private Set<CfFacil_Equip> cffacil_equip_equipmentSet;
+	protected Set<CfFacil_Equip> cffacil_equip_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_equip_equipment")
-	private Set<CfOrgUnit_Equip> cforgunit_equip_equipmentSet;
+	protected Set<CfOrgUnit_Equip> cforgunit_equip_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_equip_equipment")
-	private Set<CfPers_Equip> cfpers_equip_equipmentSet;
+	protected Set<CfPers_Equip> cfpers_equip_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_equip_equipment")
-	private Set<CfProj_Equip> cfproj_equip_equipmentSet;
+	protected Set<CfProj_Equip> cfproj_equip_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_equip_equipment")
-	private Set<CfResPat_Equip> cfrespat_equip_equipmentSet;
+	protected Set<CfResPat_Equip> cfrespat_equip_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_equip_equipment")
-	private Set<CfResProd_Equip> cfresprod_equip_equipmentSet;
+	protected Set<CfResProd_Equip> cfresprod_equip_equipmentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_equip_equipment")
-	private Set<CfResPubl_Equip> cfrespubl_equip_equipmentSet;
+	protected Set<CfResPubl_Equip> cfrespubl_equip_equipmentSet;
 	
 	public CfEquip(){
 	}
@@ -96,28 +96,28 @@ public class CfEquip implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_equipment_identifier() {
-		return this.a_equipment_identifier;
+	public java.lang.String getKa_equipment_identifier() {
+		return this.ka_equipment_identifier;
 	}
 	
-	public void setA_equipment_identifier(java.lang.String a_equipment_identifier) {
-		this.a_equipment_identifier = a_equipment_identifier;
+	public void setKa_equipment_identifier(java.lang.String ka_equipment_identifier) {
+		this.ka_equipment_identifier = ka_equipment_identifier;
 	}
 	
-	public java.lang.String getA_acronym() {
-		return this.a_acronym;
+	public java.lang.String getKa_acronym() {
+		return this.ka_acronym;
 	}
 	
-	public void setA_acronym(java.lang.String a_acronym) {
-		this.a_acronym = a_acronym;
+	public void setKa_acronym(java.lang.String ka_acronym) {
+		this.ka_acronym = ka_acronym;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfEquip_Class> getCfequip_class_equipmentSet() {

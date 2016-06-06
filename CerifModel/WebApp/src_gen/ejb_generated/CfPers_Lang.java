@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,29 +36,29 @@ public class CfPers_Lang implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_start_date;
+	protected java.util.Date ka_start_date;
 	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_end_date;
+	protected java.util.Date ka_end_date;
 	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_fraction;
+	protected java.math.BigDecimal ka_fraction;
 	@Column(name = "cfSkillReading", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_skill_reading;
+	protected java.lang.String ka_skill_reading;
 	@Column(name = "cfSkillSpeaking", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_skill_speaking;
+	protected java.lang.String ka_skill_speaking;
 	@Column(name = "cfSkillWriting", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_skill_writing;
+	protected java.lang.String ka_skill_writing;
 	@ManyToOne
 	@JoinColumn(name="cfpers_lang_language", referencedColumnName="ID",  nullable = true)
-	private CfLang cfpers_lang_language;
+	protected CfLang cfpers_lang_language;
 	@ManyToOne
 	@JoinColumn(name="cfpers_lang_classification", referencedColumnName="ID",  nullable = true)
-	private CfClass cfpers_lang_classification;
+	protected CfClass cfpers_lang_classification;
 	@ManyToOne
 	@JoinColumn(name="cfpers_lang_person", referencedColumnName="ID",  nullable = true)
-	private CfPers cfpers_lang_person;
+	protected CfPers cfpers_lang_person;
 	
 	public CfPers_Lang(){
 	}
@@ -71,52 +71,52 @@ public class CfPers_Lang implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.util.Date getA_start_date() {
-		return this.a_start_date;
+	public java.util.Date getKa_start_date() {
+		return this.ka_start_date;
 	}
 	
-	public void setA_start_date(java.util.Date a_start_date) {
-		this.a_start_date = a_start_date;
+	public void setKa_start_date(java.util.Date ka_start_date) {
+		this.ka_start_date = ka_start_date;
 	}
 	
-	public java.util.Date getA_end_date() {
-		return this.a_end_date;
+	public java.util.Date getKa_end_date() {
+		return this.ka_end_date;
 	}
 	
-	public void setA_end_date(java.util.Date a_end_date) {
-		this.a_end_date = a_end_date;
+	public void setKa_end_date(java.util.Date ka_end_date) {
+		this.ka_end_date = ka_end_date;
 	}
 	
-	public java.math.BigDecimal getA_fraction() {
-		return this.a_fraction;
+	public java.math.BigDecimal getKa_fraction() {
+		return this.ka_fraction;
 	}
 	
-	public void setA_fraction(java.math.BigDecimal a_fraction) {
-		this.a_fraction = a_fraction;
+	public void setKa_fraction(java.math.BigDecimal ka_fraction) {
+		this.ka_fraction = ka_fraction;
 	}
 	
-	public java.lang.String getA_skill_reading() {
-		return this.a_skill_reading;
+	public java.lang.String getKa_skill_reading() {
+		return this.ka_skill_reading;
 	}
 	
-	public void setA_skill_reading(java.lang.String a_skill_reading) {
-		this.a_skill_reading = a_skill_reading;
+	public void setKa_skill_reading(java.lang.String ka_skill_reading) {
+		this.ka_skill_reading = ka_skill_reading;
 	}
 	
-	public java.lang.String getA_skill_speaking() {
-		return this.a_skill_speaking;
+	public java.lang.String getKa_skill_speaking() {
+		return this.ka_skill_speaking;
 	}
 	
-	public void setA_skill_speaking(java.lang.String a_skill_speaking) {
-		this.a_skill_speaking = a_skill_speaking;
+	public void setKa_skill_speaking(java.lang.String ka_skill_speaking) {
+		this.ka_skill_speaking = ka_skill_speaking;
 	}
 	
-	public java.lang.String getA_skill_writing() {
-		return this.a_skill_writing;
+	public java.lang.String getKa_skill_writing() {
+		return this.ka_skill_writing;
 	}
 	
-	public void setA_skill_writing(java.lang.String a_skill_writing) {
-		this.a_skill_writing = a_skill_writing;
+	public void setKa_skill_writing(java.lang.String ka_skill_writing) {
+		this.ka_skill_writing = ka_skill_writing;
 	}
 	
 	public CfLang getCfpers_lang_language() {

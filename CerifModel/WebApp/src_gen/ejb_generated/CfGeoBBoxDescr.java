@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,18 +36,18 @@ public class CfGeoBBoxDescr implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfDescr", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_description;
+	protected java.lang.String ka_description;
 	@ManyToOne
 	@JoinColumn(name="cfgeobboxdescr_language", referencedColumnName="ID",  nullable = true)
-	private CfLang cfgeobboxdescr_language;
+	protected CfLang cfgeobboxdescr_language;
 	@ManyToOne
 	@JoinColumn(name="cfgeobboxdescr_geographicBoundingBox", referencedColumnName="ID",  nullable = true)
-	private CfGeoBBox cfgeobboxdescr_geographicBoundingBox;
+	protected CfGeoBBox cfgeobboxdescr_geographicBoundingBox;
 	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_translation_kind;
+	protected java.lang.String ka_translation_kind;
 	
 	public CfGeoBBoxDescr(){
 	}
@@ -60,12 +60,12 @@ public class CfGeoBBoxDescr implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_description() {
-		return this.a_description;
+	public java.lang.String getKa_description() {
+		return this.ka_description;
 	}
 	
-	public void setA_description(java.lang.String a_description) {
-		this.a_description = a_description;
+	public void setKa_description(java.lang.String ka_description) {
+		this.ka_description = ka_description;
 	}
 	
 	public CfLang getCfgeobboxdescr_language() {
@@ -84,12 +84,12 @@ public class CfGeoBBoxDescr implements java.io.Serializable {
 		this.cfgeobboxdescr_geographicBoundingBox = cfgeobboxdescr_geographicBoundingBox;
 	}
 	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
+	public java.lang.String getKa_translation_kind() {
+		return this.ka_translation_kind;
 	}
 	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
+	public void setKa_translation_kind(java.lang.String ka_translation_kind) {
+		this.ka_translation_kind = ka_translation_kind;
 	}
 	
 }

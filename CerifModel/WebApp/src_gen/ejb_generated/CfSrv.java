@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,56 +36,56 @@ public class CfSrv implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfSrvId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_service_identifier;
+	protected java.lang.String ka_service_identifier;
 	@Column(name = "cfAcro", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_acronym;
+	protected java.lang.String ka_acronym;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_srv_service")
-	private Set<CfEquip_Srv> cfequip_srv_serviceSet;
+	protected Set<CfEquip_Srv> cfequip_srv_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_srv_service")
-	private Set<CfFacil_Srv> cffacil_srv_serviceSet;
+	protected Set<CfFacil_Srv> cffacil_srv_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_srv_service")
-	private Set<CfOrgUnit_Srv> cforgunit_srv_serviceSet;
+	protected Set<CfOrgUnit_Srv> cforgunit_srv_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_srv_service")
-	private Set<CfPers_Srv> cfpers_srv_serviceSet;
+	protected Set<CfPers_Srv> cfpers_srv_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_srv_service")
-	private Set<CfProj_Srv> cfproj_srv_serviceSet;
+	protected Set<CfProj_Srv> cfproj_srv_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_srv_service")
-	private Set<CfResPat_Srv> cfrespat_srv_serviceSet;
+	protected Set<CfResPat_Srv> cfrespat_srv_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_srv_service")
-	private Set<CfResProd_Srv> cfresprod_srv_serviceSet;
+	protected Set<CfResProd_Srv> cfresprod_srv_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_srv_service")
-	private Set<CfResPubl_Srv> cfrespubl_srv_serviceSet;
+	protected Set<CfResPubl_Srv> cfrespubl_srv_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_srv_service1")
-	private Set<CfSrv_Srv> cfsrv_srv_service1Set;
+	protected Set<CfSrv_Srv> cfsrv_srv_service1Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_srv_service2")
-	private Set<CfSrv_Srv> cfsrv_srv_service2Set;
+	protected Set<CfSrv_Srv> cfsrv_srv_service2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_class_service")
-	private Set<CfSrv_Class> cfsrv_class_serviceSet;
+	protected Set<CfSrv_Class> cfsrv_class_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrvdescr_service")
-	private Set<CfSrvDescr> cfsrvdescr_serviceSet;
+	protected Set<CfSrvDescr> cfsrvdescr_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_event_service")
-	private Set<CfSrv_Event> cfsrv_event_serviceSet;
+	protected Set<CfSrv_Event> cfsrv_event_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_fedid_service")
-	private Set<CfSrv_FedId> cfsrv_fedid_serviceSet;
+	protected Set<CfSrv_FedId> cfsrv_fedid_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_fund_service")
-	private Set<CfSrv_Fund> cfsrv_fund_serviceSet;
+	protected Set<CfSrv_Fund> cfsrv_fund_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_indic_service")
-	private Set<CfSrv_Indic> cfsrv_indic_serviceSet;
+	protected Set<CfSrv_Indic> cfsrv_indic_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrvkeyw_service")
-	private Set<CfSrvKeyw> cfsrvkeyw_serviceSet;
+	protected Set<CfSrvKeyw> cfsrvkeyw_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_meas_service")
-	private Set<CfSrv_Meas> cfsrv_meas_serviceSet;
+	protected Set<CfSrv_Meas> cfsrv_meas_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_medium_service")
-	private Set<CfSrv_Medium> cfsrv_medium_serviceSet;
+	protected Set<CfSrv_Medium> cfsrv_medium_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrvname_service")
-	private Set<CfSrvName> cfsrvname_serviceSet;
+	protected Set<CfSrvName> cfsrvname_serviceSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_paddr_service")
-	private Set<CfSrv_PAddr> cfsrv_paddr_serviceSet;
+	protected Set<CfSrv_PAddr> cfsrv_paddr_serviceSet;
 	
 	public CfSrv(){
 	}
@@ -98,28 +98,28 @@ public class CfSrv implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_service_identifier() {
-		return this.a_service_identifier;
+	public java.lang.String getKa_service_identifier() {
+		return this.ka_service_identifier;
 	}
 	
-	public void setA_service_identifier(java.lang.String a_service_identifier) {
-		this.a_service_identifier = a_service_identifier;
+	public void setKa_service_identifier(java.lang.String ka_service_identifier) {
+		this.ka_service_identifier = ka_service_identifier;
 	}
 	
-	public java.lang.String getA_acronym() {
-		return this.a_acronym;
+	public java.lang.String getKa_acronym() {
+		return this.ka_acronym;
 	}
 	
-	public void setA_acronym(java.lang.String a_acronym) {
-		this.a_acronym = a_acronym;
+	public void setKa_acronym(java.lang.String ka_acronym) {
+		this.ka_acronym = ka_acronym;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfEquip_Srv> getCfequip_srv_serviceSet() {

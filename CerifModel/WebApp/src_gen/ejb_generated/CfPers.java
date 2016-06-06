@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,72 +36,72 @@ public class CfPers implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfPersId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_person_identifier;
+	protected java.lang.String ka_person_identifier;
 	@Column(name = "cfBirthdate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_birthdate;
+	protected java.util.Date ka_birthdate;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@Column(name = "cfGender", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_gender;
+	protected java.lang.String ka_gender;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_class_person")
-	private Set<CfPers_Class> cfpers_class_personSet;
+	protected Set<CfPers_Class> cfpers_class_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_country_person")
-	private Set<CfPers_Country> cfpers_country_personSet;
+	protected Set<CfPers_Country> cfpers_country_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_cv_person")
-	private Set<CfPers_CV> cfpers_cv_personSet;
+	protected Set<CfPers_CV> cfpers_cv_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_dc_person")
-	private Set<CfPers_DC> cfpers_dc_personSet;
+	protected Set<CfPers_DC> cfpers_dc_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_eaddr_person")
-	private Set<CfPers_EAddr> cfpers_eaddr_personSet;
+	protected Set<CfPers_EAddr> cfpers_eaddr_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_equip_person")
-	private Set<CfPers_Equip> cfpers_equip_personSet;
+	protected Set<CfPers_Equip> cfpers_equip_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_event_person")
-	private Set<CfPers_Event> cfpers_event_personSet;
+	protected Set<CfPers_Event> cfpers_event_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_expskills_person")
-	private Set<CfPers_ExpSkills> cfpers_expskills_personSet;
+	protected Set<CfPers_ExpSkills> cfpers_expskills_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_facil_person")
-	private Set<CfPers_Facil> cfpers_facil_personSet;
+	protected Set<CfPers_Facil> cfpers_facil_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_fund_person")
-	private Set<CfPers_Fund> cfpers_fund_personSet;
+	protected Set<CfPers_Fund> cfpers_fund_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_indic_person")
-	private Set<CfPers_Indic> cfpers_indic_personSet;
+	protected Set<CfPers_Indic> cfpers_indic_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfperskeyw_person")
-	private Set<CfPersKeyw> cfperskeyw_personSet;
+	protected Set<CfPersKeyw> cfperskeyw_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_lang_person")
-	private Set<CfPers_Lang> cfpers_lang_personSet;
+	protected Set<CfPers_Lang> cfpers_lang_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_meas_person")
-	private Set<CfPers_Meas> cfpers_meas_personSet;
+	protected Set<CfPers_Meas> cfpers_meas_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_medium_person")
-	private Set<CfPers_Medium> cfpers_medium_personSet;
+	protected Set<CfPers_Medium> cfpers_medium_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpersname_pers_person")
-	private Set<CfPersName_Pers> cfpersname_pers_personSet;
+	protected Set<CfPersName_Pers> cfpersname_pers_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_orgunit_person")
-	private Set<CfPers_OrgUnit> cfpers_orgunit_personSet;
+	protected Set<CfPers_OrgUnit> cfpers_orgunit_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_pers_person")
-	private Set<CfPers_Pers> cfpers_pers_personSet;
+	protected Set<CfPers_Pers> cfpers_pers_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_pers_persona")
-	private Set<CfPers_Pers> cfpers_pers_personaSet;
+	protected Set<CfPers_Pers> cfpers_pers_personaSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_paddr_person")
-	private Set<CfPers_PAddr> cfpers_paddr_personSet;
+	protected Set<CfPers_PAddr> cfpers_paddr_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_prize_person")
-	private Set<CfPers_Prize> cfpers_prize_personSet;
+	protected Set<CfPers_Prize> cfpers_prize_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_qual_person")
-	private Set<CfPers_Qual> cfpers_qual_personSet;
+	protected Set<CfPers_Qual> cfpers_qual_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpersresint_person")
-	private Set<CfPersResInt> cfpersresint_personSet;
+	protected Set<CfPersResInt> cfpersresint_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_respat_person")
-	private Set<CfPers_ResPat> cfpers_respat_personSet;
+	protected Set<CfPers_ResPat> cfpers_respat_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_resprod_person")
-	private Set<CfPers_ResProd> cfpers_resprod_personSet;
+	protected Set<CfPers_ResProd> cfpers_resprod_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_respubl_person")
-	private Set<CfPers_ResPubl> cfpers_respubl_personSet;
+	protected Set<CfPers_ResPubl> cfpers_respubl_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_srv_person")
-	private Set<CfPers_Srv> cfpers_srv_personSet;
+	protected Set<CfPers_Srv> cfpers_srv_personSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_pers_person")
-	private Set<CfProj_Pers> cfproj_pers_personSet;
+	protected Set<CfProj_Pers> cfproj_pers_personSet;
 	
 	public CfPers(){
 	}
@@ -114,36 +114,36 @@ public class CfPers implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_person_identifier() {
-		return this.a_person_identifier;
+	public java.lang.String getKa_person_identifier() {
+		return this.ka_person_identifier;
 	}
 	
-	public void setA_person_identifier(java.lang.String a_person_identifier) {
-		this.a_person_identifier = a_person_identifier;
+	public void setKa_person_identifier(java.lang.String ka_person_identifier) {
+		this.ka_person_identifier = ka_person_identifier;
 	}
 	
-	public java.util.Date getA_birthdate() {
-		return this.a_birthdate;
+	public java.util.Date getKa_birthdate() {
+		return this.ka_birthdate;
 	}
 	
-	public void setA_birthdate(java.util.Date a_birthdate) {
-		this.a_birthdate = a_birthdate;
+	public void setKa_birthdate(java.util.Date ka_birthdate) {
+		this.ka_birthdate = ka_birthdate;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
-	public java.lang.String getA_gender() {
-		return this.a_gender;
+	public java.lang.String getKa_gender() {
+		return this.ka_gender;
 	}
 	
-	public void setA_gender(java.lang.String a_gender) {
-		this.a_gender = a_gender;
+	public void setKa_gender(java.lang.String ka_gender) {
+		this.ka_gender = ka_gender;
 	}
 	
 	public Set<CfPers_Class> getCfpers_class_personSet() {

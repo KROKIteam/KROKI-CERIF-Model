@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,54 +36,54 @@ public class CfFacil implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfFacilId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_facility_identifier;
+	protected java.lang.String ka_facility_identifier;
 	@Column(name = "cfAcro", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_acronym;
+	protected java.lang.String ka_acronym;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_class_facility")
-	private Set<CfFacil_Class> cffacil_class_facilitySet;
+	protected Set<CfFacil_Class> cffacil_class_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacildescr_facility")
-	private Set<CfFacilDescr> cffacildescr_facilitySet;
+	protected Set<CfFacilDescr> cffacildescr_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_equip_facility")
-	private Set<CfFacil_Equip> cffacil_equip_facilitySet;
+	protected Set<CfFacil_Equip> cffacil_equip_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_event_facility")
-	private Set<CfFacil_Event> cffacil_event_facilitySet;
+	protected Set<CfFacil_Event> cffacil_event_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_facil_facility")
-	private Set<CfFacil_Facil> cffacil_facil_facilitySet;
+	protected Set<CfFacil_Facil> cffacil_facil_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_facil_facilitya")
-	private Set<CfFacil_Facil> cffacil_facil_facilityaSet;
+	protected Set<CfFacil_Facil> cffacil_facil_facilityaSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_fund_facility")
-	private Set<CfFacil_Fund> cffacil_fund_facilitySet;
+	protected Set<CfFacil_Fund> cffacil_fund_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_indic_facility")
-	private Set<CfFacil_Indic> cffacil_indic_facilitySet;
+	protected Set<CfFacil_Indic> cffacil_indic_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacilkeyw_facility")
-	private Set<CfFacilKeyw> cffacilkeyw_facilitySet;
+	protected Set<CfFacilKeyw> cffacilkeyw_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_meas_facility")
-	private Set<CfFacil_Meas> cffacil_meas_facilitySet;
+	protected Set<CfFacil_Meas> cffacil_meas_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_medium_facility")
-	private Set<CfFacil_Medium> cffacil_medium_facilitySet;
+	protected Set<CfFacil_Medium> cffacil_medium_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacilname_facility")
-	private Set<CfFacilName> cffacilname_facilitySet;
+	protected Set<CfFacilName> cffacilname_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_paddr_facility")
-	private Set<CfFacil_PAddr> cffacil_paddr_facilitySet;
+	protected Set<CfFacil_PAddr> cffacil_paddr_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_srv_facility")
-	private Set<CfFacil_Srv> cffacil_srv_facilitySet;
+	protected Set<CfFacil_Srv> cffacil_srv_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_facil_facility")
-	private Set<CfOrgUnit_Facil> cforgunit_facil_facilitySet;
+	protected Set<CfOrgUnit_Facil> cforgunit_facil_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_facil_facility")
-	private Set<CfPers_Facil> cfpers_facil_facilitySet;
+	protected Set<CfPers_Facil> cfpers_facil_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_facil_facility")
-	private Set<CfProj_Facil> cfproj_facil_facilitySet;
+	protected Set<CfProj_Facil> cfproj_facil_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_facil_facility")
-	private Set<CfResPat_Facil> cfrespat_facil_facilitySet;
+	protected Set<CfResPat_Facil> cfrespat_facil_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_facil_facility")
-	private Set<CfResProd_Facil> cfresprod_facil_facilitySet;
+	protected Set<CfResProd_Facil> cfresprod_facil_facilitySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_facil_facility")
-	private Set<CfResPubl_Facil> cfrespubl_facil_facilitySet;
+	protected Set<CfResPubl_Facil> cfrespubl_facil_facilitySet;
 	
 	public CfFacil(){
 	}
@@ -96,28 +96,28 @@ public class CfFacil implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_facility_identifier() {
-		return this.a_facility_identifier;
+	public java.lang.String getKa_facility_identifier() {
+		return this.ka_facility_identifier;
 	}
 	
-	public void setA_facility_identifier(java.lang.String a_facility_identifier) {
-		this.a_facility_identifier = a_facility_identifier;
+	public void setKa_facility_identifier(java.lang.String ka_facility_identifier) {
+		this.ka_facility_identifier = ka_facility_identifier;
 	}
 	
-	public java.lang.String getA_acronym() {
-		return this.a_acronym;
+	public java.lang.String getKa_acronym() {
+		return this.ka_acronym;
 	}
 	
-	public void setA_acronym(java.lang.String a_acronym) {
-		this.a_acronym = a_acronym;
+	public void setKa_acronym(java.lang.String ka_acronym) {
+		this.ka_acronym = ka_acronym;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfFacil_Class> getCffacil_class_facilitySet() {

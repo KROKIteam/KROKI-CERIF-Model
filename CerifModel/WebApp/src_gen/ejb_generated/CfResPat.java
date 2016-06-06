@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,57 +36,57 @@ public class CfResPat implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfResPatId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_result_patent_identifier;
+	protected java.lang.String ka_result_patent_identifier;
 	@Column(name = "cfRegistrDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_registration_date;
+	protected java.util.Date ka_registration_date;
 	@Column(name = "cfApprovDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_approval_date;
+	protected java.util.Date ka_approval_date;
 	@Column(name = "cfPatentNum", unique = false, nullable = false , length = 64, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_patent_number;
+	protected java.lang.String ka_patent_number;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@ManyToOne
 	@JoinColumn(name="cfrespat_country", referencedColumnName="ID",  nullable = true)
-	private CfCountry cfrespat_country;
+	protected CfCountry cfrespat_country;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_respat_resultPatent")
-	private Set<CfOrgUnit_ResPat> cforgunit_respat_resultPatentSet;
+	protected Set<CfOrgUnit_ResPat> cforgunit_respat_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_respat_resultPatent")
-	private Set<CfPers_ResPat> cfpers_respat_resultPatentSet;
+	protected Set<CfPers_ResPat> cfpers_respat_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_respat_resultPatent")
-	private Set<CfProj_ResPat> cfproj_respat_resultPatentSet;
+	protected Set<CfProj_ResPat> cfproj_respat_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_respat_resultPatent1")
-	private Set<CfResPat_ResPat> cfrespat_respat_resultPatent1Set;
+	protected Set<CfResPat_ResPat> cfrespat_respat_resultPatent1Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_respat_resultPatent2")
-	private Set<CfResPat_ResPat> cfrespat_respat_resultPatent2Set;
+	protected Set<CfResPat_ResPat> cfrespat_respat_resultPatent2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespatabstr_resultPatent")
-	private Set<CfResPatAbstr> cfrespatabstr_resultPatentSet;
+	protected Set<CfResPatAbstr> cfrespatabstr_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_class_resultPatent")
-	private Set<CfResPat_Class> cfrespat_class_resultPatentSet;
+	protected Set<CfResPat_Class> cfrespat_class_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_equip_resultPatent")
-	private Set<CfResPat_Equip> cfrespat_equip_resultPatentSet;
+	protected Set<CfResPat_Equip> cfrespat_equip_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_facil_resultPatent")
-	private Set<CfResPat_Facil> cfrespat_facil_resultPatentSet;
+	protected Set<CfResPat_Facil> cfrespat_facil_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_fund_resultPatent")
-	private Set<CfResPat_Fund> cfrespat_fund_resultPatentSet;
+	protected Set<CfResPat_Fund> cfrespat_fund_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_indic_resultPatent")
-	private Set<CfResPat_Indic> cfrespat_indic_resultPatentSet;
+	protected Set<CfResPat_Indic> cfrespat_indic_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespatkeyw_resultPatent")
-	private Set<CfResPatKeyw> cfrespatkeyw_resultPatentSet;
+	protected Set<CfResPatKeyw> cfrespatkeyw_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_meas_resultPatent")
-	private Set<CfResPat_Meas> cfrespat_meas_resultPatentSet;
+	protected Set<CfResPat_Meas> cfrespat_meas_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_medium_resultPatent")
-	private Set<CfResPat_Medium> cfrespat_medium_resultPatentSet;
+	protected Set<CfResPat_Medium> cfrespat_medium_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_srv_resultPatent")
-	private Set<CfResPat_Srv> cfrespat_srv_resultPatentSet;
+	protected Set<CfResPat_Srv> cfrespat_srv_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespattitle_resultPatent")
-	private Set<CfResPatTitle> cfrespattitle_resultPatentSet;
+	protected Set<CfResPatTitle> cfrespattitle_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespatversinfo_resultPatent")
-	private Set<CfResPatVersInfo> cfrespatversinfo_resultPatentSet;
+	protected Set<CfResPatVersInfo> cfrespatversinfo_resultPatentSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_respat_resultPatent")
-	private Set<CfResPubl_ResPat> cfrespubl_respat_resultPatentSet;
+	protected Set<CfResPubl_ResPat> cfrespubl_respat_resultPatentSet;
 	
 	public CfResPat(){
 	}
@@ -99,44 +99,44 @@ public class CfResPat implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_result_patent_identifier() {
-		return this.a_result_patent_identifier;
+	public java.lang.String getKa_result_patent_identifier() {
+		return this.ka_result_patent_identifier;
 	}
 	
-	public void setA_result_patent_identifier(java.lang.String a_result_patent_identifier) {
-		this.a_result_patent_identifier = a_result_patent_identifier;
+	public void setKa_result_patent_identifier(java.lang.String ka_result_patent_identifier) {
+		this.ka_result_patent_identifier = ka_result_patent_identifier;
 	}
 	
-	public java.util.Date getA_registration_date() {
-		return this.a_registration_date;
+	public java.util.Date getKa_registration_date() {
+		return this.ka_registration_date;
 	}
 	
-	public void setA_registration_date(java.util.Date a_registration_date) {
-		this.a_registration_date = a_registration_date;
+	public void setKa_registration_date(java.util.Date ka_registration_date) {
+		this.ka_registration_date = ka_registration_date;
 	}
 	
-	public java.util.Date getA_approval_date() {
-		return this.a_approval_date;
+	public java.util.Date getKa_approval_date() {
+		return this.ka_approval_date;
 	}
 	
-	public void setA_approval_date(java.util.Date a_approval_date) {
-		this.a_approval_date = a_approval_date;
+	public void setKa_approval_date(java.util.Date ka_approval_date) {
+		this.ka_approval_date = ka_approval_date;
 	}
 	
-	public java.lang.String getA_patent_number() {
-		return this.a_patent_number;
+	public java.lang.String getKa_patent_number() {
+		return this.ka_patent_number;
 	}
 	
-	public void setA_patent_number(java.lang.String a_patent_number) {
-		this.a_patent_number = a_patent_number;
+	public void setKa_patent_number(java.lang.String ka_patent_number) {
+		this.ka_patent_number = ka_patent_number;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public CfCountry getCfrespat_country() {

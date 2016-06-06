@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,17 +36,17 @@ public class CfFDCRightsMMRights implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfDCLangTag", unique = false, nullable = false , length = 5, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_dc_language_tag;
+	protected java.lang.String ka_dc_language_tag;
 	@Column(name = "cfDCTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_dc_translation;
+	protected java.lang.String ka_dc_translation;
 	@Column(name = "cfFDCRightsConstraint", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_formalised_dc_rights_constraint;
+	protected java.lang.String ka_formalised_dc_rights_constraint;
 	@ManyToOne
 	@JoinColumn(name="cffdcrightsmmrights_dublinCore", referencedColumnName="ID",  nullable = true)
-	private CfDC cffdcrightsmmrights_dublinCore;
+	protected CfDC cffdcrightsmmrights_dublinCore;
 	
 	public CfFDCRightsMMRights(){
 	}
@@ -59,28 +59,28 @@ public class CfFDCRightsMMRights implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_dc_language_tag() {
-		return this.a_dc_language_tag;
+	public java.lang.String getKa_dc_language_tag() {
+		return this.ka_dc_language_tag;
 	}
 	
-	public void setA_dc_language_tag(java.lang.String a_dc_language_tag) {
-		this.a_dc_language_tag = a_dc_language_tag;
+	public void setKa_dc_language_tag(java.lang.String ka_dc_language_tag) {
+		this.ka_dc_language_tag = ka_dc_language_tag;
 	}
 	
-	public java.lang.String getA_dc_translation() {
-		return this.a_dc_translation;
+	public java.lang.String getKa_dc_translation() {
+		return this.ka_dc_translation;
 	}
 	
-	public void setA_dc_translation(java.lang.String a_dc_translation) {
-		this.a_dc_translation = a_dc_translation;
+	public void setKa_dc_translation(java.lang.String ka_dc_translation) {
+		this.ka_dc_translation = ka_dc_translation;
 	}
 	
-	public java.lang.String getA_formalised_dc_rights_constraint() {
-		return this.a_formalised_dc_rights_constraint;
+	public java.lang.String getKa_formalised_dc_rights_constraint() {
+		return this.ka_formalised_dc_rights_constraint;
 	}
 	
-	public void setA_formalised_dc_rights_constraint(java.lang.String a_formalised_dc_rights_constraint) {
-		this.a_formalised_dc_rights_constraint = a_formalised_dc_rights_constraint;
+	public void setKa_formalised_dc_rights_constraint(java.lang.String ka_formalised_dc_rights_constraint) {
+		this.ka_formalised_dc_rights_constraint = ka_formalised_dc_rights_constraint;
 	}
 	
 	public CfDC getCffdcrightsmmrights_dublinCore() {

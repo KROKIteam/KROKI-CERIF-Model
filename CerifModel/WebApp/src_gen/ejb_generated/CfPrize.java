@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,26 +36,26 @@ public class CfPrize implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfPrizeId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_prize_award_identifier;
+	protected java.lang.String ka_prize_award_identifier;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_prize_prizeAward")
-	private Set<CfOrgUnit_Prize> cforgunit_prize_prizeAwardSet;
+	protected Set<CfOrgUnit_Prize> cforgunit_prize_prizeAwardSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_prize_prizeAward")
-	private Set<CfPers_Prize> cfpers_prize_prizeAwardSet;
+	protected Set<CfPers_Prize> cfpers_prize_prizeAwardSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprize_class_prizeAward")
-	private Set<CfPrize_Class> cfprize_class_prizeAwardSet;
+	protected Set<CfPrize_Class> cfprize_class_prizeAwardSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprizedescr_prizeAward")
-	private Set<CfPrizeDescr> cfprizedescr_prizeAwardSet;
+	protected Set<CfPrizeDescr> cfprizedescr_prizeAwardSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprizekeyw_prizeAward")
-	private Set<CfPrizeKeyw> cfprizekeyw_prizeAwardSet;
+	protected Set<CfPrizeKeyw> cfprizekeyw_prizeAwardSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfprizename_prizeAward")
-	private Set<CfPrizeName> cfprizename_prizeAwardSet;
+	protected Set<CfPrizeName> cfprizename_prizeAwardSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_prize_prizeAward")
-	private Set<CfProj_Prize> cfproj_prize_prizeAwardSet;
+	protected Set<CfProj_Prize> cfproj_prize_prizeAwardSet;
 	
 	public CfPrize(){
 	}
@@ -68,20 +68,20 @@ public class CfPrize implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_prize_award_identifier() {
-		return this.a_prize_award_identifier;
+	public java.lang.String getKa_prize_award_identifier() {
+		return this.ka_prize_award_identifier;
 	}
 	
-	public void setA_prize_award_identifier(java.lang.String a_prize_award_identifier) {
-		this.a_prize_award_identifier = a_prize_award_identifier;
+	public void setKa_prize_award_identifier(java.lang.String ka_prize_award_identifier) {
+		this.ka_prize_award_identifier = ka_prize_award_identifier;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfOrgUnit_Prize> getCforgunit_prize_prizeAwardSet() {

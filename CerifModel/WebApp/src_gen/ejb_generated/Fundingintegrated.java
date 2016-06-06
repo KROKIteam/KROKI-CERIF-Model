@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,16 +36,16 @@ public class Fundingintegrated implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_fundingIntegrated")
-	private Set<CfFund> cffund_fundingIntegratedSet;
+	protected Set<CfFund> cffund_fundingIntegratedSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffunddescr_fundingIntegrated")
-	private Set<CfFundDescr> cffunddescr_fundingIntegratedSet;
+	protected Set<CfFundDescr> cffunddescr_fundingIntegratedSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffundkeyw_fundingIntegrated")
-	private Set<CfFundKeyw> cffundkeyw_fundingIntegratedSet;
+	protected Set<CfFundKeyw> cffundkeyw_fundingIntegratedSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffundname_fundingIntegrated")
-	private Set<CfFundName> cffundname_fundingIntegratedSet;
+	protected Set<CfFundName> cffundname_fundingIntegratedSet;
 	
 	public Fundingintegrated(){
 	}

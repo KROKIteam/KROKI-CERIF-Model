@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,24 +36,24 @@ public class CfCountry implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfCountryCode", unique = false, nullable = false , length = 2, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_country_code;
+	protected java.lang.String ka_country_code;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcountry_class_country")
-	private Set<CfCountry_Class> cfcountry_class_countrySet;
+	protected Set<CfCountry_Class> cfcountry_class_countrySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcountryname_country")
-	private Set<CfCountryName> cfcountryname_countrySet;
+	protected Set<CfCountryName> cfcountryname_countrySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_country")
-	private Set<CfEvent> cfevent_countrySet;
+	protected Set<CfEvent> cfevent_countrySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_country_country")
-	private Set<CfPers_Country> cfpers_country_countrySet;
+	protected Set<CfPers_Country> cfpers_country_countrySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpaddr_country")
-	private Set<CfPAddr> cfpaddr_countrySet;
+	protected Set<CfPAddr> cfpaddr_countrySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_country")
-	private Set<CfResPat> cfrespat_countrySet;
+	protected Set<CfResPat> cfrespat_countrySet;
 	
 	public CfCountry(){
 	}
@@ -66,20 +66,20 @@ public class CfCountry implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_country_code() {
-		return this.a_country_code;
+	public java.lang.String getKa_country_code() {
+		return this.ka_country_code;
 	}
 	
-	public void setA_country_code(java.lang.String a_country_code) {
-		this.a_country_code = a_country_code;
+	public void setKa_country_code(java.lang.String ka_country_code) {
+		this.ka_country_code = ka_country_code;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfCountry_Class> getCfcountry_class_countrySet() {

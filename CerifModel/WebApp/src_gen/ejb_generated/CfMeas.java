@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,66 +36,66 @@ public class CfMeas implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfMeasId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_measurement_identifier;
+	protected java.lang.String ka_measurement_identifier;
 	@Column(name = "cfCountInt", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_count_integer;
+	protected java.lang.Integer ka_count_integer;
 	@Column(name = "cfValFloatP", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_value_floating_point;
+	protected java.math.BigDecimal ka_value_floating_point;
 	@Column(name = "cfValJudgeNum", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_value_judgemental_numeric;
+	protected java.math.BigDecimal ka_value_judgemental_numeric;
 	@Column(name = "cfCountIntChange", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_count_integer_change;
+	protected java.lang.Integer ka_count_integer_change;
 	@Column(name = "cfCountFloatPChange", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_count_floating_point_change;
+	protected java.math.BigDecimal ka_count_floating_point_change;
 	@Column(name = "cfValJudgeNumChange", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_value_judgemental_numeric_change;
+	protected java.math.BigDecimal ka_value_judgemental_numeric_change;
 	@Column(name = "cfValJudgeText", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_value_judgemental_text;
+	protected java.lang.String ka_value_judgemental_text;
 	@Column(name = "cfValJudgeTextChange", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_value_judgemental_text_change;
+	protected java.lang.String ka_value_judgemental_text_change;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_meas_measurement")
-	private Set<CfEquip_Meas> cfequip_meas_measurementSet;
+	protected Set<CfEquip_Meas> cfequip_meas_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_meas_measurement")
-	private Set<CfEvent_Meas> cfevent_meas_measurementSet;
+	protected Set<CfEvent_Meas> cfevent_meas_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_meas_measurement")
-	private Set<CfFacil_Meas> cffacil_meas_measurementSet;
+	protected Set<CfFacil_Meas> cffacil_meas_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_meas_measurement")
-	private Set<CfFund_Meas> cffund_meas_measurementSet;
+	protected Set<CfFund_Meas> cffund_meas_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindic_meas_measurement")
-	private Set<CfIndic_Meas> cfindic_meas_measurementSet;
+	protected Set<CfIndic_Meas> cfindic_meas_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmeas_meas_measurement1")
-	private Set<CfMeas_Meas> cfmeas_meas_measurement1Set;
+	protected Set<CfMeas_Meas> cfmeas_meas_measurement1Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmeas_meas_measurement2")
-	private Set<CfMeas_Meas> cfmeas_meas_measurement2Set;
+	protected Set<CfMeas_Meas> cfmeas_meas_measurement2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmeas_class_measurement")
-	private Set<CfMeas_Class> cfmeas_class_measurementSet;
+	protected Set<CfMeas_Class> cfmeas_class_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmeasdescr_measurement")
-	private Set<CfMeasDescr> cfmeasdescr_measurementSet;
+	protected Set<CfMeasDescr> cfmeasdescr_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmeaskeyw_measurement")
-	private Set<CfMeasKeyw> cfmeaskeyw_measurementSet;
+	protected Set<CfMeasKeyw> cfmeaskeyw_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmeasname_measurement")
-	private Set<CfMeasName> cfmeasname_measurementSet;
+	protected Set<CfMeasName> cfmeasname_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_meas_measurement")
-	private Set<CfMedium_Meas> cfmedium_meas_measurementSet;
+	protected Set<CfMedium_Meas> cfmedium_meas_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_meas_measurement")
-	private Set<CfOrgUnit_Meas> cforgunit_meas_measurementSet;
+	protected Set<CfOrgUnit_Meas> cforgunit_meas_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_meas_measurement")
-	private Set<CfPers_Meas> cfpers_meas_measurementSet;
+	protected Set<CfPers_Meas> cfpers_meas_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_meas_measurement")
-	private Set<CfProj_Meas> cfproj_meas_measurementSet;
+	protected Set<CfProj_Meas> cfproj_meas_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_meas_measurement")
-	private Set<CfResPat_Meas> cfrespat_meas_measurementSet;
+	protected Set<CfResPat_Meas> cfrespat_meas_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_meas_measurement")
-	private Set<CfResProd_Meas> cfresprod_meas_measurementSet;
+	protected Set<CfResProd_Meas> cfresprod_meas_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_meas_measurement")
-	private Set<CfResPubl_Meas> cfrespubl_meas_measurementSet;
+	protected Set<CfResPubl_Meas> cfrespubl_meas_measurementSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_meas_measurement")
-	private Set<CfSrv_Meas> cfsrv_meas_measurementSet;
+	protected Set<CfSrv_Meas> cfsrv_meas_measurementSet;
 	
 	public CfMeas(){
 	}
@@ -108,84 +108,84 @@ public class CfMeas implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_measurement_identifier() {
-		return this.a_measurement_identifier;
+	public java.lang.String getKa_measurement_identifier() {
+		return this.ka_measurement_identifier;
 	}
 	
-	public void setA_measurement_identifier(java.lang.String a_measurement_identifier) {
-		this.a_measurement_identifier = a_measurement_identifier;
+	public void setKa_measurement_identifier(java.lang.String ka_measurement_identifier) {
+		this.ka_measurement_identifier = ka_measurement_identifier;
 	}
 	
-	public java.lang.String getA_count_integer() {
-		return this.a_count_integer;
+	public java.lang.Integer getKa_count_integer() {
+		return this.ka_count_integer;
 	}
 	
-	public void setA_count_integer(java.lang.String a_count_integer) {
-		this.a_count_integer = a_count_integer;
+	public void setKa_count_integer(java.lang.Integer ka_count_integer) {
+		this.ka_count_integer = ka_count_integer;
 	}
 	
-	public java.math.BigDecimal getA_value_floating_point() {
-		return this.a_value_floating_point;
+	public java.math.BigDecimal getKa_value_floating_point() {
+		return this.ka_value_floating_point;
 	}
 	
-	public void setA_value_floating_point(java.math.BigDecimal a_value_floating_point) {
-		this.a_value_floating_point = a_value_floating_point;
+	public void setKa_value_floating_point(java.math.BigDecimal ka_value_floating_point) {
+		this.ka_value_floating_point = ka_value_floating_point;
 	}
 	
-	public java.math.BigDecimal getA_value_judgemental_numeric() {
-		return this.a_value_judgemental_numeric;
+	public java.math.BigDecimal getKa_value_judgemental_numeric() {
+		return this.ka_value_judgemental_numeric;
 	}
 	
-	public void setA_value_judgemental_numeric(java.math.BigDecimal a_value_judgemental_numeric) {
-		this.a_value_judgemental_numeric = a_value_judgemental_numeric;
+	public void setKa_value_judgemental_numeric(java.math.BigDecimal ka_value_judgemental_numeric) {
+		this.ka_value_judgemental_numeric = ka_value_judgemental_numeric;
 	}
 	
-	public java.lang.String getA_count_integer_change() {
-		return this.a_count_integer_change;
+	public java.lang.Integer getKa_count_integer_change() {
+		return this.ka_count_integer_change;
 	}
 	
-	public void setA_count_integer_change(java.lang.String a_count_integer_change) {
-		this.a_count_integer_change = a_count_integer_change;
+	public void setKa_count_integer_change(java.lang.Integer ka_count_integer_change) {
+		this.ka_count_integer_change = ka_count_integer_change;
 	}
 	
-	public java.math.BigDecimal getA_count_floating_point_change() {
-		return this.a_count_floating_point_change;
+	public java.math.BigDecimal getKa_count_floating_point_change() {
+		return this.ka_count_floating_point_change;
 	}
 	
-	public void setA_count_floating_point_change(java.math.BigDecimal a_count_floating_point_change) {
-		this.a_count_floating_point_change = a_count_floating_point_change;
+	public void setKa_count_floating_point_change(java.math.BigDecimal ka_count_floating_point_change) {
+		this.ka_count_floating_point_change = ka_count_floating_point_change;
 	}
 	
-	public java.math.BigDecimal getA_value_judgemental_numeric_change() {
-		return this.a_value_judgemental_numeric_change;
+	public java.math.BigDecimal getKa_value_judgemental_numeric_change() {
+		return this.ka_value_judgemental_numeric_change;
 	}
 	
-	public void setA_value_judgemental_numeric_change(java.math.BigDecimal a_value_judgemental_numeric_change) {
-		this.a_value_judgemental_numeric_change = a_value_judgemental_numeric_change;
+	public void setKa_value_judgemental_numeric_change(java.math.BigDecimal ka_value_judgemental_numeric_change) {
+		this.ka_value_judgemental_numeric_change = ka_value_judgemental_numeric_change;
 	}
 	
-	public java.lang.String getA_value_judgemental_text() {
-		return this.a_value_judgemental_text;
+	public java.lang.String getKa_value_judgemental_text() {
+		return this.ka_value_judgemental_text;
 	}
 	
-	public void setA_value_judgemental_text(java.lang.String a_value_judgemental_text) {
-		this.a_value_judgemental_text = a_value_judgemental_text;
+	public void setKa_value_judgemental_text(java.lang.String ka_value_judgemental_text) {
+		this.ka_value_judgemental_text = ka_value_judgemental_text;
 	}
 	
-	public java.lang.String getA_value_judgemental_text_change() {
-		return this.a_value_judgemental_text_change;
+	public java.lang.String getKa_value_judgemental_text_change() {
+		return this.ka_value_judgemental_text_change;
 	}
 	
-	public void setA_value_judgemental_text_change(java.lang.String a_value_judgemental_text_change) {
-		this.a_value_judgemental_text_change = a_value_judgemental_text_change;
+	public void setKa_value_judgemental_text_change(java.lang.String ka_value_judgemental_text_change) {
+		this.ka_value_judgemental_text_change = ka_value_judgemental_text_change;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfEquip_Meas> getCfequip_meas_measurementSet() {

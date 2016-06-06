@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,27 +36,27 @@ public class CfResPubl_Cite implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_start_date;
+	protected java.util.Date ka_start_date;
 	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_end_date;
+	protected java.util.Date ka_end_date;
 	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_fraction;
+	protected java.math.BigDecimal ka_fraction;
 	@Column(name = "cfYear", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_year;
+	protected java.lang.Integer ka_year;
 	@Column(name = "cfCount", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_count;
+	protected java.math.BigDecimal ka_count;
 	@ManyToOne
 	@JoinColumn(name="cfrespubl_cite_classification", referencedColumnName="ID",  nullable = true)
-	private CfClass cfrespubl_cite_classification;
+	protected CfClass cfrespubl_cite_classification;
 	@ManyToOne
 	@JoinColumn(name="cfrespubl_cite_citation", referencedColumnName="ID",  nullable = true)
-	private CfCite cfrespubl_cite_citation;
+	protected CfCite cfrespubl_cite_citation;
 	@ManyToOne
 	@JoinColumn(name="cfrespubl_cite_resultPublication", referencedColumnName="ID",  nullable = true)
-	private CfResPubl cfrespubl_cite_resultPublication;
+	protected CfResPubl cfrespubl_cite_resultPublication;
 	
 	public CfResPubl_Cite(){
 	}
@@ -69,44 +69,44 @@ public class CfResPubl_Cite implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.util.Date getA_start_date() {
-		return this.a_start_date;
+	public java.util.Date getKa_start_date() {
+		return this.ka_start_date;
 	}
 	
-	public void setA_start_date(java.util.Date a_start_date) {
-		this.a_start_date = a_start_date;
+	public void setKa_start_date(java.util.Date ka_start_date) {
+		this.ka_start_date = ka_start_date;
 	}
 	
-	public java.util.Date getA_end_date() {
-		return this.a_end_date;
+	public java.util.Date getKa_end_date() {
+		return this.ka_end_date;
 	}
 	
-	public void setA_end_date(java.util.Date a_end_date) {
-		this.a_end_date = a_end_date;
+	public void setKa_end_date(java.util.Date ka_end_date) {
+		this.ka_end_date = ka_end_date;
 	}
 	
-	public java.math.BigDecimal getA_fraction() {
-		return this.a_fraction;
+	public java.math.BigDecimal getKa_fraction() {
+		return this.ka_fraction;
 	}
 	
-	public void setA_fraction(java.math.BigDecimal a_fraction) {
-		this.a_fraction = a_fraction;
+	public void setKa_fraction(java.math.BigDecimal ka_fraction) {
+		this.ka_fraction = ka_fraction;
 	}
 	
-	public java.lang.String getA_year() {
-		return this.a_year;
+	public java.lang.Integer getKa_year() {
+		return this.ka_year;
 	}
 	
-	public void setA_year(java.lang.String a_year) {
-		this.a_year = a_year;
+	public void setKa_year(java.lang.Integer ka_year) {
+		this.ka_year = ka_year;
 	}
 	
-	public java.math.BigDecimal getA_count() {
-		return this.a_count;
+	public java.math.BigDecimal getKa_count() {
+		return this.ka_count;
 	}
 	
-	public void setA_count(java.math.BigDecimal a_count) {
-		this.a_count = a_count;
+	public void setKa_count(java.math.BigDecimal ka_count) {
+		this.ka_count = ka_count;
 	}
 	
 	public CfClass getCfrespubl_cite_classification() {

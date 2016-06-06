@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,32 +36,32 @@ public class CfPers_Equip implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_start_date;
+	protected java.util.Date ka_start_date;
 	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_end_date;
+	protected java.util.Date ka_end_date;
 	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_fraction;
+	protected java.math.BigDecimal ka_fraction;
 	@Column(name = "cfAvailability", unique = false, nullable = false , length = 64, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_availability;
+	protected java.lang.String ka_availability;
 	@Column(name = "cfConditions", unique = false, nullable = false , length = 255, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_conditions;
+	protected java.lang.String ka_conditions;
 	@Column(name = "cfPrice", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_price;
+	protected java.math.BigDecimal ka_price;
 	@ManyToOne
 	@JoinColumn(name="cfpers_equip_equipment", referencedColumnName="ID",  nullable = true)
-	private CfEquip cfpers_equip_equipment;
+	protected CfEquip cfpers_equip_equipment;
 	@ManyToOne
 	@JoinColumn(name="cfpers_equip_classification", referencedColumnName="ID",  nullable = true)
-	private CfClass cfpers_equip_classification;
+	protected CfClass cfpers_equip_classification;
 	@ManyToOne
 	@JoinColumn(name="cfpers_equip_currency", referencedColumnName="ID",  nullable = true)
-	private CfCurrency cfpers_equip_currency;
+	protected CfCurrency cfpers_equip_currency;
 	@ManyToOne
 	@JoinColumn(name="cfpers_equip_person", referencedColumnName="ID",  nullable = true)
-	private CfPers cfpers_equip_person;
+	protected CfPers cfpers_equip_person;
 	
 	public CfPers_Equip(){
 	}
@@ -74,52 +74,52 @@ public class CfPers_Equip implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.util.Date getA_start_date() {
-		return this.a_start_date;
+	public java.util.Date getKa_start_date() {
+		return this.ka_start_date;
 	}
 	
-	public void setA_start_date(java.util.Date a_start_date) {
-		this.a_start_date = a_start_date;
+	public void setKa_start_date(java.util.Date ka_start_date) {
+		this.ka_start_date = ka_start_date;
 	}
 	
-	public java.util.Date getA_end_date() {
-		return this.a_end_date;
+	public java.util.Date getKa_end_date() {
+		return this.ka_end_date;
 	}
 	
-	public void setA_end_date(java.util.Date a_end_date) {
-		this.a_end_date = a_end_date;
+	public void setKa_end_date(java.util.Date ka_end_date) {
+		this.ka_end_date = ka_end_date;
 	}
 	
-	public java.math.BigDecimal getA_fraction() {
-		return this.a_fraction;
+	public java.math.BigDecimal getKa_fraction() {
+		return this.ka_fraction;
 	}
 	
-	public void setA_fraction(java.math.BigDecimal a_fraction) {
-		this.a_fraction = a_fraction;
+	public void setKa_fraction(java.math.BigDecimal ka_fraction) {
+		this.ka_fraction = ka_fraction;
 	}
 	
-	public java.lang.String getA_availability() {
-		return this.a_availability;
+	public java.lang.String getKa_availability() {
+		return this.ka_availability;
 	}
 	
-	public void setA_availability(java.lang.String a_availability) {
-		this.a_availability = a_availability;
+	public void setKa_availability(java.lang.String ka_availability) {
+		this.ka_availability = ka_availability;
 	}
 	
-	public java.lang.String getA_conditions() {
-		return this.a_conditions;
+	public java.lang.String getKa_conditions() {
+		return this.ka_conditions;
 	}
 	
-	public void setA_conditions(java.lang.String a_conditions) {
-		this.a_conditions = a_conditions;
+	public void setKa_conditions(java.lang.String ka_conditions) {
+		this.ka_conditions = ka_conditions;
 	}
 	
-	public java.math.BigDecimal getA_price() {
-		return this.a_price;
+	public java.math.BigDecimal getKa_price() {
+		return this.ka_price;
 	}
 	
-	public void setA_price(java.math.BigDecimal a_price) {
-		this.a_price = a_price;
+	public void setKa_price(java.math.BigDecimal ka_price) {
+		this.ka_price = ka_price;
 	}
 	
 	public CfEquip getCfpers_equip_equipment() {

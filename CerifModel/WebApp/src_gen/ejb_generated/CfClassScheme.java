@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,22 +36,22 @@ public class CfClassScheme implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfClassSchemeId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_classification_scheme_identifier;
+	protected java.lang.String ka_classification_scheme_identifier;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclass_classificationScheme")
-	private Set<CfClass> cfclass_classificationSchemeSet;
+	protected Set<CfClass> cfclass_classificationSchemeSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassscheme_classscheme_classificationScheme1")
-	private Set<CfClassScheme_ClassScheme> cfclassscheme_classscheme_classificationScheme1Set;
+	protected Set<CfClassScheme_ClassScheme> cfclassscheme_classscheme_classificationScheme1Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassscheme_classscheme_classificationScheme2")
-	private Set<CfClassScheme_ClassScheme> cfclassscheme_classscheme_classificationScheme2Set;
+	protected Set<CfClassScheme_ClassScheme> cfclassscheme_classscheme_classificationScheme2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassschemedescr_classificationScheme")
-	private Set<CfClassSchemeDescr> cfclassschemedescr_classificationSchemeSet;
+	protected Set<CfClassSchemeDescr> cfclassschemedescr_classificationSchemeSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfclassschemename_classificationScheme")
-	private Set<CfClassSchemeName> cfclassschemename_classificationSchemeSet;
+	protected Set<CfClassSchemeName> cfclassschemename_classificationSchemeSet;
 	
 	public CfClassScheme(){
 	}
@@ -64,20 +64,20 @@ public class CfClassScheme implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_classification_scheme_identifier() {
-		return this.a_classification_scheme_identifier;
+	public java.lang.String getKa_classification_scheme_identifier() {
+		return this.ka_classification_scheme_identifier;
 	}
 	
-	public void setA_classification_scheme_identifier(java.lang.String a_classification_scheme_identifier) {
-		this.a_classification_scheme_identifier = a_classification_scheme_identifier;
+	public void setKa_classification_scheme_identifier(java.lang.String ka_classification_scheme_identifier) {
+		this.ka_classification_scheme_identifier = ka_classification_scheme_identifier;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfClass> getCfclass_classificationSchemeSet() {

@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,28 +36,28 @@ public class CfFacil_Fund implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_start_date;
+	protected java.util.Date ka_start_date;
 	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_end_date;
+	protected java.util.Date ka_end_date;
 	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_fraction;
+	protected java.math.BigDecimal ka_fraction;
 	@Column(name = "cfAmount", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_amount;
+	protected java.math.BigDecimal ka_amount;
 	@ManyToOne
 	@JoinColumn(name="cffacil_fund_classification", referencedColumnName="ID",  nullable = true)
-	private CfClass cffacil_fund_classification;
+	protected CfClass cffacil_fund_classification;
 	@ManyToOne
 	@JoinColumn(name="cffacil_fund_currency", referencedColumnName="ID",  nullable = true)
-	private CfCurrency cffacil_fund_currency;
+	protected CfCurrency cffacil_fund_currency;
 	@ManyToOne
 	@JoinColumn(name="cffacil_fund_funding", referencedColumnName="ID",  nullable = true)
-	private CfFund cffacil_fund_funding;
+	protected CfFund cffacil_fund_funding;
 	@ManyToOne
 	@JoinColumn(name="cffacil_fund_facility", referencedColumnName="ID",  nullable = true)
-	private CfFacil cffacil_fund_facility;
+	protected CfFacil cffacil_fund_facility;
 	
 	public CfFacil_Fund(){
 	}
@@ -70,36 +70,36 @@ public class CfFacil_Fund implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.util.Date getA_start_date() {
-		return this.a_start_date;
+	public java.util.Date getKa_start_date() {
+		return this.ka_start_date;
 	}
 	
-	public void setA_start_date(java.util.Date a_start_date) {
-		this.a_start_date = a_start_date;
+	public void setKa_start_date(java.util.Date ka_start_date) {
+		this.ka_start_date = ka_start_date;
 	}
 	
-	public java.util.Date getA_end_date() {
-		return this.a_end_date;
+	public java.util.Date getKa_end_date() {
+		return this.ka_end_date;
 	}
 	
-	public void setA_end_date(java.util.Date a_end_date) {
-		this.a_end_date = a_end_date;
+	public void setKa_end_date(java.util.Date ka_end_date) {
+		this.ka_end_date = ka_end_date;
 	}
 	
-	public java.math.BigDecimal getA_fraction() {
-		return this.a_fraction;
+	public java.math.BigDecimal getKa_fraction() {
+		return this.ka_fraction;
 	}
 	
-	public void setA_fraction(java.math.BigDecimal a_fraction) {
-		this.a_fraction = a_fraction;
+	public void setKa_fraction(java.math.BigDecimal ka_fraction) {
+		this.ka_fraction = ka_fraction;
 	}
 	
-	public java.math.BigDecimal getA_amount() {
-		return this.a_amount;
+	public java.math.BigDecimal getKa_amount() {
+		return this.ka_amount;
 	}
 	
-	public void setA_amount(java.math.BigDecimal a_amount) {
-		this.a_amount = a_amount;
+	public void setKa_amount(java.math.BigDecimal ka_amount) {
+		this.ka_amount = ka_amount;
 	}
 	
 	public CfClass getCffacil_fund_classification() {

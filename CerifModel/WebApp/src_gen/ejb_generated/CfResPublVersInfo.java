@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,18 +36,18 @@ public class CfResPublVersInfo implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfVersInfo", unique = false, nullable = false , length = 255, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_version_info;
+	protected java.lang.String ka_version_info;
 	@ManyToOne
 	@JoinColumn(name="cfrespublversinfo_language", referencedColumnName="ID",  nullable = true)
-	private CfLang cfrespublversinfo_language;
+	protected CfLang cfrespublversinfo_language;
 	@ManyToOne
 	@JoinColumn(name="cfrespublversinfo_resultPublication", referencedColumnName="ID",  nullable = true)
-	private CfResPubl cfrespublversinfo_resultPublication;
+	protected CfResPubl cfrespublversinfo_resultPublication;
 	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_translation_kind;
+	protected java.lang.String ka_translation_kind;
 	
 	public CfResPublVersInfo(){
 	}
@@ -60,12 +60,12 @@ public class CfResPublVersInfo implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_version_info() {
-		return this.a_version_info;
+	public java.lang.String getKa_version_info() {
+		return this.ka_version_info;
 	}
 	
-	public void setA_version_info(java.lang.String a_version_info) {
-		this.a_version_info = a_version_info;
+	public void setKa_version_info(java.lang.String ka_version_info) {
+		this.ka_version_info = ka_version_info;
 	}
 	
 	public CfLang getCfrespublversinfo_language() {
@@ -84,12 +84,12 @@ public class CfResPublVersInfo implements java.io.Serializable {
 		this.cfrespublversinfo_resultPublication = cfrespublversinfo_resultPublication;
 	}
 	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
+	public java.lang.String getKa_translation_kind() {
+		return this.ka_translation_kind;
 	}
 	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
+	public void setKa_translation_kind(java.lang.String ka_translation_kind) {
+		this.ka_translation_kind = ka_translation_kind;
 	}
 	
 }

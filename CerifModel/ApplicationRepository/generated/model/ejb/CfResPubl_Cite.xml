@@ -2,11 +2,11 @@
 <entity class-name="ejb_generated.CfResPubl_Cite" label="Result Publication Citation" name="CFRESPUBL_CITE">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
-<column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
-<column-attribute field-name="a_fraction" hidden="false" key="false" label="Fraction" length="0" name="a_fraction" precision="0" type="java.math.BigDecimal"/>
-<column-attribute field-name="a_year" hidden="false" key="false" label="Year" length="0" name="a_year" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_count" hidden="false" key="false" label="Count" length="0" name="a_count" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="ka_start_date" hidden="false" key="false" label="Start Date" length="0" name="ka_start_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="ka_end_date" hidden="false" key="false" label="End Date" length="0" name="ka_end_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="ka_fraction" hidden="false" key="false" label="Fraction" length="0" name="ka_fraction" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="ka_year" hidden="false" key="false" label="Year" length="0" name="ka_year" precision="0" type="java.lang.Integer"/>
+<column-attribute field-name="ka_count" hidden="false" key="false" label="Count" length="0" name="ka_count" precision="0" type="java.math.BigDecimal"/>
 <zoom-attribute class-name="ejb_generated.CfClass" field-name="cfrespubl_cite_classification" label="Classification" name="cfrespubl_cite_classification" zoomed-by="id">
 <column-ref label="Classification ID" name="id"/>
 </zoom-attribute>

@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,57 +36,57 @@ public class CfEvent implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfEventId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_event_identifier;
+	protected java.lang.String ka_event_identifier;
 	@Column(name = "cfCityTown", unique = false, nullable = false , length = 30, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_city_town;
+	protected java.lang.String ka_city_town;
 	@Column(name = "cfFeeOrFree", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_fee_or_free;
+	protected java.lang.String ka_fee_or_free;
 	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_start_date;
+	protected java.util.Date ka_start_date;
 	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_end_date;
+	protected java.util.Date ka_end_date;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@ManyToOne
 	@JoinColumn(name="cfevent_country", referencedColumnName="ID",  nullable = true)
-	private CfCountry cfevent_country;
+	protected CfCountry cfevent_country;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_event_event")
-	private Set<CfEquip_Event> cfequip_event_eventSet;
+	protected Set<CfEquip_Event> cfequip_event_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_class_event")
-	private Set<CfEvent_Class> cfevent_class_eventSet;
+	protected Set<CfEvent_Class> cfevent_class_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfeventdescr_event")
-	private Set<CfEventDescr> cfeventdescr_eventSet;
+	protected Set<CfEventDescr> cfeventdescr_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_event_event")
-	private Set<CfEvent_Event> cfevent_event_eventSet;
+	protected Set<CfEvent_Event> cfevent_event_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_event_eventa")
-	private Set<CfEvent_Event> cfevent_event_eventaSet;
+	protected Set<CfEvent_Event> cfevent_event_eventaSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_fund_event")
-	private Set<CfEvent_Fund> cfevent_fund_eventSet;
+	protected Set<CfEvent_Fund> cfevent_fund_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_indic_event")
-	private Set<CfEvent_Indic> cfevent_indic_eventSet;
+	protected Set<CfEvent_Indic> cfevent_indic_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfeventkeyw_event")
-	private Set<CfEventKeyw> cfeventkeyw_eventSet;
+	protected Set<CfEventKeyw> cfeventkeyw_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_meas_event")
-	private Set<CfEvent_Meas> cfevent_meas_eventSet;
+	protected Set<CfEvent_Meas> cfevent_meas_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_medium_event")
-	private Set<CfEvent_Medium> cfevent_medium_eventSet;
+	protected Set<CfEvent_Medium> cfevent_medium_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfeventname_event")
-	private Set<CfEventName> cfeventname_eventSet;
+	protected Set<CfEventName> cfeventname_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_event_event")
-	private Set<CfFacil_Event> cffacil_event_eventSet;
+	protected Set<CfFacil_Event> cffacil_event_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_event_event")
-	private Set<CfOrgUnit_Event> cforgunit_event_eventSet;
+	protected Set<CfOrgUnit_Event> cforgunit_event_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_event_event")
-	private Set<CfPers_Event> cfpers_event_eventSet;
+	protected Set<CfPers_Event> cfpers_event_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_event_event")
-	private Set<CfProj_Event> cfproj_event_eventSet;
+	protected Set<CfProj_Event> cfproj_event_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_event_event")
-	private Set<CfResPubl_Event> cfrespubl_event_eventSet;
+	protected Set<CfResPubl_Event> cfrespubl_event_eventSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_event_event")
-	private Set<CfSrv_Event> cfsrv_event_eventSet;
+	protected Set<CfSrv_Event> cfsrv_event_eventSet;
 	
 	public CfEvent(){
 	}
@@ -99,52 +99,52 @@ public class CfEvent implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_event_identifier() {
-		return this.a_event_identifier;
+	public java.lang.String getKa_event_identifier() {
+		return this.ka_event_identifier;
 	}
 	
-	public void setA_event_identifier(java.lang.String a_event_identifier) {
-		this.a_event_identifier = a_event_identifier;
+	public void setKa_event_identifier(java.lang.String ka_event_identifier) {
+		this.ka_event_identifier = ka_event_identifier;
 	}
 	
-	public java.lang.String getA_city_town() {
-		return this.a_city_town;
+	public java.lang.String getKa_city_town() {
+		return this.ka_city_town;
 	}
 	
-	public void setA_city_town(java.lang.String a_city_town) {
-		this.a_city_town = a_city_town;
+	public void setKa_city_town(java.lang.String ka_city_town) {
+		this.ka_city_town = ka_city_town;
 	}
 	
-	public java.lang.String getA_fee_or_free() {
-		return this.a_fee_or_free;
+	public java.lang.String getKa_fee_or_free() {
+		return this.ka_fee_or_free;
 	}
 	
-	public void setA_fee_or_free(java.lang.String a_fee_or_free) {
-		this.a_fee_or_free = a_fee_or_free;
+	public void setKa_fee_or_free(java.lang.String ka_fee_or_free) {
+		this.ka_fee_or_free = ka_fee_or_free;
 	}
 	
-	public java.util.Date getA_start_date() {
-		return this.a_start_date;
+	public java.util.Date getKa_start_date() {
+		return this.ka_start_date;
 	}
 	
-	public void setA_start_date(java.util.Date a_start_date) {
-		this.a_start_date = a_start_date;
+	public void setKa_start_date(java.util.Date ka_start_date) {
+		this.ka_start_date = ka_start_date;
 	}
 	
-	public java.util.Date getA_end_date() {
-		return this.a_end_date;
+	public java.util.Date getKa_end_date() {
+		return this.ka_end_date;
 	}
 	
-	public void setA_end_date(java.util.Date a_end_date) {
-		this.a_end_date = a_end_date;
+	public void setKa_end_date(java.util.Date ka_end_date) {
+		this.ka_end_date = ka_end_date;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public CfCountry getCfevent_country() {

@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,48 +36,48 @@ public class CfResProd implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfResProdId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_result_product_identifier;
+	protected java.lang.String ka_result_product_identifier;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_resprod_resultProduct")
-	private Set<CfOrgUnit_ResProd> cforgunit_resprod_resultProductSet;
+	protected Set<CfOrgUnit_ResProd> cforgunit_resprod_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_resprod_resultProduct")
-	private Set<CfPers_ResProd> cfpers_resprod_resultProductSet;
+	protected Set<CfPers_ResProd> cfpers_resprod_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_resprod_resultProduct")
-	private Set<CfProj_ResProd> cfproj_resprod_resultProductSet;
+	protected Set<CfProj_ResProd> cfproj_resprod_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_resprod_resultProduct1")
-	private Set<CfResProd_ResProd> cfresprod_resprod_resultProduct1Set;
+	protected Set<CfResProd_ResProd> cfresprod_resprod_resultProduct1Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_resprod_resultProduct2")
-	private Set<CfResProd_ResProd> cfresprod_resprod_resultProduct2Set;
+	protected Set<CfResProd_ResProd> cfresprod_resprod_resultProduct2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_class_resultProduct")
-	private Set<CfResProd_Class> cfresprod_class_resultProductSet;
+	protected Set<CfResProd_Class> cfresprod_class_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresproddescr_resultProduct")
-	private Set<CfResProdDescr> cfresproddescr_resultProductSet;
+	protected Set<CfResProdDescr> cfresproddescr_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_equip_resultProduct")
-	private Set<CfResProd_Equip> cfresprod_equip_resultProductSet;
+	protected Set<CfResProd_Equip> cfresprod_equip_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_facil_resultProduct")
-	private Set<CfResProd_Facil> cfresprod_facil_resultProductSet;
+	protected Set<CfResProd_Facil> cfresprod_facil_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_fund_resultProduct")
-	private Set<CfResProd_Fund> cfresprod_fund_resultProductSet;
+	protected Set<CfResProd_Fund> cfresprod_fund_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_indic_resultProduct")
-	private Set<CfResProd_Indic> cfresprod_indic_resultProductSet;
+	protected Set<CfResProd_Indic> cfresprod_indic_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprodkeyw_resultProduct")
-	private Set<CfResProdKeyw> cfresprodkeyw_resultProductSet;
+	protected Set<CfResProdKeyw> cfresprodkeyw_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_meas_resultProduct")
-	private Set<CfResProd_Meas> cfresprod_meas_resultProductSet;
+	protected Set<CfResProd_Meas> cfresprod_meas_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_medium_resultProduct")
-	private Set<CfResProd_Medium> cfresprod_medium_resultProductSet;
+	protected Set<CfResProd_Medium> cfresprod_medium_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprodname_resultProduct")
-	private Set<CfResProdName> cfresprodname_resultProductSet;
+	protected Set<CfResProdName> cfresprodname_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_srv_resultProduct")
-	private Set<CfResProd_Srv> cfresprod_srv_resultProductSet;
+	protected Set<CfResProd_Srv> cfresprod_srv_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprodversinfo_resultProduct")
-	private Set<CfResProdVersInfo> cfresprodversinfo_resultProductSet;
+	protected Set<CfResProdVersInfo> cfresprodversinfo_resultProductSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_resprod_resultProduct")
-	private Set<CfResPubl_ResProd> cfrespubl_resprod_resultProductSet;
+	protected Set<CfResPubl_ResProd> cfrespubl_resprod_resultProductSet;
 	
 	public CfResProd(){
 	}
@@ -90,20 +90,20 @@ public class CfResProd implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_result_product_identifier() {
-		return this.a_result_product_identifier;
+	public java.lang.String getKa_result_product_identifier() {
+		return this.ka_result_product_identifier;
 	}
 	
-	public void setA_result_product_identifier(java.lang.String a_result_product_identifier) {
-		this.a_result_product_identifier = a_result_product_identifier;
+	public void setKa_result_product_identifier(java.lang.String ka_result_product_identifier) {
+		this.ka_result_product_identifier = ka_result_product_identifier;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfOrgUnit_ResProd> getCforgunit_resprod_resultProductSet() {

@@ -2,14 +2,14 @@
 <entity class-name="ejb_generated.CfExpSkillsDescr" label="Expertise And Skills Description" name="CFEXPSKILLSDESCR">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_description" hidden="false" key="false" label="Description" length="0" name="a_description" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_description" hidden="false" key="false" label="Description" length="0" name="ka_description" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfLang" field-name="cfexpskillsdescr_language" label="Language" name="cfexpskillsdescr_language" zoomed-by="id">
 <column-ref label="Language ID" name="id"/>
 </zoom-attribute>
 <zoom-attribute class-name="ejb_generated.CfExpSkills" field-name="cfexpskillsdescr_expertiseAndSkills" label="Expertise and skills" name="cfexpskillsdescr_expertiseAndSkills" zoomed-by="id">
 <column-ref label="Expertise and skills ID" name="id"/>
 </zoom-attribute>
-<column-attribute enum="TranslationKindExpertise_and_skills_descriptionEnum" field-name="a_translation_kind" hidden="false" key="false" label="Translation Kind" length="1" name="a_translation_kind" precision="0" type="java.lang.String"/>
+<column-attribute enum="TranslationKindExpertise_and_skills_descriptionEnum" field-name="ka_translation_kind" hidden="false" key="false" label="Translation Kind" length="1" name="ka_translation_kind" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.Expertiseandskillsintegrated" field-name="cfexpskillsdescr_expertiseAndSkillsIntegrated" label="Expertise and skills integrated" name="cfexpskillsdescr_expertiseAndSkillsIntegrated" zoomed-by="id">
 <column-ref label="Expertise and skills integrated ID" name="id"/>
 </zoom-attribute>

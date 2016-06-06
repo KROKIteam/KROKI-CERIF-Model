@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,22 +36,22 @@ public class CfQual implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfQualId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_qualification_identifier;
+	protected java.lang.String ka_qualification_identifier;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_qual_qualification")
-	private Set<CfPers_Qual> cfpers_qual_qualificationSet;
+	protected Set<CfPers_Qual> cfpers_qual_qualificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfqual_class_qualification")
-	private Set<CfQual_Class> cfqual_class_qualificationSet;
+	protected Set<CfQual_Class> cfqual_class_qualificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfqualdescr_qualification")
-	private Set<CfQualDescr> cfqualdescr_qualificationSet;
+	protected Set<CfQualDescr> cfqualdescr_qualificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfqualkeyw_qualification")
-	private Set<CfQualKeyw> cfqualkeyw_qualificationSet;
+	protected Set<CfQualKeyw> cfqualkeyw_qualificationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfqualtitle_qualification")
-	private Set<CfQualTitle> cfqualtitle_qualificationSet;
+	protected Set<CfQualTitle> cfqualtitle_qualificationSet;
 	
 	public CfQual(){
 	}
@@ -64,20 +64,20 @@ public class CfQual implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_qualification_identifier() {
-		return this.a_qualification_identifier;
+	public java.lang.String getKa_qualification_identifier() {
+		return this.ka_qualification_identifier;
 	}
 	
-	public void setA_qualification_identifier(java.lang.String a_qualification_identifier) {
-		this.a_qualification_identifier = a_qualification_identifier;
+	public void setKa_qualification_identifier(java.lang.String ka_qualification_identifier) {
+		this.ka_qualification_identifier = ka_qualification_identifier;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfPers_Qual> getCfpers_qual_qualificationSet() {

@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,69 +36,69 @@ public class CfOrgUnit implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfOrgUnitId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_orgisation_unit_identifier;
+	protected java.lang.String ka_orgisation_unit_identifier;
 	@Column(name = "cfAcro", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_acronym;
+	protected java.lang.String ka_acronym;
 	@Column(name = "cfHeadcount", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_headcount;
+	protected java.lang.Integer ka_headcount;
 	@Column(name = "cfTurn", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_turnover;
+	protected java.math.BigDecimal ka_turnover;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@ManyToOne
 	@JoinColumn(name="cforgunit_currency", referencedColumnName="ID",  nullable = true)
-	private CfCurrency cforgunit_currency;
+	protected CfCurrency cforgunit_currency;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_orgunit_organisationUnit1")
-	private Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_organisationUnit1Set;
+	protected Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_organisationUnit1Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_orgunit_organisationUnit2")
-	private Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_organisationUnit2Set;
+	protected Set<CfOrgUnit_OrgUnit> cforgunit_orgunit_organisationUnit2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_class_organisationUnit")
-	private Set<CfOrgUnit_Class> cforgunit_class_organisationUnitSet;
+	protected Set<CfOrgUnit_Class> cforgunit_class_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_dc_organisationUnit")
-	private Set<CfOrgUnit_DC> cforgunit_dc_organisationUnitSet;
+	protected Set<CfOrgUnit_DC> cforgunit_dc_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_eaddr_organisationUnit")
-	private Set<CfOrgUnit_EAddr> cforgunit_eaddr_organisationUnitSet;
+	protected Set<CfOrgUnit_EAddr> cforgunit_eaddr_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_equip_organisationUnit")
-	private Set<CfOrgUnit_Equip> cforgunit_equip_organisationUnitSet;
+	protected Set<CfOrgUnit_Equip> cforgunit_equip_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_event_organisationUnit")
-	private Set<CfOrgUnit_Event> cforgunit_event_organisationUnitSet;
+	protected Set<CfOrgUnit_Event> cforgunit_event_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_expskills_organisationUnit")
-	private Set<CfOrgUnit_ExpSkills> cforgunit_expskills_organisationUnitSet;
+	protected Set<CfOrgUnit_ExpSkills> cforgunit_expskills_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_facil_organisationUnit")
-	private Set<CfOrgUnit_Facil> cforgunit_facil_organisationUnitSet;
+	protected Set<CfOrgUnit_Facil> cforgunit_facil_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_fund_organisationUnit")
-	private Set<CfOrgUnit_Fund> cforgunit_fund_organisationUnitSet;
+	protected Set<CfOrgUnit_Fund> cforgunit_fund_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_indic_organisationUnit")
-	private Set<CfOrgUnit_Indic> cforgunit_indic_organisationUnitSet;
+	protected Set<CfOrgUnit_Indic> cforgunit_indic_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunitkeyw_organisationUnit")
-	private Set<CfOrgUnitKeyw> cforgunitkeyw_organisationUnitSet;
+	protected Set<CfOrgUnitKeyw> cforgunitkeyw_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_meas_organisationUnit")
-	private Set<CfOrgUnit_Meas> cforgunit_meas_organisationUnitSet;
+	protected Set<CfOrgUnit_Meas> cforgunit_meas_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_medium_organisationUnit")
-	private Set<CfOrgUnit_Medium> cforgunit_medium_organisationUnitSet;
+	protected Set<CfOrgUnit_Medium> cforgunit_medium_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunitname_organisationUnit")
-	private Set<CfOrgUnitName> cforgunitname_organisationUnitSet;
+	protected Set<CfOrgUnitName> cforgunitname_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_paddr_organisationUnit")
-	private Set<CfOrgUnit_PAddr> cforgunit_paddr_organisationUnitSet;
+	protected Set<CfOrgUnit_PAddr> cforgunit_paddr_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_prize_organisationUnit")
-	private Set<CfOrgUnit_Prize> cforgunit_prize_organisationUnitSet;
+	protected Set<CfOrgUnit_Prize> cforgunit_prize_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunitresact_organisationUnit")
-	private Set<CfOrgUnitResAct> cforgunitresact_organisationUnitSet;
+	protected Set<CfOrgUnitResAct> cforgunitresact_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_respat_organisationUnit")
-	private Set<CfOrgUnit_ResPat> cforgunit_respat_organisationUnitSet;
+	protected Set<CfOrgUnit_ResPat> cforgunit_respat_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_resprod_organisationUnit")
-	private Set<CfOrgUnit_ResProd> cforgunit_resprod_organisationUnitSet;
+	protected Set<CfOrgUnit_ResProd> cforgunit_resprod_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_respubl_organisationUnit")
-	private Set<CfOrgUnit_ResPubl> cforgunit_respubl_organisationUnitSet;
+	protected Set<CfOrgUnit_ResPubl> cforgunit_respubl_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_srv_organisationUnit")
-	private Set<CfOrgUnit_Srv> cforgunit_srv_organisationUnitSet;
+	protected Set<CfOrgUnit_Srv> cforgunit_srv_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_orgunit_organisationUnit")
-	private Set<CfPers_OrgUnit> cfpers_orgunit_organisationUnitSet;
+	protected Set<CfPers_OrgUnit> cfpers_orgunit_organisationUnitSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_orgunit_organisationUnit")
-	private Set<CfProj_OrgUnit> cfproj_orgunit_organisationUnitSet;
+	protected Set<CfProj_OrgUnit> cfproj_orgunit_organisationUnitSet;
 	
 	public CfOrgUnit(){
 	}
@@ -111,44 +111,44 @@ public class CfOrgUnit implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_orgisation_unit_identifier() {
-		return this.a_orgisation_unit_identifier;
+	public java.lang.String getKa_orgisation_unit_identifier() {
+		return this.ka_orgisation_unit_identifier;
 	}
 	
-	public void setA_orgisation_unit_identifier(java.lang.String a_orgisation_unit_identifier) {
-		this.a_orgisation_unit_identifier = a_orgisation_unit_identifier;
+	public void setKa_orgisation_unit_identifier(java.lang.String ka_orgisation_unit_identifier) {
+		this.ka_orgisation_unit_identifier = ka_orgisation_unit_identifier;
 	}
 	
-	public java.lang.String getA_acronym() {
-		return this.a_acronym;
+	public java.lang.String getKa_acronym() {
+		return this.ka_acronym;
 	}
 	
-	public void setA_acronym(java.lang.String a_acronym) {
-		this.a_acronym = a_acronym;
+	public void setKa_acronym(java.lang.String ka_acronym) {
+		this.ka_acronym = ka_acronym;
 	}
 	
-	public java.lang.String getA_headcount() {
-		return this.a_headcount;
+	public java.lang.Integer getKa_headcount() {
+		return this.ka_headcount;
 	}
 	
-	public void setA_headcount(java.lang.String a_headcount) {
-		this.a_headcount = a_headcount;
+	public void setKa_headcount(java.lang.Integer ka_headcount) {
+		this.ka_headcount = ka_headcount;
 	}
 	
-	public java.math.BigDecimal getA_turnover() {
-		return this.a_turnover;
+	public java.math.BigDecimal getKa_turnover() {
+		return this.ka_turnover;
 	}
 	
-	public void setA_turnover(java.math.BigDecimal a_turnover) {
-		this.a_turnover = a_turnover;
+	public void setKa_turnover(java.math.BigDecimal ka_turnover) {
+		this.ka_turnover = ka_turnover;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public CfCurrency getCforgunit_currency() {

@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,50 +36,50 @@ public class CfIndic implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfIndicId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_indicator_identifier;
+	protected java.lang.String ka_indicator_identifier;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_indic_indicator")
-	private Set<CfEquip_Indic> cfequip_indic_indicatorSet;
+	protected Set<CfEquip_Indic> cfequip_indic_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_indic_indicator")
-	private Set<CfEvent_Indic> cfevent_indic_indicatorSet;
+	protected Set<CfEvent_Indic> cfevent_indic_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_indic_indicator")
-	private Set<CfFacil_Indic> cffacil_indic_indicatorSet;
+	protected Set<CfFacil_Indic> cffacil_indic_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_indic_indicator")
-	private Set<CfFund_Indic> cffund_indic_indicatorSet;
+	protected Set<CfFund_Indic> cffund_indic_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindic_indic_indicator1")
-	private Set<CfIndic_Indic> cfindic_indic_indicator1Set;
+	protected Set<CfIndic_Indic> cfindic_indic_indicator1Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindic_indic_indicator2")
-	private Set<CfIndic_Indic> cfindic_indic_indicator2Set;
+	protected Set<CfIndic_Indic> cfindic_indic_indicator2Set;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindic_class_indicator")
-	private Set<CfIndic_Class> cfindic_class_indicatorSet;
+	protected Set<CfIndic_Class> cfindic_class_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindicdescr_indicator")
-	private Set<CfIndicDescr> cfindicdescr_indicatorSet;
+	protected Set<CfIndicDescr> cfindicdescr_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindickeyw_indicator")
-	private Set<CfIndicKeyw> cfindickeyw_indicatorSet;
+	protected Set<CfIndicKeyw> cfindickeyw_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindic_meas_indicator")
-	private Set<CfIndic_Meas> cfindic_meas_indicatorSet;
+	protected Set<CfIndic_Meas> cfindic_meas_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfindicname_indicator")
-	private Set<CfIndicName> cfindicname_indicatorSet;
+	protected Set<CfIndicName> cfindicname_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_indic_indicator")
-	private Set<CfMedium_Indic> cfmedium_indic_indicatorSet;
+	protected Set<CfMedium_Indic> cfmedium_indic_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_indic_indicator")
-	private Set<CfOrgUnit_Indic> cforgunit_indic_indicatorSet;
+	protected Set<CfOrgUnit_Indic> cforgunit_indic_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_indic_indicator")
-	private Set<CfPers_Indic> cfpers_indic_indicatorSet;
+	protected Set<CfPers_Indic> cfpers_indic_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_indic_indicator")
-	private Set<CfProj_Indic> cfproj_indic_indicatorSet;
+	protected Set<CfProj_Indic> cfproj_indic_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_indic_indicator")
-	private Set<CfResPat_Indic> cfrespat_indic_indicatorSet;
+	protected Set<CfResPat_Indic> cfrespat_indic_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_indic_indicator")
-	private Set<CfResProd_Indic> cfresprod_indic_indicatorSet;
+	protected Set<CfResProd_Indic> cfresprod_indic_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_indic_indicator")
-	private Set<CfResPubl_Indic> cfrespubl_indic_indicatorSet;
+	protected Set<CfResPubl_Indic> cfrespubl_indic_indicatorSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_indic_indicator")
-	private Set<CfSrv_Indic> cfsrv_indic_indicatorSet;
+	protected Set<CfSrv_Indic> cfsrv_indic_indicatorSet;
 	
 	public CfIndic(){
 	}
@@ -92,20 +92,20 @@ public class CfIndic implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_indicator_identifier() {
-		return this.a_indicator_identifier;
+	public java.lang.String getKa_indicator_identifier() {
+		return this.ka_indicator_identifier;
 	}
 	
-	public void setA_indicator_identifier(java.lang.String a_indicator_identifier) {
-		this.a_indicator_identifier = a_indicator_identifier;
+	public void setKa_indicator_identifier(java.lang.String ka_indicator_identifier) {
+		this.ka_indicator_identifier = ka_indicator_identifier;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfEquip_Indic> getCfequip_indic_indicatorSet() {

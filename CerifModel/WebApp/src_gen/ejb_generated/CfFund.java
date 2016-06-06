@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,64 +36,64 @@ public class CfFund implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfFundId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_funding_identifier;
+	protected java.lang.String ka_funding_identifier;
 	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_start_date;
+	protected java.util.Date ka_start_date;
 	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_end_date;
+	protected java.util.Date ka_end_date;
 	@Column(name = "cfAcro", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_acronym;
+	protected java.lang.String ka_acronym;
 	@Column(name = "cfAmount", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_amount;
+	protected java.math.BigDecimal ka_amount;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@ManyToOne
 	@JoinColumn(name="cffund_currency", referencedColumnName="ID",  nullable = true)
-	private CfCurrency cffund_currency;
+	protected CfCurrency cffund_currency;
 	@ManyToOne
 	@JoinColumn(name="cffund_fundingIntegrated", referencedColumnName="ID",  nullable = true)
-	private Fundingintegrated cffund_fundingIntegrated;
+	protected Fundingintegrated cffund_fundingIntegrated;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_fund_funding")
-	private Set<CfEquip_Fund> cfequip_fund_fundingSet;
+	protected Set<CfEquip_Fund> cfequip_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_fund_funding")
-	private Set<CfEvent_Fund> cfevent_fund_fundingSet;
+	protected Set<CfEvent_Fund> cfevent_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_fund_funding")
-	private Set<CfFacil_Fund> cffacil_fund_fundingSet;
+	protected Set<CfFacil_Fund> cffacil_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_fund_funding")
-	private Set<CfFund_Fund> cffund_fund_fundingSet;
+	protected Set<CfFund_Fund> cffund_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_fund_fundinga")
-	private Set<CfFund_Fund> cffund_fund_fundingaSet;
+	protected Set<CfFund_Fund> cffund_fund_fundingaSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_class_funding")
-	private Set<CfFund_Class> cffund_class_fundingSet;
+	protected Set<CfFund_Class> cffund_class_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffunddescr_funding")
-	private Set<CfFundDescr> cffunddescr_fundingSet;
+	protected Set<CfFundDescr> cffunddescr_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_indic_funding")
-	private Set<CfFund_Indic> cffund_indic_fundingSet;
+	protected Set<CfFund_Indic> cffund_indic_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffundkeyw_funding")
-	private Set<CfFundKeyw> cffundkeyw_fundingSet;
+	protected Set<CfFundKeyw> cffundkeyw_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_meas_funding")
-	private Set<CfFund_Meas> cffund_meas_fundingSet;
+	protected Set<CfFund_Meas> cffund_meas_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffundname_funding")
-	private Set<CfFundName> cffundname_fundingSet;
+	protected Set<CfFundName> cffundname_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_fund_funding")
-	private Set<CfMedium_Fund> cfmedium_fund_fundingSet;
+	protected Set<CfMedium_Fund> cfmedium_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_fund_funding")
-	private Set<CfOrgUnit_Fund> cforgunit_fund_fundingSet;
+	protected Set<CfOrgUnit_Fund> cforgunit_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_fund_funding")
-	private Set<CfPers_Fund> cfpers_fund_fundingSet;
+	protected Set<CfPers_Fund> cfpers_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_fund_funding")
-	private Set<CfProj_Fund> cfproj_fund_fundingSet;
+	protected Set<CfProj_Fund> cfproj_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_fund_funding")
-	private Set<CfResPat_Fund> cfrespat_fund_fundingSet;
+	protected Set<CfResPat_Fund> cfrespat_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_fund_funding")
-	private Set<CfResProd_Fund> cfresprod_fund_fundingSet;
+	protected Set<CfResProd_Fund> cfresprod_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_fund_funding")
-	private Set<CfResPubl_Fund> cfrespubl_fund_fundingSet;
+	protected Set<CfResPubl_Fund> cfrespubl_fund_fundingSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_fund_funding")
-	private Set<CfSrv_Fund> cfsrv_fund_fundingSet;
+	protected Set<CfSrv_Fund> cfsrv_fund_fundingSet;
 	
 	public CfFund(){
 	}
@@ -106,52 +106,52 @@ public class CfFund implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_funding_identifier() {
-		return this.a_funding_identifier;
+	public java.lang.String getKa_funding_identifier() {
+		return this.ka_funding_identifier;
 	}
 	
-	public void setA_funding_identifier(java.lang.String a_funding_identifier) {
-		this.a_funding_identifier = a_funding_identifier;
+	public void setKa_funding_identifier(java.lang.String ka_funding_identifier) {
+		this.ka_funding_identifier = ka_funding_identifier;
 	}
 	
-	public java.util.Date getA_start_date() {
-		return this.a_start_date;
+	public java.util.Date getKa_start_date() {
+		return this.ka_start_date;
 	}
 	
-	public void setA_start_date(java.util.Date a_start_date) {
-		this.a_start_date = a_start_date;
+	public void setKa_start_date(java.util.Date ka_start_date) {
+		this.ka_start_date = ka_start_date;
 	}
 	
-	public java.util.Date getA_end_date() {
-		return this.a_end_date;
+	public java.util.Date getKa_end_date() {
+		return this.ka_end_date;
 	}
 	
-	public void setA_end_date(java.util.Date a_end_date) {
-		this.a_end_date = a_end_date;
+	public void setKa_end_date(java.util.Date ka_end_date) {
+		this.ka_end_date = ka_end_date;
 	}
 	
-	public java.lang.String getA_acronym() {
-		return this.a_acronym;
+	public java.lang.String getKa_acronym() {
+		return this.ka_acronym;
 	}
 	
-	public void setA_acronym(java.lang.String a_acronym) {
-		this.a_acronym = a_acronym;
+	public void setKa_acronym(java.lang.String ka_acronym) {
+		this.ka_acronym = ka_acronym;
 	}
 	
-	public java.math.BigDecimal getA_amount() {
-		return this.a_amount;
+	public java.math.BigDecimal getKa_amount() {
+		return this.ka_amount;
 	}
 	
-	public void setA_amount(java.math.BigDecimal a_amount) {
-		this.a_amount = a_amount;
+	public void setKa_amount(java.math.BigDecimal ka_amount) {
+		this.ka_amount = ka_amount;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public CfCurrency getCffund_currency() {

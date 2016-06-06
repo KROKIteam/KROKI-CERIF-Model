@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,76 +36,76 @@ public class CfCurrency implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfCurrCode", unique = false, nullable = false , length = 3, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_currency_code;
+	protected java.lang.String ka_currency_code;
 	@Column(name = "cfNumCurrCode", unique = false, nullable = false , length = 3, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_numeric_currency_code;
+	protected java.lang.String ka_numeric_currency_code;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcurrency_class_currency")
-	private Set<CfCurrency_Class> cfcurrency_class_currencySet;
+	protected Set<CfCurrency_Class> cfcurrency_class_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcurrencyentname_currency")
-	private Set<CfCurrencyEntName> cfcurrencyentname_currencySet;
+	protected Set<CfCurrencyEntName> cfcurrencyentname_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcurrencyname_currency")
-	private Set<CfCurrencyName> cfcurrencyname_currencySet;
+	protected Set<CfCurrencyName> cfcurrencyname_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_fund_currency")
-	private Set<CfEquip_Fund> cfequip_fund_currencySet;
+	protected Set<CfEquip_Fund> cfequip_fund_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfevent_fund_currency")
-	private Set<CfEvent_Fund> cfevent_fund_currencySet;
+	protected Set<CfEvent_Fund> cfevent_fund_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_fund_currency")
-	private Set<CfFacil_Fund> cffacil_fund_currencySet;
+	protected Set<CfFacil_Fund> cffacil_fund_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_currency")
-	private Set<CfFund> cffund_currencySet;
+	protected Set<CfFund> cffund_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_indic_currency")
-	private Set<CfFund_Indic> cffund_indic_currencySet;
+	protected Set<CfFund_Indic> cffund_indic_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffund_meas_currency")
-	private Set<CfFund_Meas> cffund_meas_currencySet;
+	protected Set<CfFund_Meas> cffund_meas_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmedium_fund_currency")
-	private Set<CfMedium_Fund> cfmedium_fund_currencySet;
+	protected Set<CfMedium_Fund> cfmedium_fund_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_currency")
-	private Set<CfOrgUnit> cforgunit_currencySet;
+	protected Set<CfOrgUnit> cforgunit_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_equip_currency")
-	private Set<CfOrgUnit_Equip> cforgunit_equip_currencySet;
+	protected Set<CfOrgUnit_Equip> cforgunit_equip_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_expskills_currency")
-	private Set<CfOrgUnit_ExpSkills> cforgunit_expskills_currencySet;
+	protected Set<CfOrgUnit_ExpSkills> cforgunit_expskills_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_facil_currency")
-	private Set<CfOrgUnit_Facil> cforgunit_facil_currencySet;
+	protected Set<CfOrgUnit_Facil> cforgunit_facil_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_fund_currency")
-	private Set<CfOrgUnit_Fund> cforgunit_fund_currencySet;
+	protected Set<CfOrgUnit_Fund> cforgunit_fund_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_resprod_currency")
-	private Set<CfOrgUnit_ResProd> cforgunit_resprod_currencySet;
+	protected Set<CfOrgUnit_ResProd> cforgunit_resprod_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_srv_currency")
-	private Set<CfOrgUnit_Srv> cforgunit_srv_currencySet;
+	protected Set<CfOrgUnit_Srv> cforgunit_srv_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_equip_currency")
-	private Set<CfPers_Equip> cfpers_equip_currencySet;
+	protected Set<CfPers_Equip> cfpers_equip_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_expskills_currency")
-	private Set<CfPers_ExpSkills> cfpers_expskills_currencySet;
+	protected Set<CfPers_ExpSkills> cfpers_expskills_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_facil_currency")
-	private Set<CfPers_Facil> cfpers_facil_currencySet;
+	protected Set<CfPers_Facil> cfpers_facil_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_fund_currency")
-	private Set<CfPers_Fund> cfpers_fund_currencySet;
+	protected Set<CfPers_Fund> cfpers_fund_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_resprod_currency")
-	private Set<CfPers_ResProd> cfpers_resprod_currencySet;
+	protected Set<CfPers_ResProd> cfpers_resprod_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_srv_currency")
-	private Set<CfPers_Srv> cfpers_srv_currencySet;
+	protected Set<CfPers_Srv> cfpers_srv_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_equip_currency")
-	private Set<CfProj_Equip> cfproj_equip_currencySet;
+	protected Set<CfProj_Equip> cfproj_equip_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_facil_currency")
-	private Set<CfProj_Facil> cfproj_facil_currencySet;
+	protected Set<CfProj_Facil> cfproj_facil_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_fund_currency")
-	private Set<CfProj_Fund> cfproj_fund_currencySet;
+	protected Set<CfProj_Fund> cfproj_fund_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfproj_srv_currency")
-	private Set<CfProj_Srv> cfproj_srv_currencySet;
+	protected Set<CfProj_Srv> cfproj_srv_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespat_fund_currency")
-	private Set<CfResPat_Fund> cfrespat_fund_currencySet;
+	protected Set<CfResPat_Fund> cfrespat_fund_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfresprod_fund_currency")
-	private Set<CfResProd_Fund> cfresprod_fund_currencySet;
+	protected Set<CfResProd_Fund> cfresprod_fund_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_fund_currency")
-	private Set<CfResPubl_Fund> cfrespubl_fund_currencySet;
+	protected Set<CfResPubl_Fund> cfrespubl_fund_currencySet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_fund_currency")
-	private Set<CfSrv_Fund> cfsrv_fund_currencySet;
+	protected Set<CfSrv_Fund> cfsrv_fund_currencySet;
 	
 	public CfCurrency(){
 	}
@@ -118,28 +118,28 @@ public class CfCurrency implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_currency_code() {
-		return this.a_currency_code;
+	public java.lang.String getKa_currency_code() {
+		return this.ka_currency_code;
 	}
 	
-	public void setA_currency_code(java.lang.String a_currency_code) {
-		this.a_currency_code = a_currency_code;
+	public void setKa_currency_code(java.lang.String ka_currency_code) {
+		this.ka_currency_code = ka_currency_code;
 	}
 	
-	public java.lang.String getA_numeric_currency_code() {
-		return this.a_numeric_currency_code;
+	public java.lang.String getKa_numeric_currency_code() {
+		return this.ka_numeric_currency_code;
 	}
 	
-	public void setA_numeric_currency_code(java.lang.String a_numeric_currency_code) {
-		this.a_numeric_currency_code = a_numeric_currency_code;
+	public void setKa_numeric_currency_code(java.lang.String ka_numeric_currency_code) {
+		this.ka_numeric_currency_code = ka_numeric_currency_code;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfCurrency_Class> getCfcurrency_class_currencySet() {

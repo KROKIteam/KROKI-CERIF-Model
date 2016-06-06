@@ -47,11 +47,13 @@ public aspect TranslationAspect {
 				JoinColumnAttribute joinColumn = (JoinColumnAttribute) attribute;
 				for (LinkedHashMap<String, String> row : tableMap) {
 					String zoomValues = row.get(joinColumn.getFieldName());
+					System.out.println("ZOOM VALUES: " + zoomValues);
 					if(zoomValues != "") {
 						// For now assume that the id is always displayed in zoom column
 						String id = zoomValues.split(",")[0];
 						ColumnAttribute additionalColumn = findNameOrTitleColumn(joinColumn);
 						String additionalValue = getNameOrTitleColumnValue(joinColumn, id, additionalColumn);
+						System.out.println("DODAJEM U ZOOM VALS: " + additionalValue);
 						zoomValues = zoomValues + ", " + additionalValue;
 						row.put(joinColumn.getFieldName(), zoomValues);
 					}
@@ -122,6 +124,7 @@ public aspect TranslationAspect {
 			try {
 				// If the Name entity does not exist, try and fetch Title entity if it is available
 				Class titleEJBClass = Class.forName(jcAttribute.getLookupClass().getName() + "Title");
+				System.out.println("\t CLASS: " + jcAttribute.getLookupClass().getName() + "Name");
 				ColumnAttribute titleColumn = new ColumnAttribute();
 				titleColumn.setHidden(false);
 				titleColumn.setName(jcAttribute.getLookupClass().getSimpleName() + "Title");
@@ -130,6 +133,7 @@ public aspect TranslationAspect {
 				titleColumn.setLabel(jcAttribute.getLabel() + " Title");
 				return titleColumn;
 			} catch (ClassNotFoundException e1) {
+				System.out.println("CATCH class not found :(");
 				e1.printStackTrace();
 				return null;
 			}
@@ -137,14 +141,14 @@ public aspect TranslationAspect {
 	}
 
 	private String getNameOrTitleColumnValue(JoinColumnAttribute jcAttribute, String id, ColumnAttribute injectedColumn) {
-		String toSelect = "a_name";
+		String toSelect = "ka_name";
 		if(injectedColumn.getName().endsWith("Title")) {
-			toSelect = "a_title";
+			toSelect = "ka_title";
 		}
 		String injectedColumnName = injectedColumn.getName().toLowerCase() + "_" + jcAttribute.getLabel().replaceAll(" ", "").toLowerCase();
 		String query = 	"SELECT x." + toSelect + " FROM " + injectedColumn.getName() + 
 				" x WHERE x." + injectedColumnName + ".id = " + Long.parseLong(id) + 
-				" AND x.a_translation_kind = 'o'";
+				" AND x.ka_translation_kind = 'o'";
 		System.out.println("QUERY: " + query);
 
 		try {

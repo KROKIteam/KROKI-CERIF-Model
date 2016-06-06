@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,22 +36,22 @@ public class CfCite implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfCiteId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_citation_identifier;
+	protected java.lang.String ka_citation_identifier;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcite_class_citation")
-	private Set<CfCite_Class> cfcite_class_citationSet;
+	protected Set<CfCite_Class> cfcite_class_citationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcitedescr_citation")
-	private Set<CfCiteDescr> cfcitedescr_citationSet;
+	protected Set<CfCiteDescr> cfcitedescr_citationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcite_medium_citation")
-	private Set<CfCite_Medium> cfcite_medium_citationSet;
+	protected Set<CfCite_Medium> cfcite_medium_citationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfcitetitle_citation")
-	private Set<CfCiteTitle> cfcitetitle_citationSet;
+	protected Set<CfCiteTitle> cfcitetitle_citationSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_cite_citation")
-	private Set<CfResPubl_Cite> cfrespubl_cite_citationSet;
+	protected Set<CfResPubl_Cite> cfrespubl_cite_citationSet;
 	
 	public CfCite(){
 	}
@@ -64,20 +64,20 @@ public class CfCite implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_citation_identifier() {
-		return this.a_citation_identifier;
+	public java.lang.String getKa_citation_identifier() {
+		return this.ka_citation_identifier;
 	}
 	
-	public void setA_citation_identifier(java.lang.String a_citation_identifier) {
-		this.a_citation_identifier = a_citation_identifier;
+	public void setKa_citation_identifier(java.lang.String ka_citation_identifier) {
+		this.ka_citation_identifier = ka_citation_identifier;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfCite_Class> getCfcite_class_citationSet() {

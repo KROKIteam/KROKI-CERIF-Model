@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,25 +36,25 @@ public class CfFedId implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfFedIdId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_federated_identifier_identifier;
+	protected java.lang.String ka_federated_identifier_identifier;
 	@Column(name = "cfInstId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_instance_identifier;
+	protected java.lang.String ka_instance_identifier;
 	@Column(name = "cfFedId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_federate_identifier;
+	protected java.lang.String ka_federate_identifier;
 	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_start_date;
+	protected java.util.Date ka_start_date;
 	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_end_date;
+	protected java.util.Date ka_end_date;
 	@ManyToOne
 	@JoinColumn(name="cffedid_classification", referencedColumnName="ID",  nullable = true)
-	private CfClass cffedid_classification;
+	protected CfClass cffedid_classification;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffedid_class_federatedIdentifier")
-	private Set<CfFedId_Class> cffedid_class_federatedIdentifierSet;
+	protected Set<CfFedId_Class> cffedid_class_federatedIdentifierSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_fedid_federatedIdentifier")
-	private Set<CfSrv_FedId> cfsrv_fedid_federatedIdentifierSet;
+	protected Set<CfSrv_FedId> cfsrv_fedid_federatedIdentifierSet;
 	
 	public CfFedId(){
 	}
@@ -67,44 +67,44 @@ public class CfFedId implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_federated_identifier_identifier() {
-		return this.a_federated_identifier_identifier;
+	public java.lang.String getKa_federated_identifier_identifier() {
+		return this.ka_federated_identifier_identifier;
 	}
 	
-	public void setA_federated_identifier_identifier(java.lang.String a_federated_identifier_identifier) {
-		this.a_federated_identifier_identifier = a_federated_identifier_identifier;
+	public void setKa_federated_identifier_identifier(java.lang.String ka_federated_identifier_identifier) {
+		this.ka_federated_identifier_identifier = ka_federated_identifier_identifier;
 	}
 	
-	public java.lang.String getA_instance_identifier() {
-		return this.a_instance_identifier;
+	public java.lang.String getKa_instance_identifier() {
+		return this.ka_instance_identifier;
 	}
 	
-	public void setA_instance_identifier(java.lang.String a_instance_identifier) {
-		this.a_instance_identifier = a_instance_identifier;
+	public void setKa_instance_identifier(java.lang.String ka_instance_identifier) {
+		this.ka_instance_identifier = ka_instance_identifier;
 	}
 	
-	public java.lang.String getA_federate_identifier() {
-		return this.a_federate_identifier;
+	public java.lang.String getKa_federate_identifier() {
+		return this.ka_federate_identifier;
 	}
 	
-	public void setA_federate_identifier(java.lang.String a_federate_identifier) {
-		this.a_federate_identifier = a_federate_identifier;
+	public void setKa_federate_identifier(java.lang.String ka_federate_identifier) {
+		this.ka_federate_identifier = ka_federate_identifier;
 	}
 	
-	public java.util.Date getA_start_date() {
-		return this.a_start_date;
+	public java.util.Date getKa_start_date() {
+		return this.ka_start_date;
 	}
 	
-	public void setA_start_date(java.util.Date a_start_date) {
-		this.a_start_date = a_start_date;
+	public void setKa_start_date(java.util.Date ka_start_date) {
+		this.ka_start_date = ka_start_date;
 	}
 	
-	public java.util.Date getA_end_date() {
-		return this.a_end_date;
+	public java.util.Date getKa_end_date() {
+		return this.ka_end_date;
 	}
 	
-	public void setA_end_date(java.util.Date a_end_date) {
-		this.a_end_date = a_end_date;
+	public void setKa_end_date(java.util.Date ka_end_date) {
+		this.ka_end_date = ka_end_date;
 	}
 	
 	public CfClass getCffedid_classification() {

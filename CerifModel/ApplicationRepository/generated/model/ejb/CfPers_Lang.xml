@@ -2,12 +2,12 @@
 <entity class-name="ejb_generated.CfPers_Lang" label="Person Language" name="CFPERS_LANG">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
-<column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
-<column-attribute field-name="a_fraction" hidden="false" key="false" label="Fraction" length="0" name="a_fraction" precision="0" type="java.math.BigDecimal"/>
-<column-attribute field-name="a_skill_reading" hidden="false" key="false" label="Skill Reading" length="1" name="a_skill_reading" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_skill_speaking" hidden="false" key="false" label="Skill Speaking" length="1" name="a_skill_speaking" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_skill_writing" hidden="false" key="false" label="Skill Writing" length="1" name="a_skill_writing" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_start_date" hidden="false" key="false" label="Start Date" length="0" name="ka_start_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="ka_end_date" hidden="false" key="false" label="End Date" length="0" name="ka_end_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="ka_fraction" hidden="false" key="false" label="Fraction" length="0" name="ka_fraction" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="ka_skill_reading" hidden="false" key="false" label="Skill Reading" length="1" name="ka_skill_reading" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_skill_speaking" hidden="false" key="false" label="Skill Speaking" length="1" name="ka_skill_speaking" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_skill_writing" hidden="false" key="false" label="Skill Writing" length="1" name="ka_skill_writing" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfLang" field-name="cfpers_lang_language" label="Language" name="cfpers_lang_language" zoomed-by="id">
 <column-ref label="Language ID" name="id"/>
 </zoom-attribute>

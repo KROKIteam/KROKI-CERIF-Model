@@ -2,12 +2,12 @@
 <entity class-name="ejb_generated.CfEvent" label="Event" name="CFEVENT">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_event_identifier" hidden="false" key="false" label="Event Identifier" length="128" name="a_event_identifier" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_city_town" hidden="false" key="false" label="City Town" length="30" name="a_city_town" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_fee_or_free" hidden="false" key="false" label="Fee Or Free" length="1" name="a_fee_or_free" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
-<column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
-<column-attribute field-name="a_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="128" name="a_uniform_resource_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_event_identifier" hidden="false" key="false" label="Event Identifier" length="128" name="ka_event_identifier" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_city_town" hidden="false" key="false" label="City Town" length="30" name="ka_city_town" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_fee_or_free" hidden="false" key="false" label="Fee Or Free" length="1" name="ka_fee_or_free" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_start_date" hidden="false" key="false" label="Start Date" length="0" name="ka_start_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="ka_end_date" hidden="false" key="false" label="End Date" length="0" name="ka_end_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="ka_uniform_resource_identifier" hidden="false" key="false" label="Uniform Resource Identifier" length="128" name="ka_uniform_resource_identifier" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfCountry" field-name="cfevent_country" label="Country" name="cfevent_country" zoomed-by="id">
 <column-ref label="Country ID" name="id"/>
 </zoom-attribute>

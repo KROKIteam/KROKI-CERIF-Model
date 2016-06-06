@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,47 +36,47 @@ public class CfPAddr implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfPAddrId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_post_address_identifier;
+	protected java.lang.String ka_post_address_identifier;
 	@Column(name = "cfAddrline1", unique = false, nullable = false , length = 80, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_address_line1;
+	protected java.lang.String ka_address_line1;
 	@Column(name = "cfAddrline2", unique = false, nullable = false , length = 80, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_address_line2;
+	protected java.lang.String ka_address_line2;
 	@Column(name = "cfAddrline3", unique = false, nullable = false , length = 80, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_address_line3;
+	protected java.lang.String ka_address_line3;
 	@Column(name = "cfAddrline4", unique = false, nullable = false , length = 80, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_address_line4;
+	protected java.lang.String ka_address_line4;
 	@Column(name = "cfAddrline5", unique = false, nullable = false , length = 80, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_address_line5;
+	protected java.lang.String ka_address_line5;
 	@Column(name = "cfPostCode", unique = false, nullable = false , length = 16, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_post_code;
+	protected java.lang.String ka_post_code;
 	@Column(name = "cfCityTown", unique = false, nullable = false , length = 64, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_city_town;
+	protected java.lang.String ka_city_town;
 	@Column(name = "cfStateOfCountry", unique = false, nullable = false , length = 64, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_state_of_country;
+	protected java.lang.String ka_state_of_country;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@ManyToOne
 	@JoinColumn(name="cfpaddr_country", referencedColumnName="ID",  nullable = true)
-	private CfCountry cfpaddr_country;
+	protected CfCountry cfpaddr_country;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfeaddr_postAddress")
-	private Set<CfEAddr> cfeaddr_postAddressSet;
+	protected Set<CfEAddr> cfeaddr_postAddressSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfequip_paddr_postAddress")
-	private Set<CfEquip_PAddr> cfequip_paddr_postAddressSet;
+	protected Set<CfEquip_PAddr> cfequip_paddr_postAddressSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cffacil_paddr_postAddress")
-	private Set<CfFacil_PAddr> cffacil_paddr_postAddressSet;
+	protected Set<CfFacil_PAddr> cffacil_paddr_postAddressSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_paddr_postAddress")
-	private Set<CfOrgUnit_PAddr> cforgunit_paddr_postAddressSet;
+	protected Set<CfOrgUnit_PAddr> cforgunit_paddr_postAddressSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_paddr_postAddress")
-	private Set<CfPers_PAddr> cfpers_paddr_postAddressSet;
+	protected Set<CfPers_PAddr> cfpers_paddr_postAddressSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpaddr_class_postAddress")
-	private Set<CfPAddr_Class> cfpaddr_class_postAddressSet;
+	protected Set<CfPAddr_Class> cfpaddr_class_postAddressSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpaddr_geobbox_postAddress")
-	private Set<CfPAddr_GeoBBox> cfpaddr_geobbox_postAddressSet;
+	protected Set<CfPAddr_GeoBBox> cfpaddr_geobbox_postAddressSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfsrv_paddr_postAddress")
-	private Set<CfSrv_PAddr> cfsrv_paddr_postAddressSet;
+	protected Set<CfSrv_PAddr> cfsrv_paddr_postAddressSet;
 	
 	public CfPAddr(){
 	}
@@ -89,84 +89,84 @@ public class CfPAddr implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_post_address_identifier() {
-		return this.a_post_address_identifier;
+	public java.lang.String getKa_post_address_identifier() {
+		return this.ka_post_address_identifier;
 	}
 	
-	public void setA_post_address_identifier(java.lang.String a_post_address_identifier) {
-		this.a_post_address_identifier = a_post_address_identifier;
+	public void setKa_post_address_identifier(java.lang.String ka_post_address_identifier) {
+		this.ka_post_address_identifier = ka_post_address_identifier;
 	}
 	
-	public java.lang.String getA_address_line1() {
-		return this.a_address_line1;
+	public java.lang.String getKa_address_line1() {
+		return this.ka_address_line1;
 	}
 	
-	public void setA_address_line1(java.lang.String a_address_line1) {
-		this.a_address_line1 = a_address_line1;
+	public void setKa_address_line1(java.lang.String ka_address_line1) {
+		this.ka_address_line1 = ka_address_line1;
 	}
 	
-	public java.lang.String getA_address_line2() {
-		return this.a_address_line2;
+	public java.lang.String getKa_address_line2() {
+		return this.ka_address_line2;
 	}
 	
-	public void setA_address_line2(java.lang.String a_address_line2) {
-		this.a_address_line2 = a_address_line2;
+	public void setKa_address_line2(java.lang.String ka_address_line2) {
+		this.ka_address_line2 = ka_address_line2;
 	}
 	
-	public java.lang.String getA_address_line3() {
-		return this.a_address_line3;
+	public java.lang.String getKa_address_line3() {
+		return this.ka_address_line3;
 	}
 	
-	public void setA_address_line3(java.lang.String a_address_line3) {
-		this.a_address_line3 = a_address_line3;
+	public void setKa_address_line3(java.lang.String ka_address_line3) {
+		this.ka_address_line3 = ka_address_line3;
 	}
 	
-	public java.lang.String getA_address_line4() {
-		return this.a_address_line4;
+	public java.lang.String getKa_address_line4() {
+		return this.ka_address_line4;
 	}
 	
-	public void setA_address_line4(java.lang.String a_address_line4) {
-		this.a_address_line4 = a_address_line4;
+	public void setKa_address_line4(java.lang.String ka_address_line4) {
+		this.ka_address_line4 = ka_address_line4;
 	}
 	
-	public java.lang.String getA_address_line5() {
-		return this.a_address_line5;
+	public java.lang.String getKa_address_line5() {
+		return this.ka_address_line5;
 	}
 	
-	public void setA_address_line5(java.lang.String a_address_line5) {
-		this.a_address_line5 = a_address_line5;
+	public void setKa_address_line5(java.lang.String ka_address_line5) {
+		this.ka_address_line5 = ka_address_line5;
 	}
 	
-	public java.lang.String getA_post_code() {
-		return this.a_post_code;
+	public java.lang.String getKa_post_code() {
+		return this.ka_post_code;
 	}
 	
-	public void setA_post_code(java.lang.String a_post_code) {
-		this.a_post_code = a_post_code;
+	public void setKa_post_code(java.lang.String ka_post_code) {
+		this.ka_post_code = ka_post_code;
 	}
 	
-	public java.lang.String getA_city_town() {
-		return this.a_city_town;
+	public java.lang.String getKa_city_town() {
+		return this.ka_city_town;
 	}
 	
-	public void setA_city_town(java.lang.String a_city_town) {
-		this.a_city_town = a_city_town;
+	public void setKa_city_town(java.lang.String ka_city_town) {
+		this.ka_city_town = ka_city_town;
 	}
 	
-	public java.lang.String getA_state_of_country() {
-		return this.a_state_of_country;
+	public java.lang.String getKa_state_of_country() {
+		return this.ka_state_of_country;
 	}
 	
-	public void setA_state_of_country(java.lang.String a_state_of_country) {
-		this.a_state_of_country = a_state_of_country;
+	public void setKa_state_of_country(java.lang.String ka_state_of_country) {
+		this.ka_state_of_country = ka_state_of_country;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public CfCountry getCfpaddr_country() {

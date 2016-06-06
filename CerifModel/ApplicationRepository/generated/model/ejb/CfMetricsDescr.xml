@@ -2,13 +2,13 @@
 <entity class-name="ejb_generated.CfMetricsDescr" label="Metrics Description" name="CFMETRICSDESCR">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_description" hidden="false" key="false" label="Description" length="0" name="a_description" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_description" hidden="false" key="false" label="Description" length="0" name="ka_description" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfLang" field-name="cfmetricsdescr_language" label="Language" name="cfmetricsdescr_language" zoomed-by="id">
 <column-ref label="Language ID" name="id"/>
 </zoom-attribute>
 <zoom-attribute class-name="ejb_generated.CfMetrics" field-name="cfmetricsdescr_metrics" label="Metrics" name="cfmetricsdescr_metrics" zoomed-by="id">
 <column-ref label="Metrics ID" name="id"/>
 </zoom-attribute>
-<column-attribute enum="TranslationKindMetrics_descriptionEnum" field-name="a_translation_kind" hidden="false" key="false" label="Translation Kind" length="1" name="a_translation_kind" precision="0" type="java.lang.String"/>
+<column-attribute enum="TranslationKindMetrics_descriptionEnum" field-name="ka_translation_kind" hidden="false" key="false" label="Translation Kind" length="1" name="ka_translation_kind" precision="0" type="java.lang.String"/>
 </attributes>
 </entity>

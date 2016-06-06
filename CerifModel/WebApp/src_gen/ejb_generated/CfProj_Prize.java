@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,25 +36,25 @@ public class CfProj_Prize implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_start_date;
+	protected java.util.Date ka_start_date;
 	@Column(name = "cfEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_end_date;
+	protected java.util.Date ka_end_date;
 	@Column(name = "cfFraction", unique = false, nullable = false ,columnDefinition = "FLOAT")
-	private java.math.BigDecimal a_fraction;
+	protected java.math.BigDecimal ka_fraction;
 	@Column(name = "cfPrizeDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_prize_award_date;
+	protected java.util.Date ka_prize_award_date;
 	@ManyToOne
 	@JoinColumn(name="cfproj_prize_classification", referencedColumnName="ID",  nullable = true)
-	private CfClass cfproj_prize_classification;
+	protected CfClass cfproj_prize_classification;
 	@ManyToOne
 	@JoinColumn(name="cfproj_prize_prizeAward", referencedColumnName="ID",  nullable = true)
-	private CfPrize cfproj_prize_prizeAward;
+	protected CfPrize cfproj_prize_prizeAward;
 	@ManyToOne
 	@JoinColumn(name="cfproj_prize_project", referencedColumnName="ID",  nullable = true)
-	private CfProj cfproj_prize_project;
+	protected CfProj cfproj_prize_project;
 	
 	public CfProj_Prize(){
 	}
@@ -67,36 +67,36 @@ public class CfProj_Prize implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.util.Date getA_start_date() {
-		return this.a_start_date;
+	public java.util.Date getKa_start_date() {
+		return this.ka_start_date;
 	}
 	
-	public void setA_start_date(java.util.Date a_start_date) {
-		this.a_start_date = a_start_date;
+	public void setKa_start_date(java.util.Date ka_start_date) {
+		this.ka_start_date = ka_start_date;
 	}
 	
-	public java.util.Date getA_end_date() {
-		return this.a_end_date;
+	public java.util.Date getKa_end_date() {
+		return this.ka_end_date;
 	}
 	
-	public void setA_end_date(java.util.Date a_end_date) {
-		this.a_end_date = a_end_date;
+	public void setKa_end_date(java.util.Date ka_end_date) {
+		this.ka_end_date = ka_end_date;
 	}
 	
-	public java.math.BigDecimal getA_fraction() {
-		return this.a_fraction;
+	public java.math.BigDecimal getKa_fraction() {
+		return this.ka_fraction;
 	}
 	
-	public void setA_fraction(java.math.BigDecimal a_fraction) {
-		this.a_fraction = a_fraction;
+	public void setKa_fraction(java.math.BigDecimal ka_fraction) {
+		this.ka_fraction = ka_fraction;
 	}
 	
-	public java.util.Date getA_prize_award_date() {
-		return this.a_prize_award_date;
+	public java.util.Date getKa_prize_award_date() {
+		return this.ka_prize_award_date;
 	}
 	
-	public void setA_prize_award_date(java.util.Date a_prize_award_date) {
-		this.a_prize_award_date = a_prize_award_date;
+	public void setKa_prize_award_date(java.util.Date ka_prize_award_date) {
+		this.ka_prize_award_date = ka_prize_award_date;
 	}
 	
 	public CfClass getCfproj_prize_classification() {

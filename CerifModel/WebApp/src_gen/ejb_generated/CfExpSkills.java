@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,27 +36,27 @@ public class CfExpSkills implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfExpSkillsId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_expertise_and_skills;
+	protected java.lang.String ka_expertise_and_skills;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@ManyToOne
 	@JoinColumn(name="cfexpskills_expertiseAndSkillsIntegrated", referencedColumnName="ID",  nullable = true)
-	private Expertiseandskillsintegrated cfexpskills_expertiseAndSkillsIntegrated;
+	protected Expertiseandskillsintegrated cfexpskills_expertiseAndSkillsIntegrated;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskills_class_expertiseAndSkills")
-	private Set<CfExpSkills_Class> cfexpskills_class_expertiseAndSkillsSet;
+	protected Set<CfExpSkills_Class> cfexpskills_class_expertiseAndSkillsSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskillsdescr_expertiseAndSkills")
-	private Set<CfExpSkillsDescr> cfexpskillsdescr_expertiseAndSkillsSet;
+	protected Set<CfExpSkillsDescr> cfexpskillsdescr_expertiseAndSkillsSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskillskeyw_expertiseAndSkills")
-	private Set<CfExpSkillsKeyw> cfexpskillskeyw_expertiseAndSkillsSet;
+	protected Set<CfExpSkillsKeyw> cfexpskillskeyw_expertiseAndSkillsSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskillsname_expertiseAndSkills")
-	private Set<CfExpSkillsName> cfexpskillsname_expertiseAndSkillsSet;
+	protected Set<CfExpSkillsName> cfexpskillsname_expertiseAndSkillsSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cforgunit_expskills_expertiseAndSkills")
-	private Set<CfOrgUnit_ExpSkills> cforgunit_expskills_expertiseAndSkillsSet;
+	protected Set<CfOrgUnit_ExpSkills> cforgunit_expskills_expertiseAndSkillsSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpers_expskills_expertiseAndSkills")
-	private Set<CfPers_ExpSkills> cfpers_expskills_expertiseAndSkillsSet;
+	protected Set<CfPers_ExpSkills> cfpers_expskills_expertiseAndSkillsSet;
 	
 	public CfExpSkills(){
 	}
@@ -69,20 +69,20 @@ public class CfExpSkills implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_expertise_and_skills() {
-		return this.a_expertise_and_skills;
+	public java.lang.String getKa_expertise_and_skills() {
+		return this.ka_expertise_and_skills;
 	}
 	
-	public void setA_expertise_and_skills(java.lang.String a_expertise_and_skills) {
-		this.a_expertise_and_skills = a_expertise_and_skills;
+	public void setKa_expertise_and_skills(java.lang.String ka_expertise_and_skills) {
+		this.ka_expertise_and_skills = ka_expertise_and_skills;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Expertiseandskillsintegrated getCfexpskills_expertiseAndSkillsIntegrated() {

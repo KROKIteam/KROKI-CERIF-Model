@@ -8,7 +8,7 @@
 <zoom-attribute class-name="ejb_generated.CfProj" field-name="cfprojabstr_project" label="Project" name="cfprojabstr_project" zoomed-by="id">
 <column-ref label="Project ID" name="id"/>
 </zoom-attribute>
-<column-attribute enum="TranslationKindProject_abstractEnum" field-name="a_translation_kind" hidden="false" key="false" label="Translation Kind" length="1" name="a_translation_kind" precision="0" type="java.lang.String"/>
-<column-attribute field-name="a_abstract" hidden="false" key="false" label="Abstract" length="0" name="a_abstract" precision="0" type="java.lang.String:TextArea"/>
+<column-attribute enum="TranslationKindProject_abstractEnum" field-name="ka_translation_kind" hidden="false" key="false" label="Translation Kind" length="1" name="ka_translation_kind" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_abstract" hidden="false" key="false" label="Abstract" length="0" name="ka_abstract" precision="0" type="java.lang.String:TextArea"/>
 </attributes>
 </entity>

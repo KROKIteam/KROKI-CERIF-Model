@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,16 +36,16 @@ public class Expertiseandskillsintegrated implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskills_expertiseAndSkillsIntegrated")
-	private Set<CfExpSkills> cfexpskills_expertiseAndSkillsIntegratedSet;
+	protected Set<CfExpSkills> cfexpskills_expertiseAndSkillsIntegratedSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskillsdescr_expertiseAndSkillsIntegrated")
-	private Set<CfExpSkillsDescr> cfexpskillsdescr_expertiseAndSkillsIntegratedSet;
+	protected Set<CfExpSkillsDescr> cfexpskillsdescr_expertiseAndSkillsIntegratedSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskillskeyw_expertiseAndSkillsIntegrated")
-	private Set<CfExpSkillsKeyw> cfexpskillskeyw_expertiseAndSkillsIntegratedSet;
+	protected Set<CfExpSkillsKeyw> cfexpskillskeyw_expertiseAndSkillsIntegratedSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfexpskillsname_expertiseAndSkillsIntegrated")
-	private Set<CfExpSkillsName> cfexpskillsname_expertiseAndSkillsIntegratedSet;
+	protected Set<CfExpSkillsName> cfexpskillsname_expertiseAndSkillsIntegratedSet;
 	
 	public Expertiseandskillsintegrated(){
 	}

@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,26 +36,26 @@ public class CfDCRelation implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfDCLangTag", unique = false, nullable = false , length = 5, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_dc_language_tag;
+	protected java.lang.String ka_dc_language_tag;
 	@Column(name = "cfDCTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_dc_translation;
+	protected java.lang.String ka_dc_translation;
 	@Column(name = "cfDCStartDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_dc_start_date;
+	protected java.util.Date ka_dc_start_date;
 	@Column(name = "cfDCEndDate", unique = false, nullable = false ,columnDefinition = "DATETIME")
-	private java.util.Date a_dc_end_date;
+	protected java.util.Date ka_dc_end_date;
 	@Column(name = "cfDCType", unique = false, nullable = false , length = 30, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_dc_type;
+	protected java.lang.String ka_dc_type;
 	@Column(name = "cfDCValue", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_dc_value;
+	protected java.lang.String ka_dc_value;
 	@ManyToOne
 	@JoinColumn(name="cfdcrelation_dublinCore", referencedColumnName="ID",  nullable = true)
-	private CfDC cfdcrelation_dublinCore;
+	protected CfDC cfdcrelation_dublinCore;
 	@ManyToOne
 	@JoinColumn(name="cfdcrelation_dublinCorea", referencedColumnName="ID",  nullable = true)
-	private CfDC cfdcrelation_dublinCorea;
+	protected CfDC cfdcrelation_dublinCorea;
 	
 	public CfDCRelation(){
 	}
@@ -68,52 +68,52 @@ public class CfDCRelation implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_dc_language_tag() {
-		return this.a_dc_language_tag;
+	public java.lang.String getKa_dc_language_tag() {
+		return this.ka_dc_language_tag;
 	}
 	
-	public void setA_dc_language_tag(java.lang.String a_dc_language_tag) {
-		this.a_dc_language_tag = a_dc_language_tag;
+	public void setKa_dc_language_tag(java.lang.String ka_dc_language_tag) {
+		this.ka_dc_language_tag = ka_dc_language_tag;
 	}
 	
-	public java.lang.String getA_dc_translation() {
-		return this.a_dc_translation;
+	public java.lang.String getKa_dc_translation() {
+		return this.ka_dc_translation;
 	}
 	
-	public void setA_dc_translation(java.lang.String a_dc_translation) {
-		this.a_dc_translation = a_dc_translation;
+	public void setKa_dc_translation(java.lang.String ka_dc_translation) {
+		this.ka_dc_translation = ka_dc_translation;
 	}
 	
-	public java.util.Date getA_dc_start_date() {
-		return this.a_dc_start_date;
+	public java.util.Date getKa_dc_start_date() {
+		return this.ka_dc_start_date;
 	}
 	
-	public void setA_dc_start_date(java.util.Date a_dc_start_date) {
-		this.a_dc_start_date = a_dc_start_date;
+	public void setKa_dc_start_date(java.util.Date ka_dc_start_date) {
+		this.ka_dc_start_date = ka_dc_start_date;
 	}
 	
-	public java.util.Date getA_dc_end_date() {
-		return this.a_dc_end_date;
+	public java.util.Date getKa_dc_end_date() {
+		return this.ka_dc_end_date;
 	}
 	
-	public void setA_dc_end_date(java.util.Date a_dc_end_date) {
-		this.a_dc_end_date = a_dc_end_date;
+	public void setKa_dc_end_date(java.util.Date ka_dc_end_date) {
+		this.ka_dc_end_date = ka_dc_end_date;
 	}
 	
-	public java.lang.String getA_dc_type() {
-		return this.a_dc_type;
+	public java.lang.String getKa_dc_type() {
+		return this.ka_dc_type;
 	}
 	
-	public void setA_dc_type(java.lang.String a_dc_type) {
-		this.a_dc_type = a_dc_type;
+	public void setKa_dc_type(java.lang.String ka_dc_type) {
+		this.ka_dc_type = ka_dc_type;
 	}
 	
-	public java.lang.String getA_dc_value() {
-		return this.a_dc_value;
+	public java.lang.String getKa_dc_value() {
+		return this.ka_dc_value;
 	}
 	
-	public void setA_dc_value(java.lang.String a_dc_value) {
-		this.a_dc_value = a_dc_value;
+	public void setKa_dc_value(java.lang.String ka_dc_value) {
+		this.ka_dc_value = ka_dc_value;
 	}
 	
 	public CfDC getCfdcrelation_dublinCore() {

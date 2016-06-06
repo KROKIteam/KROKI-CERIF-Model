@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,18 +36,18 @@ public class CfPersName implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfPersNameId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_person_name_identifier;
+	protected java.lang.String ka_person_name_identifier;
 	@Column(name = "cfFamilyNames", unique = false, nullable = false , length = 64, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_family_names;
+	protected java.lang.String ka_family_names;
 	@Column(name = "cfFirstNames", unique = false, nullable = false , length = 64, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_first_names;
+	protected java.lang.String ka_first_names;
 	@Column(name = "cfOtherNames", unique = false, nullable = false , length = 64, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_other_names;
+	protected java.lang.String ka_other_names;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfpersname_pers_personName")
-	private Set<CfPersName_Pers> cfpersname_pers_personNameSet;
+	protected Set<CfPersName_Pers> cfpersname_pers_personNameSet;
 	
 	public CfPersName(){
 	}
@@ -60,36 +60,36 @@ public class CfPersName implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_person_name_identifier() {
-		return this.a_person_name_identifier;
+	public java.lang.String getKa_person_name_identifier() {
+		return this.ka_person_name_identifier;
 	}
 	
-	public void setA_person_name_identifier(java.lang.String a_person_name_identifier) {
-		this.a_person_name_identifier = a_person_name_identifier;
+	public void setKa_person_name_identifier(java.lang.String ka_person_name_identifier) {
+		this.ka_person_name_identifier = ka_person_name_identifier;
 	}
 	
-	public java.lang.String getA_family_names() {
-		return this.a_family_names;
+	public java.lang.String getKa_family_names() {
+		return this.ka_family_names;
 	}
 	
-	public void setA_family_names(java.lang.String a_family_names) {
-		this.a_family_names = a_family_names;
+	public void setKa_family_names(java.lang.String ka_family_names) {
+		this.ka_family_names = ka_family_names;
 	}
 	
-	public java.lang.String getA_first_names() {
-		return this.a_first_names;
+	public java.lang.String getKa_first_names() {
+		return this.ka_first_names;
 	}
 	
-	public void setA_first_names(java.lang.String a_first_names) {
-		this.a_first_names = a_first_names;
+	public void setKa_first_names(java.lang.String ka_first_names) {
+		this.ka_first_names = ka_first_names;
 	}
 	
-	public java.lang.String getA_other_names() {
-		return this.a_other_names;
+	public java.lang.String getKa_other_names() {
+		return this.ka_other_names;
 	}
 	
-	public void setA_other_names(java.lang.String a_other_names) {
-		this.a_other_names = a_other_names;
+	public void setKa_other_names(java.lang.String ka_other_names) {
+		this.ka_other_names = ka_other_names;
 	}
 	
 	public Set<CfPersName_Pers> getCfpersname_pers_personNameSet() {

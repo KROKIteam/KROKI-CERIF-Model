@@ -2,10 +2,10 @@
 <entity class-name="ejb_generated.CfOrgUnit_ResPubl" label="Organisation Unit Result Publication" name="CFORGUNIT_RESPUBL">
 <attributes>
 <column-attribute field-name="id" hidden="true" key="true" label="ID" length="50" name="id" type="java.lang.Long"/>
-<column-attribute field-name="a_start_date" hidden="false" key="false" label="Start Date" length="0" name="a_start_date" precision="0" type="java.util.Date"/>
-<column-attribute field-name="a_end_date" hidden="false" key="false" label="End Date" length="0" name="a_end_date" precision="0" type="java.util.Date"/>
-<column-attribute field-name="a_fraction" hidden="false" key="false" label="Fraction" length="0" name="a_fraction" precision="0" type="java.math.BigDecimal"/>
-<column-attribute field-name="a_copyright" hidden="false" key="false" label="Copyright" length="64" name="a_copyright" precision="0" type="java.lang.String"/>
+<column-attribute field-name="ka_start_date" hidden="false" key="false" label="Start Date" length="0" name="ka_start_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="ka_end_date" hidden="false" key="false" label="End Date" length="0" name="ka_end_date" precision="0" type="java.util.Date"/>
+<column-attribute field-name="ka_fraction" hidden="false" key="false" label="Fraction" length="0" name="ka_fraction" precision="0" type="java.math.BigDecimal"/>
+<column-attribute field-name="ka_copyright" hidden="false" key="false" label="Copyright" length="64" name="ka_copyright" precision="0" type="java.lang.String"/>
 <zoom-attribute class-name="ejb_generated.CfClass" field-name="cforgunit_respubl_classification" label="Classification" name="cforgunit_respubl_classification" zoomed-by="id">
 <column-ref label="Classification ID" name="id"/>
 </zoom-attribute>

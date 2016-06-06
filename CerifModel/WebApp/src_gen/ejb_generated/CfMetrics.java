@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,22 +36,22 @@ public class CfMetrics implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfMetricsId", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_metrics_identifier;
+	protected java.lang.String ka_metrics_identifier;
 	@Column(name = "cfURI", unique = false, nullable = false , length = 128, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_uniform_resource_identifier;
+	protected java.lang.String ka_uniform_resource_identifier;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmetrics_class_metrics")
-	private Set<CfMetrics_Class> cfmetrics_class_metricsSet;
+	protected Set<CfMetrics_Class> cfmetrics_class_metricsSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmetricsdescr_metrics")
-	private Set<CfMetricsDescr> cfmetricsdescr_metricsSet;
+	protected Set<CfMetricsDescr> cfmetricsdescr_metricsSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmetricskeyw_metrics")
-	private Set<CfMetricsKeyw> cfmetricskeyw_metricsSet;
+	protected Set<CfMetricsKeyw> cfmetricskeyw_metricsSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfmetricsname_metrics")
-	private Set<CfMetricsName> cfmetricsname_metricsSet;
+	protected Set<CfMetricsName> cfmetricsname_metricsSet;
 	@OneToMany(cascade = { ALL }, fetch = FetchType.LAZY, mappedBy = "cfrespubl_metrics_metrics")
-	private Set<CfResPubl_Metrics> cfrespubl_metrics_metricsSet;
+	protected Set<CfResPubl_Metrics> cfrespubl_metrics_metricsSet;
 	
 	public CfMetrics(){
 	}
@@ -64,20 +64,20 @@ public class CfMetrics implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_metrics_identifier() {
-		return this.a_metrics_identifier;
+	public java.lang.String getKa_metrics_identifier() {
+		return this.ka_metrics_identifier;
 	}
 	
-	public void setA_metrics_identifier(java.lang.String a_metrics_identifier) {
-		this.a_metrics_identifier = a_metrics_identifier;
+	public void setKa_metrics_identifier(java.lang.String ka_metrics_identifier) {
+		this.ka_metrics_identifier = ka_metrics_identifier;
 	}
 	
-	public java.lang.String getA_uniform_resource_identifier() {
-		return this.a_uniform_resource_identifier;
+	public java.lang.String getKa_uniform_resource_identifier() {
+		return this.ka_uniform_resource_identifier;
 	}
 	
-	public void setA_uniform_resource_identifier(java.lang.String a_uniform_resource_identifier) {
-		this.a_uniform_resource_identifier = a_uniform_resource_identifier;
+	public void setKa_uniform_resource_identifier(java.lang.String ka_uniform_resource_identifier) {
+		this.ka_uniform_resource_identifier = ka_uniform_resource_identifier;
 	}
 	
 	public Set<CfMetrics_Class> getCfmetrics_class_metricsSet() {

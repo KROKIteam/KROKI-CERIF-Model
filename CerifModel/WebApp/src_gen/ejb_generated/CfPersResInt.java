@@ -24,7 +24,7 @@ import javax.persistence.JoinTable;
    /** 
    Class generated using Kroki EJBGenerator 
    @Author KROKI Team 
-   Creation date: 22.04.2015  15:41:53h
+   Creation date: 06.06.2016  13:28:38h
    **/
 
 @Entity
@@ -36,18 +36,18 @@ public class CfPersResInt implements java.io.Serializable {
 	@Id 
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private java.lang.Long id;
+	protected java.lang.Long id;
 
 	@Column(name = "cfResInt", unique = false, nullable = false ,columnDefinition = "TEXT")
-	private java.lang.String a_research_interest;
+	protected java.lang.String ka_research_interest;
 	@ManyToOne
 	@JoinColumn(name="cfpersresint_language", referencedColumnName="ID",  nullable = true)
-	private CfLang cfpersresint_language;
+	protected CfLang cfpersresint_language;
 	@ManyToOne
 	@JoinColumn(name="cfpersresint_person", referencedColumnName="ID",  nullable = true)
-	private CfPers cfpersresint_person;
+	protected CfPers cfpersresint_person;
 	@Column(name = "cfTrans", unique = false, nullable = false , length = 1, precision = 0,columnDefinition = "CHAR")
-	private java.lang.String a_translation_kind;
+	protected java.lang.String ka_translation_kind;
 	
 	public CfPersResInt(){
 	}
@@ -60,12 +60,12 @@ public class CfPersResInt implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public java.lang.String getA_research_interest() {
-		return this.a_research_interest;
+	public java.lang.String getKa_research_interest() {
+		return this.ka_research_interest;
 	}
 	
-	public void setA_research_interest(java.lang.String a_research_interest) {
-		this.a_research_interest = a_research_interest;
+	public void setKa_research_interest(java.lang.String ka_research_interest) {
+		this.ka_research_interest = ka_research_interest;
 	}
 	
 	public CfLang getCfpersresint_language() {
@@ -84,12 +84,12 @@ public class CfPersResInt implements java.io.Serializable {
 		this.cfpersresint_person = cfpersresint_person;
 	}
 	
-	public java.lang.String getA_translation_kind() {
-		return this.a_translation_kind;
+	public java.lang.String getKa_translation_kind() {
+		return this.ka_translation_kind;
 	}
 	
-	public void setA_translation_kind(java.lang.String a_translation_kind) {
-		this.a_translation_kind = a_translation_kind;
+	public void setKa_translation_kind(java.lang.String ka_translation_kind) {
+		this.ka_translation_kind = ka_translation_kind;
 	}
 	
 }
